@@ -41,6 +41,8 @@ section {
 </div>
 </div>
 
+[El puente](../assets/puente.png)
+
 ---
 
 <!-- _class: cover -->
