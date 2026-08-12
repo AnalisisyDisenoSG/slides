@@ -1574,6 +1574,15 @@ La representación de **cómo** se va a detallar el caso de uso del negocio
 
 ---
 
+## Realización con un diagrama de actividades
+
+[![h:390](../assets/ads-man-actividades.png)](../assets/ads-man-actividades.png)
+
+- Las **calles** (*swimlanes*) son los **trabajadores de negocio**; las cajas son las **actividades**
+- La flecha que cruza de una calle a otra es un **traspaso** → donde vive el riesgo del proceso
+
+---
+
 ## Ejemplo: «Vende Barato S.A»
 
 <steps>
@@ -1712,15 +1721,6 @@ La representación de **cómo** se va a detallar el caso de uso del negocio
 
 </step>
 </steps>
-
----
-
-## Realización con un diagrama de actividades
-
-[![h:390](../assets/ads-man-actividades.png)](../assets/ads-man-actividades.png)
-
-- Las **calles** (*swimlanes*) son los **trabajadores de negocio**; las cajas son las **actividades**
-- La flecha que cruza de una calle a otra es un **traspaso** → donde vive el riesgo del proceso
 
 ---
 
