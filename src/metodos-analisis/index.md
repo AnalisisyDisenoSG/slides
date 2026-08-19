@@ -24,7 +24,7 @@ section {
 
 ## ¿Dónde estamos?
 
-- En el mazo anterior vimos **qué es un sistema** y **cómo se organiza un proceso de desarrollo**
+- Anteriormente vimos **qué es un sistema** y **cómo se organiza un proceso de desarrollo**
 - Ahora nos toca el **cómo**: los métodos concretos con los que una persona analista entiende un problema antes de diseñar la solución
 
 <div class="grid">
@@ -143,7 +143,7 @@ Las **características** de alto nivel del producto
 | **4. Descripción del producto** | Necesidades y características | ¿Qué capacidades hacen falta? |
 | **5. Restricciones y atributos de calidad** | Límites del proyecto y NFRs | ¿Bajo qué condiciones? |
 
-- Es la **plantilla del curso** (basada en RUP): la vas a usar en el proyecto del semestre
+- Aqui puedes ver una **[plantilla](https://drive.google.com/file/d/1tigftrEoIYBCDlJpwU3vqOfHF4wayamV/view)**
 
 ---
 
@@ -623,7 +623,7 @@ El límite es el del **sistema**, no el de la organización
 </div>
 
 ---
-
+<!-- 
 ## Actividad 2: construye un diagrama de contexto
 
 - Retomen el sistema de la Actividad 1 y dibujen su diagrama de contexto
@@ -649,7 +649,7 @@ El límite es el del **sistema**, no el de la organización
 
 - ⏱️ 15 minutos · Compárenlo con la sentencia del problema: **¿son consistentes?**
 
----
+--- -->
 
 <!-- _class: cover -->
 <style scoped>
@@ -1232,7 +1232,7 @@ El **VAN** es la más defendible; el ***payback*** es la más fácil de explicar
 </div>
 </split-slide>
 
----
+<!-- ---
 
 ## Actividad 3: evalúa la factibilidad
 
@@ -1259,7 +1259,7 @@ Escojan una y expliquen **por qué**, no solo cuál
 - ❓ Preguntas para la discusión:
   - ¿Cuál factibilidad fue la **más difícil** de estimar? ¿Por qué?
   - ¿Alguna candidata falló por una razón **no técnica**?
-  - ¿Qué información les **hizo falta** para decidir con confianza?
+  - ¿Qué información les **hizo falta** para decidir con confianza? -->
 
 ---
 
@@ -1277,7 +1277,7 @@ section {
 - Análisis del negocio y ejemplos
 
 ---
-
+<!-- 
 ## ¿Qué es un proceso de negocio?
 
 <steps>
@@ -1776,7 +1776,7 @@ Señalen cada flecha que **cruza** de una calle a otra
 ### ⚠️ Si se rompe el hilo
 Aparecen requerimientos **sin dueño** y decisiones que nadie puede explicar
 </div>
-</div>
+</div> -->
 
 ---
 

@@ -25,7 +25,7 @@ section {
 
 ## ¿Dónde estamos?
 
-- En el mazo anterior vimos los **métodos de análisis**: la visión, el diagrama de contexto, las fases y la factibilidad
+- Anteriormente vimos los **métodos de análisis**: la visión, el diagrama de contexto, las fases y la factibilidad
 - Ahora bajamos un nivel de abstracción: del **problema del negocio** a la **especificación**
 
 <div class="grid">
