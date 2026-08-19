@@ -1,5 +1,5 @@
-<!DOCTYPE html><html lang="en-US"><head><title>Métodos de análisis de sistemas</title><meta property="og:title" content="Métodos de análisis de sistemas"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{inset:0;position:absolute}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1;view-transition-name:__bespoke_marp_transition_osc__}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;700&display=swap');@import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/monokai.css');div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:2em;margin-block:0.67em}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1280px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;print-color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}div#\:\$p > svg > foreignObject > :where(section):not([\20 root]){font-family:"Outfit", sans-serif;font-weight:200;font-size:20px;padding:calc(var(--marpit-root-font-size, 1rem) * 2.5);background:#181818;color:#ccc}div#\:\$p > svg > foreignObject > :where(section):not([\20 root]){--marpit-root-font-size: 20px}div#\:\$p > svg > foreignObject > section spoiler{color:transparent;text-shadow:none}div#\:\$p > svg > foreignObject > section .bespoke-marp-parent{position:absolute;inset:0;overflow:hidden;aspect-ratio:16/9!important;align-self:center}div#\:\$p > svg > foreignObject > section.cover{background:linear-gradient(to bottom, black, transparent 40% 96%, black 100%), linear-gradient(to right, #000 3%, #000e 15%, #000c 20%, transparent 28%), var(--cover, url(cover.jpg));background-color:black;background-size:auto 765px;background-position:top right;background-repeat:no-repeat}div#\:\$p > svg > foreignObject > section.cover ul{padding-left:5px;list-style:none}div#\:\$p > svg > foreignObject > section.cover li{background:#000c;margin:calc(var(--marpit-root-font-size, 1rem) * 1) 0;padding:calc(var(--marpit-root-font-size, 1rem) * 1);box-shadow:3px 3px 0 #fe704d;max-width:max-content}div#\:\$p > svg > foreignObject > section.cover li:hover{background:#fe704d;cursor:pointer}div#\:\$p > svg > foreignObject > section.cover blockquote{position:absolute;bottom:calc(var(--marpit-root-font-size, 1rem) * 5);right:calc(var(--marpit-root-font-size, 1rem) * 5);padding:calc(var(--marpit-root-font-size, 1rem) * 1);background:#000c}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){color:#fe704d}div#\:\$p > svg > foreignObject > section li{margin:calc(var(--marpit-root-font-size, 1rem) * .5) 0}div#\:\$p > svg > foreignObject > section strong{color:white}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){background:#000;color:white;padding:calc(var(--marpit-root-font-size, 1rem) * 1);margin:0}div#\:\$p > svg > foreignObject > section code{color:gold;text-wrap:auto}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code{color:white}div#\:\$p > svg > foreignObject > section a{color:#3179ed;text-decoration:none}div#\:\$p > svg > foreignObject > section svg[data-marpit-svg]{background:linear-gradient(126deg, indigo, deeppink)}div#\:\$p > svg > foreignObject > section .grid{display:grid;gap:calc(var(--marpit-root-font-size, 1rem) * 1);grid-template-columns:repeat(auto-fit, minmax(300px, 1fr))}div#\:\$p > svg > foreignObject > section:has(steps){position:relative}div#\:\$p > svg > foreignObject > section .step-indicator{position:absolute;top:0;right:0;font-size:0.85em;font-weight:400;padding:calc(var(--marpit-root-font-size, 1rem) * 0.3) calc(var(--marpit-root-font-size, 1rem) * 0.8);background:#fe704d22;color:#fe704d;border-radius:0 0 0 calc(var(--marpit-root-font-size, 1rem) * 0.5);z-index:100;letter-spacing:0.05em;pointer-events:none}div#\:\$p > svg > foreignObject > section section.step-indicator{--marpit-root-font-size: 0.85em}div#\:\$p > svg > foreignObject > section steps{display:block;position:relative}div#\:\$p > svg > foreignObject > section step{display:block}div#\:\$p > svg > foreignObject > section step:not(:first-child){display:none}div#\:\$p > svg > foreignObject > section step[data-marpit-fragment]{display:none}div#\:\$p > svg > foreignObject > section steps:has(> step[data-bespoke-marp-fragment=active])>step:first-child{display:none}div#\:\$p > svg > foreignObject > section step[data-bespoke-marp-fragment=inactive]{visibility:visible!important;display:none!important}div#\:\$p > svg > foreignObject > section step[data-bespoke-marp-fragment=active]{display:block!important;visibility:visible!important}div#\:\$p > svg > foreignObject > section step[data-bespoke-marp-fragment=active]:has(~ step[data-bespoke-marp-fragment=active]){display:none!important}div#\:\$p > svg > foreignObject > section split-slide{--left: 50%;--right: 50%;--font-size: calc(var(--marpit-root-font-size, 1rem) * 1);display:grid;grid-template-columns:var(--left) var(--right);gap:calc(var(--marpit-root-font-size, 1rem) * 1)}div#\:\$p > svg > foreignObject > section split-slide :is(pre, marp-pre){font-size:var(--font-size)}div#\:\$p > svg > foreignObject > section table{--width: 100%;width:var(--width);border-collapse:collapse}div#\:\$p > svg > foreignObject > section th, div#\:\$p > svg > foreignObject > section td{border:1px solid #ddd;padding:8px;text-align:center}div#\:\$p > svg > foreignObject > section a:is([href$=".png"],[href$=".jpg"],[href$=".jpeg"],[href$=".webp"],[href$=".gif"])::before{content:"";display:inline-block;vertical-align:middle;margin-right:calc(var(--marpit-root-font-size, 1rem) * 0.2);width:24px;height:24px;background-size:contain;background-repeat:no-repeat;background-position:center;background-image:url(../assets/icon-img.png)}div#\:\$p > svg > foreignObject > section[data-marpit-scope-FmT8ORML]{--cover: url(../assets/img_00072_.png);}div#\:\$p > svg > foreignObject > section[data-marpit-scope-sRF7vuvi]{--cover: url(../assets/img_00066_.png);}div#\:\$p > svg > foreignObject > section[data-marpit-scope-TtztDzmt]{--cover: url(../assets/img_00068_.png);}div#\:\$p > svg > foreignObject > section[data-marpit-scope-KG2SWMjB]{--cover: url(../assets/img_00074_.png);}div#\:\$p > svg > foreignObject > section[data-marpit-scope-bILVdBdz]{--cover: url(../assets/img_00071_.png);}div#\:\$p > svg > foreignObject > section[data-marpit-scope-1qtcA7y2]{--cover: url(../assets/img_00076_.png);}div#\:\$p > svg > foreignObject > section[data-marpit-scope-S10noo0r]{--cover: url(../assets/img_00075_.png);}div#\:\$p > svg > foreignObject > section[data-marpit-scope-NTMLVxvy] table{table-layout:fixed;font-size:calc(var(--marpit-root-font-size, 1rem) * 0.8)}div#\:\$p > svg > foreignObject > section[data-marpit-scope-NTMLVxvy] th, div#\:\$p > svg > foreignObject > section[data-marpit-scope-NTMLVxvy] td{padding:8px 6px}div#\:\$p > svg > foreignObject > section[data-marpit-scope-NTMLVxvy] th:first-child, div#\:\$p > svg > foreignObject > section[data-marpit-scope-NTMLVxvy] td:first-child{width:17%;text-align:left}div#\:\$p > svg > foreignObject > section[data-marpit-scope-B8gSlV8c] ul{font-size:calc(var(--marpit-root-font-size, 1rem) * 0.86)}div#\:\$p > svg > foreignObject > section[data-marpit-scope-B8gSlV8c] ul li{margin-block:0.2em}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
-</style></head><body><div class="bespoke-progress-parent"><div class="bespoke-progress-bar"></div></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-marpit-scope-FmT8ORML="" data-paginate="true" data-class="cover" data-theme="alo" lang="en-US" class="cover" data-marpit-pagination="1" style="--paginate:true;--class:cover;--theme:alo;" data-marpit-pagination-total="67">
+<!DOCTYPE html><html lang="en-US"><head><title>Métodos de análisis de sistemas</title><meta property="og:title" content="Métodos de análisis de sistemas"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}body[data-bespoke-view=""] .bespoke-marp-parent,body[data-bespoke-view=next] .bespoke-marp-parent{inset:0;position:absolute}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;white-space:nowrap;will-change:transform;z-index:1;view-transition-name:__bespoke_marp_transition_osc__}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>*,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>*{margin-left:6px}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>:first-child,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>:first-child{margin-left:0}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}body[data-bespoke-view=""] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc,body[data-bespoke-view=next] .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}body[data-bespoke-view=""] svg.bespoke-marp-slide,body[data-bespoke-view=next] svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+.bespoke-marp-parent{top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent{grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide{height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page .bespoke-marp-presenter-info-page-text{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}}@media print{.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;700&display=swap');@import url('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/monokai.css');div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:2em;margin-block:0.67em}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1280px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;print-color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}div#\:\$p > svg > foreignObject > :where(section):not([\20 root]){font-family:"Outfit", sans-serif;font-weight:200;font-size:20px;padding:calc(var(--marpit-root-font-size, 1rem) * 2.5);background:#181818;color:#ccc}div#\:\$p > svg > foreignObject > :where(section):not([\20 root]){--marpit-root-font-size: 20px}div#\:\$p > svg > foreignObject > section spoiler{color:transparent;text-shadow:none}div#\:\$p > svg > foreignObject > section .bespoke-marp-parent{position:absolute;inset:0;overflow:hidden;aspect-ratio:16/9!important;align-self:center}div#\:\$p > svg > foreignObject > section.cover{background:linear-gradient(to bottom, black, transparent 40% 96%, black 100%), linear-gradient(to right, #000 3%, #000e 15%, #000c 20%, transparent 28%), var(--cover, url(cover.jpg));background-color:black;background-size:auto 765px;background-position:top right;background-repeat:no-repeat}div#\:\$p > svg > foreignObject > section.cover ul{padding-left:5px;list-style:none}div#\:\$p > svg > foreignObject > section.cover li{background:#000c;margin:calc(var(--marpit-root-font-size, 1rem) * 1) 0;padding:calc(var(--marpit-root-font-size, 1rem) * 1);box-shadow:3px 3px 0 #fe704d;max-width:max-content}div#\:\$p > svg > foreignObject > section.cover li:hover{background:#fe704d;cursor:pointer}div#\:\$p > svg > foreignObject > section.cover blockquote{position:absolute;bottom:calc(var(--marpit-root-font-size, 1rem) * 5);right:calc(var(--marpit-root-font-size, 1rem) * 5);padding:calc(var(--marpit-root-font-size, 1rem) * 1);background:#000c}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){color:#fe704d}div#\:\$p > svg > foreignObject > section li{margin:calc(var(--marpit-root-font-size, 1rem) * .5) 0}div#\:\$p > svg > foreignObject > section strong{color:white}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){background:#000;color:white;padding:calc(var(--marpit-root-font-size, 1rem) * 1);margin:0}div#\:\$p > svg > foreignObject > section code{color:gold;text-wrap:auto}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code{color:white}div#\:\$p > svg > foreignObject > section a{color:#3179ed;text-decoration:none}div#\:\$p > svg > foreignObject > section svg[data-marpit-svg]{background:linear-gradient(126deg, indigo, deeppink)}div#\:\$p > svg > foreignObject > section .grid{display:grid;gap:calc(var(--marpit-root-font-size, 1rem) * 1);grid-template-columns:repeat(auto-fit, minmax(300px, 1fr))}div#\:\$p > svg > foreignObject > section:has(steps){position:relative}div#\:\$p > svg > foreignObject > section .step-indicator{position:absolute;top:0;right:0;font-size:0.85em;font-weight:400;padding:calc(var(--marpit-root-font-size, 1rem) * 0.3) calc(var(--marpit-root-font-size, 1rem) * 0.8);background:#fe704d22;color:#fe704d;border-radius:0 0 0 calc(var(--marpit-root-font-size, 1rem) * 0.5);z-index:100;letter-spacing:0.05em;pointer-events:none}div#\:\$p > svg > foreignObject > section section.step-indicator{--marpit-root-font-size: 0.85em}div#\:\$p > svg > foreignObject > section steps{display:block;position:relative}div#\:\$p > svg > foreignObject > section step{display:block}div#\:\$p > svg > foreignObject > section step:not(:first-child){display:none}div#\:\$p > svg > foreignObject > section step[data-marpit-fragment]{display:none}div#\:\$p > svg > foreignObject > section steps:has(> step[data-bespoke-marp-fragment=active])>step:first-child{display:none}div#\:\$p > svg > foreignObject > section step[data-bespoke-marp-fragment=inactive]{visibility:visible!important;display:none!important}div#\:\$p > svg > foreignObject > section step[data-bespoke-marp-fragment=active]{display:block!important;visibility:visible!important}div#\:\$p > svg > foreignObject > section step[data-bespoke-marp-fragment=active]:has(~ step[data-bespoke-marp-fragment=active]){display:none!important}div#\:\$p > svg > foreignObject > section split-slide{--left: 50%;--right: 50%;--font-size: calc(var(--marpit-root-font-size, 1rem) * 1);display:grid;grid-template-columns:var(--left) var(--right);gap:calc(var(--marpit-root-font-size, 1rem) * 1)}div#\:\$p > svg > foreignObject > section split-slide :is(pre, marp-pre){font-size:var(--font-size)}div#\:\$p > svg > foreignObject > section table{--width: 100%;width:var(--width);border-collapse:collapse}div#\:\$p > svg > foreignObject > section th, div#\:\$p > svg > foreignObject > section td{border:1px solid #ddd;padding:8px;text-align:center}div#\:\$p > svg > foreignObject > section a:is([href$=".png"],[href$=".jpg"],[href$=".jpeg"],[href$=".webp"],[href$=".gif"])::before{content:"";display:inline-block;vertical-align:middle;margin-right:calc(var(--marpit-root-font-size, 1rem) * 0.2);width:24px;height:24px;background-size:contain;background-repeat:no-repeat;background-position:center;background-image:url(../assets/icon-img.png)}div#\:\$p > svg > foreignObject > section[data-marpit-scope-5EK2oFuN]{--cover: url(../assets/img_00072_.png);}div#\:\$p > svg > foreignObject > section[data-marpit-scope-CGZ03a5D]{--cover: url(../assets/img_00066_.png);}div#\:\$p > svg > foreignObject > section[data-marpit-scope-anI9tgVl]{--cover: url(../assets/img_00068_.png);}div#\:\$p > svg > foreignObject > section[data-marpit-scope-IgrWGx6L]{--cover: url(../assets/img_00074_.png);}div#\:\$p > svg > foreignObject > section[data-marpit-scope-Ib6Jasqa]{--cover: url(../assets/img_00071_.png);}div#\:\$p > svg > foreignObject > section[data-marpit-scope-49WiATn5]{--cover: url(../assets/img_00076_.png);}div#\:\$p > svg > foreignObject > section[data-marpit-scope-t9co9xpp]{--cover: url(../assets/img_00075_.png);}div#\:\$p > svg > foreignObject > section[data-marpit-scope-a3RQTpHo] ul{font-size:calc(var(--marpit-root-font-size, 1rem) * 0.86)}div#\:\$p > svg > foreignObject > section[data-marpit-scope-a3RQTpHo] ul li{margin-block:0.2em}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
+</style></head><body><div class="bespoke-progress-parent"><div class="bespoke-progress-bar"></div></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-marpit-scope-5EK2oFuN="" data-paginate="true" data-class="cover" data-theme="alo" lang="en-US" class="cover" data-marpit-pagination="1" style="--paginate:true;--class:cover;--theme:alo;" data-marpit-pagination-total="51">
 <h1 id="m%C3%A9todos-de-an%C3%A1lisis-de-sistemas">Métodos de análisis de sistemas</h1>
 <h2 id="contenidos">Contenidos</h2>
 <ul>
@@ -13,10 +13,10 @@
 <p>Curso <strong>Análisis y Diseño de Sistemas</strong> <br />II Semestre 2026</p>
 </blockquote>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="2" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="2" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="%C2%BFd%C3%B3nde-estamos">¿Dónde estamos?</h2>
 <ul>
-<li>En el mazo anterior vimos <strong>qué es un sistema</strong> y <strong>cómo se organiza un proceso de desarrollo</strong></li>
+<li>Anteriormente vimos <strong>qué es un sistema</strong> y <strong>cómo se organiza un proceso de desarrollo</strong></li>
 <li>Ahora nos toca el <strong>cómo</strong>: los métodos concretos con los que una persona analista entiende un problema antes de diseñar la solución</li>
 </ul>
 <div class="grid">
@@ -41,7 +41,7 @@
 <li>Recuerda los niveles de abstracción: vamos del <strong>problema del negocio</strong> hacia la <strong>especificación</strong></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-marpit-scope-sRF7vuvi="" data-paginate="true" data-class="cover" data-theme="alo" lang="en-US" class="cover" data-marpit-pagination="3" style="--paginate:true;--class:cover;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-marpit-scope-CGZ03a5D="" data-paginate="true" data-class="cover" data-theme="alo" lang="en-US" class="cover" data-marpit-pagination="3" style="--paginate:true;--class:cover;--theme:alo;" data-marpit-pagination-total="51">
 <h1 id="desarrollo-de-la-visi%C3%B3n-de-un-sistema">Desarrollo de la visión de un sistema</h1>
 <h2 id="contenidos-1">Contenidos</h2>
 <ul>
@@ -51,7 +51,7 @@
 <li>Personas interesadas, necesidades y características</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="4" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="4" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="%C2%BFpor-qu%C3%A9-empezar-por-la-visi%C3%B3n">¿Por qué empezar por la visión?</h2>
 <steps>
 <step>
@@ -80,7 +80,7 @@
 </step>
 </steps>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="5" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="5" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="el-documento-visi%C3%B3n">El documento Visión</h2>
 <ul>
 <li>Artefacto que <strong>recolecta, analiza y define</strong> las necesidades y características de <strong>alto nivel</strong> del sistema</li>
@@ -109,7 +109,7 @@
 <p>Regla de oro: si al leer una línea sabes <em>cómo</em> se programa, esa línea no va en la visión</p>
 </blockquote>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="6" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="6" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="estructura-del-documento-visi%C3%B3n">Estructura del documento Visión</h2>
 <table>
 <thead>
@@ -148,10 +148,10 @@
 </tbody>
 </table>
 <ul>
-<li>Es la <strong>plantilla del curso</strong> (basada en RUP): la vas a usar en el proyecto del semestre</li>
+<li>Aqui puedes ver una <strong><a href="https://drive.google.com/file/d/1tigftrEoIYBCDlJpwU3vqOfHF4wayamV/view">plantilla</a></strong></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="7" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="7" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="oportunidad-de-negocio">Oportunidad de negocio</h2>
 <ul>
 <li>Describe <strong>brevemente</strong> la oportunidad que este proyecto atiende</li>
@@ -174,7 +174,7 @@
 </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="8" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="8" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="sentencia-del-problema">Sentencia del problema</h2>
 <ul>
 <li>Formato de la plantilla → obliga a separar <strong>problema</strong>, <strong>afectados</strong>, <strong>impacto</strong> y <strong>beneficio</strong></li>
@@ -209,7 +209,7 @@
 <li>Fíjate que <strong>nunca</strong> se menciona el sistema propuesto: solo el problema</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="9" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="9" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="sentencia-del-problema-ejemplo">Sentencia del problema: ejemplo</h2>
 <table>
 <thead>
@@ -241,7 +241,7 @@
 <li><img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f4a1.svg" data-marp-twemoji=""/> Escribir esto <strong>antes</strong> de proponer tecnología evita enamorarse de la solución equivocada</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="10" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="10" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="declaraci%C3%B3n-de-posici%C3%B3n-del-producto">Declaración de posición del producto</h2>
 <ul>
 <li>Complemento clásico de RUP: un <strong>párrafo</strong> que cualquiera del equipo pueda repetir de memoria</li>
@@ -267,7 +267,7 @@
 </div>
 </split-slide>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="11" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="11" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="resumen-de-personas-interesadas">Resumen de personas interesadas</h2>
 <ul>
 <li>No todas las personas interesadas son <strong>usuarias</strong>: algunas <strong>financian</strong>, <strong>aprueban</strong> o <strong>auditan</strong></li>
@@ -312,7 +312,7 @@
 <li><img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/26a0.svg" data-marp-twemoji=""/> Olvidar una persona interesada es la causa más común de <spoiler>requerimientos que aparecen tarde y rompen el diseño</spoiler></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="12" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="12" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="necesidades-y-caracter%C3%ADsticas">Necesidades y características</h2>
 <ul>
 <li>Cada <strong>necesidad</strong> (STR) es del negocio; cada <strong>característica</strong> (FEA) es una capacidad del producto que la atiende</li>
@@ -351,7 +351,7 @@
 <li>La <strong>prioridad</strong> (<em>Alta / Media / Baja</em>) y la versión planeada permiten <strong>negociar alcance</strong> más adelante</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="13" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="13" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="restricciones-y-atributos-de-calidad">Restricciones y atributos de calidad</h2>
 <split-slide style="--left: 50%; --right: 50%;">
 <div>
@@ -379,7 +379,7 @@
 <p>Un atributo de calidad sin <strong>número</strong> no es verificable: «debe ser rápido» no es un requerimiento</p>
 </blockquote>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="14" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="14" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="errores-comunes-al-escribir-la-visi%C3%B3n">Errores comunes al escribir la visión</h2>
 <steps>
 <step>
@@ -402,7 +402,7 @@
 </step>
 </steps>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="15" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="15" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="actividad-1-escribe-una-visi%C3%B3n">Actividad 1: escribe una visión</h2>
 <ul>
 <li>En grupos, tomen un sistema que conozcan (Ematrícula, la soda de la U, la biblioteca...) y redacten:</li>
@@ -433,7 +433,7 @@
 <li><img class="emoji" draggable="false" alt="⏱️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/23f1.svg" data-marp-twemoji=""/> 20 minutos · Al final, intercambien con otro grupo y busquen <strong>diseño colado</strong> en la visión ajena</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-scope-TtztDzmt="" data-paginate="true" data-class="cover" data-theme="alo" lang="en-US" class="cover" data-marpit-pagination="16" style="--paginate:true;--class:cover;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-marpit-scope-anI9tgVl="" data-paginate="true" data-class="cover" data-theme="alo" lang="en-US" class="cover" data-marpit-pagination="16" style="--paginate:true;--class:cover;--theme:alo;" data-marpit-pagination-total="51">
 <h1 id="an%C3%A1lisis-de-sistemas">Análisis de sistemas</h1>
 <h2 id="contenidos-2">Contenidos</h2>
 <ul>
@@ -443,7 +443,7 @@
 <li>Notación informal y ejemplos</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="17" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="17" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="%C2%BFqu%C3%A9-es-el-an%C3%A1lisis-de-sistemas">¿Qué es el análisis de sistemas?</h2>
 <ul>
 <li>Técnica de <strong>resolución de problemas</strong> que <em>descompone</em> un sistema en sus partes, con el propósito de estudiar <strong>qué tan bien funcionan e interactúan</strong> esas partes para cumplir su propósito</li>
@@ -480,7 +480,7 @@
 </step>
 </steps>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="18" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="18" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="an%C3%A1lisis-vs-dise%C3%B1o">Análisis vs. diseño</h2>
 <split-slide style="--left: 50%; --right: 50%;">
 <div>
@@ -508,7 +508,7 @@
 <li>Síntoma típico: el equipo discute el <em>framework</em> antes de saber quién usa el sistema</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="19" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="19" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="%C2%BFqu%C3%A9-produce-el-an%C3%A1lisis">¿Qué produce el análisis?</h2>
 <ul>
 <li>El análisis no produce código: produce <strong>modelos y acuerdos</strong></li>
@@ -555,7 +555,7 @@
 <li>Todos son <strong>niveles de abstracción</strong> del mismo problema, y entre ellos hay <strong>trazabilidad</strong></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-marpit-scope-KG2SWMjB="" data-paginate="true" data-class="cover" data-theme="alo" lang="en-US" class="cover" data-marpit-pagination="20" style="--paginate:true;--class:cover;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-marpit-scope-IgrWGx6L="" data-paginate="true" data-class="cover" data-theme="alo" lang="en-US" class="cover" data-marpit-pagination="20" style="--paginate:true;--class:cover;--theme:alo;" data-marpit-pagination-total="51">
 <h1 id="diagrama-de-contexto-del-sistema">Diagrama de contexto del sistema</h1>
 <h2 id="contenidos-3">Contenidos</h2>
 <ul>
@@ -564,7 +564,7 @@
 <li>Ejemplos y errores comunes</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="21" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="21" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="diagrama-de-contexto-del-sistema-dcs">Diagrama de Contexto del Sistema (DCS)</h2>
 <ul>
 <li>De acuerdo con Clements et al. (2011) y Valacich &amp; George (2017):</li>
@@ -586,14 +586,14 @@
 <li>Es la respuesta gráfica a la pregunta: <strong>¿qué es parte de mi sistema y qué no lo es?</strong></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="22" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="22" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="ejemplo-sistema-de-toma-de-%C3%B3rdenes">Ejemplo: sistema de toma de órdenes</h2>
 <p><a href="../assets/ads-dcs-hoosier.png"><img src="../assets/ads-dcs-hoosier.png" alt="" style="height:400px;" /></a></p>
 <blockquote>
 <p>Diagrama de contexto del sistema de toma de órdenes de comida de <em>Hoosier Burger's</em>. Tomado de Valacich &amp; George (2017)</p>
 </blockquote>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="23" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="23" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="contenidos-de-un-diagrama-de-contexto">Contenidos de un diagrama de contexto</h2>
 <div class="grid">
 <div>
@@ -617,7 +617,7 @@
 <li><img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f4a1.svg" data-marp-twemoji=""/> Un solo nivel, una sola página: si necesitas más, ya estás <strong>descomponiendo</strong> (eso es un DFD nivel 0)</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="24" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="24" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="%C2%BFpara-qu%C3%A9-sirve-un-diagrama-de-contexto">¿Para qué sirve un diagrama de contexto?</h2>
 <steps>
 <step>
@@ -653,35 +653,35 @@
 </step>
 </steps>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="25" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="25" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="notaci%C3%B3n-informal-1-de-4-control-automotor">Notación informal (1 de 4): control automotor</h2>
 <p><a href="../assets/ads-dcs-informal-auto.png"><img src="../assets/ads-dcs-informal-auto.png" alt="" style="height:420px;" /></a></p>
 <blockquote>
 <p>El sistema de software cuyo contexto se define reside en <strong>«el ECU»</strong>, la caja etiquetada del lado izquierdo</p>
 </blockquote>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="26" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="26" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="notaci%C3%B3n-informal-2-de-4-sistema-de-compras-home">Notación informal (2 de 4): sistema de compras HOME</h2>
 <p><a href="../assets/ads-dcs-informal-home.png"><img src="../assets/ads-dcs-informal-home.png" alt="" style="height:400px;" /></a></p>
 <ul>
 <li>Aquí las entidades externas son de <strong>tres tipos</strong>: personas, sistemas y dispositivos (el kiosco en tienda)</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="27" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="27" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="notaci%C3%B3n-informal-3-de-4-aplicaci%C3%B3n-bancaria">Notación informal (3 de 4): aplicación bancaria</h2>
 <p><a href="../assets/ads-dcs-informal-banco.png"><img src="../assets/ads-dcs-informal-banco.png" alt="" style="height:430px;" /></a></p>
 <ul>
 <li><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/2753.svg" data-marp-twemoji=""/> ¿Cuántas <strong>integraciones</strong> tendría que construir el equipo de este sistema?</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="28" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="28" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="notaci%C3%B3n-informal-4-de-4-notaci%C3%B3n-gane-sarson">Notación informal (4 de 4): notación Gane-Sarson</h2>
 <p><a href="../assets/ads-dcs-clements-cc.png"><img src="../assets/ads-dcs-clements-cc.png" alt="" style="height:420px;" /></a></p>
 <blockquote>
 <p>Diagrama de contexto de C&amp;C. Tomado de Clements et al. (2011) — nótese la <strong>leyenda de notación</strong></p>
 </blockquote>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="29" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="29" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="errores-comunes-en-un-diagrama-de-contexto">Errores comunes en un diagrama de contexto</h2>
 <div class="grid">
 <div>
@@ -710,36 +710,7 @@
 </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="30" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
-<h2 id="actividad-2-construye-un-diagrama-de-contexto">Actividad 2: construye un diagrama de contexto</h2>
-<ul>
-<li>Retomen el sistema de la Actividad 1 y dibujen su diagrama de contexto</li>
-</ul>
-<split-slide style="--left: 50%; --right: 50%;">
-<div>
-<h3 id="pasos">Pasos</h3>
-<ol>
-<li>Nombren el <strong>sistema</strong> y dibújenlo como una caja</li>
-<li>Listen las <strong>entidades externas</strong>: personas, sistemas, dispositivos</li>
-<li>Dibujen y <strong>etiqueten</strong> cada flujo de información</li>
-<li>Agreguen una <strong>leyenda</strong> de notación</li>
-</ol>
-</div>
-<div>
-<h3 id="preguntas-de-control">Preguntas de control</h3>
-<ul>
-<li>¿Alguna entidad externa es en realidad <strong>parte</strong> del sistema?</li>
-<li>¿Hay flujos <strong>sin etiqueta</strong>?</li>
-<li>¿Cuántas integraciones implica el diagrama?</li>
-<li>¿Qué quedó <strong>fuera</strong> a propósito?</li>
-</ul>
-</div>
-</split-slide>
-<ul>
-<li><img class="emoji" draggable="false" alt="⏱️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/23f1.svg" data-marp-twemoji=""/> 15 minutos · Compárenlo con la sentencia del problema: <strong>¿son consistentes?</strong></li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-marpit-scope-bILVdBdz="" data-paginate="true" data-class="cover" data-theme="alo" lang="en-US" class="cover" data-marpit-pagination="31" style="--paginate:true;--class:cover;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="30" data-marpit-scope-Ib6Jasqa="" data-paginate="true" data-class="cover" data-theme="alo" lang="en-US" class="cover" data-marpit-pagination="30" style="--paginate:true;--class:cover;--theme:alo;" data-marpit-pagination-total="51">
 <h1 id="fases-del-an%C3%A1lisis-de-sistemas">Fases del análisis de sistemas</h1>
 <h2 id="contenidos-4">Contenidos</h2>
 <ul>
@@ -749,7 +720,7 @@
 <li>Técnicas de recolección</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="32" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="31" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="31" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="%C2%BFd%C3%B3nde-vive-el-an%C3%A1lisis-en-el-ciclo-de-vida">¿Dónde vive el análisis en el ciclo de vida?</h2>
 <split-slide style="--left: 45%; --right: 55%;">
 <p><img src="../assets/ads-sdlc-fases.jpg" alt="contain" style="width:520px;" /></p>
@@ -770,7 +741,7 @@
 </div>
 </split-slide>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="33" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="32" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="32" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="las-cinco-fases-del-an%C3%A1lisis-de-sistemas">Las cinco fases del análisis de sistemas</h2>
 <table>
 <thead>
@@ -819,7 +790,7 @@
 <li><img class="emoji" draggable="false" alt="🔁" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f501.svg" data-marp-twemoji=""/> No son estrictamente secuenciales: en un proceso iterativo se recorren <strong>varias veces</strong></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="34" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="33" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="33" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="fase-1-definici%C3%B3n-del-alcance">Fase 1: Definición del alcance</h2>
 <split-slide style="--left: 50%; --right: 50%;">
 <div>
@@ -849,7 +820,7 @@
 <li><img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/26a0.svg" data-marp-twemoji=""/> Es la fase más corta y la que más proyectos salva: cancelar temprano es <strong>barato</strong></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="35" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="34" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="34" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="fase-2-an%C3%A1lisis-del-problema">Fase 2: Análisis del problema</h2>
 <steps>
 <step>
@@ -898,7 +869,7 @@
 </step>
 </steps>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="36" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="35" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="35" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="fase-3-an%C3%A1lisis-de-requerimientos">Fase 3: Análisis de requerimientos</h2>
 <split-slide style="--left: 50%; --right: 50%;">
 <div>
@@ -926,7 +897,7 @@
 <li><strong>Salida</strong> → enunciado de requerimientos del negocio, con prioridades</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="37" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="36" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="36" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="t%C3%A9cnicas-de-recolecci%C3%B3n-de-requerimientos">Técnicas de recolección de requerimientos</h2>
 <div class="grid">
 <div>
@@ -958,7 +929,7 @@
 <li><img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f4a1.svg" data-marp-twemoji=""/> Ninguna técnica basta sola: se <strong>combinan</strong> y se <strong>triangulan</strong> los resultados</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="38" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="37" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="fase-4-dise%C3%B1o-l%C3%B3gico">Fase 4: Diseño lógico</h2>
 <split-slide style="--left: 50%; --right: 50%;">
 <div>
@@ -993,7 +964,7 @@
 <li><strong>Salida</strong> → modelos lógicos del sistema</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="39" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="38" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="fase-5-an%C3%A1lisis-de-decisi%C3%B3n">Fase 5: Análisis de decisión</h2>
 <steps>
 <step>
@@ -1031,7 +1002,7 @@
 </step>
 </steps>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="40" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="39" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="otra-forma-de-agrupar-las-fases">Otra forma de agrupar las fases</h2>
 <ul>
 <li>Valacich &amp; George agrupan el análisis en <strong>tres sub-fases</strong>; es la misma historia contada más grueso</li>
@@ -1073,7 +1044,7 @@
 </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-marpit-scope-1qtcA7y2="" data-paginate="true" data-class="cover" data-theme="alo" lang="en-US" class="cover" data-marpit-pagination="41" style="--paginate:true;--class:cover;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="40" data-marpit-scope-49WiATn5="" data-paginate="true" data-class="cover" data-theme="alo" lang="en-US" class="cover" data-marpit-pagination="40" style="--paginate:true;--class:cover;--theme:alo;" data-marpit-pagination-total="51">
 <h1 id="factibilidad-del-sistema">Factibilidad del sistema</h1>
 <h2 id="contenidos-5">Contenidos</h2>
 <ul>
@@ -1083,7 +1054,7 @@
 <li>El reporte de factibilidad</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="42" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="41" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="41" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="%C2%BFqu%C3%A9-es-la-factibilidad">¿Qué es la factibilidad?</h2>
 <ul>
 <li>Medida de qué tan <strong>beneficioso</strong> o <strong>práctico</strong> resulta desarrollar un sistema de información para la organización</li>
@@ -1137,7 +1108,7 @@
 </step>
 </steps>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="43" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="42" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="42" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="los-seis-tipos-de-factibilidad">Los seis tipos de factibilidad</h2>
 <div class="grid">
 <div>
@@ -1172,7 +1143,7 @@
 <li><img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/26a0.svg" data-marp-twemoji=""/> Un proyecto puede ser <strong>técnicamente perfecto</strong> y fracasar por factibilidad <strong>política</strong> u <strong>operacional</strong></li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="44" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="43" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="43" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="factibilidad-econ%C3%B3mica-los-costos">Factibilidad económica: los costos</h2>
 <ul>
 <li>Se hace un <strong>análisis costo-beneficio</strong>. Primero, identificar y clasificar los costos</li>
@@ -1214,7 +1185,7 @@
 <li><img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/26a0.svg" data-marp-twemoji=""/> El error más común: estimar solo el <strong>desarrollo</strong> y olvidar los costos <strong>recurrentes</strong>, que suelen ser mayores en el ciclo de vida completo</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="45" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="44" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="44" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="factibilidad-econ%C3%B3mica-los-beneficios">Factibilidad económica: los beneficios</h2>
 <split-slide style="--left: 50%; --right: 50%;">
 <div>
@@ -1246,7 +1217,7 @@
 </li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="46" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="45" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="45" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="t%C3%A9cnicas-de-evaluaci%C3%B3n-econ%C3%B3mica">Técnicas de evaluación económica</h2>
 <table>
 <thead>
@@ -1290,7 +1261,7 @@
 </div>
 </div>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="47" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="46" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="46" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="factibilidad-t%C3%A9cnica-es-an%C3%A1lisis-de-riesgo">Factibilidad técnica: es análisis de riesgo</h2>
 <ul>
 <li>La pregunta real no es «¿existe la tecnología?» sino «¿qué tan <strong>riesgoso</strong> es que <em>nosotros</em> lo construyamos?»</li>
@@ -1330,7 +1301,7 @@
 <li><img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f4a1.svg" data-marp-twemoji=""/> Alto riesgo <strong>no</strong> significa cancelar: significa <strong>gestionarlo</strong> → prototipos, iteraciones cortas, capacitación, consultoría externa</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="48" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="47" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="47" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="operacional-de-calendario-legal-y-pol%C3%ADtica">Operacional, de calendario, legal y política</h2>
 <steps>
 <step>
@@ -1378,7 +1349,7 @@
 </step>
 </steps>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="49" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="48" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="48" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="el-reporte-de-factibilidad">El reporte de factibilidad</h2>
 <ul>
 <li>Es la <strong>salida</strong> del análisis y la base de la decisión gerencial de <strong>proceder o no</strong></li>
@@ -1440,36 +1411,7 @@
 </div>
 </split-slide>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="50" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
-<h2 id="actividad-3-eval%C3%BAa-la-factibilidad">Actividad 3: evalúa la factibilidad</h2>
-<ul>
-<li>Con el sistema de las actividades anteriores, y en <strong>10 minutos</strong> por punto:</li>
-</ul>
-<div class="grid">
-<div>
-<h3 id="1%EF%B8%8F%E2%83%A3-tres-candidatas"><img class="emoji" draggable="false" alt="1️⃣" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/31-20e3.svg" data-marp-twemoji=""/> Tres candidatas</h3>
-<p>Definan <strong>construir</strong>, <strong>comprar</strong> y <strong>no hacer nada</strong> para su caso</p>
-</div>
-<div>
-<h3 id="2%EF%B8%8F%E2%83%A3-seis-factibilidades"><img class="emoji" draggable="false" alt="2️⃣" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/32-20e3.svg" data-marp-twemoji=""/> Seis factibilidades</h3>
-<p>Califiquen cada candidata (<em>Alta / Media / Baja</em>) y <strong>justifiquen</strong> en una línea</p>
-</div>
-<div>
-<h3 id="3%EF%B8%8F%E2%83%A3-recomendaci%C3%B3n"><img class="emoji" draggable="false" alt="3️⃣" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/33-20e3.svg" data-marp-twemoji=""/> Recomendación</h3>
-<p>Escojan una y expliquen <strong>por qué</strong>, no solo cuál</p>
-</div>
-</div>
-<ul>
-<li><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/2753.svg" data-marp-twemoji=""/> Preguntas para la discusión:
-<ul>
-<li>¿Cuál factibilidad fue la <strong>más difícil</strong> de estimar? ¿Por qué?</li>
-<li>¿Alguna candidata falló por una razón <strong>no técnica</strong>?</li>
-<li>¿Qué información les <strong>hizo falta</strong> para decidir con confianza?</li>
-</ul>
-</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51" data-marpit-scope-S10noo0r="" data-paginate="true" data-class="cover" data-theme="alo" lang="en-US" class="cover" data-marpit-pagination="51" style="--paginate:true;--class:cover;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="49" data-marpit-scope-t9co9xpp="" data-paginate="true" data-class="cover" data-theme="alo" lang="en-US" class="cover" data-marpit-pagination="49" style="--paginate:true;--class:cover;--theme:alo;" data-marpit-pagination-total="51">
 <h1 id="modelado-de-negocio">Modelado de negocio</h1>
 <h2 id="contenidos-6">Contenidos</h2>
 <ul>
@@ -1479,539 +1421,8 @@
 <li>Análisis del negocio y ejemplos</li>
 </ul>
 </section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="52" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="52" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
-<h2 id="%C2%BFqu%C3%A9-es-un-proceso-de-negocio">¿Qué es un proceso de negocio?</h2>
-<steps>
-<step>
-<blockquote>
-<p><strong>Davenport</strong>: «un proceso es un orden específico de actividades a través del tiempo y lugar, con un comienzo y fin, <em>inputs</em> y <em>outputs</em>: una <strong>estructura para la acción</strong>»</p>
-</blockquote>
-<br />
-<blockquote>
-<p><strong>Hammer &amp; Champy</strong>: «un proceso de negocio es un conjunto de actividades que toman uno o más tipos de <em>inputs</em> y crean un <em>output</em> que es el <strong>valor para un cliente</strong>»</p>
-</blockquote>
-</step>
-<step>
-<h3 id="lo-que-ambas-definiciones-comparten">Lo que ambas definiciones comparten</h3>
-<div class="grid">
-<div>
-<h3 id="%F0%9F%94%84-actividades-ordenadas"><img class="emoji" draggable="false" alt="🔄" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f504.svg" data-marp-twemoji=""/> Actividades ordenadas</h3>
-<p>Hay una <strong>secuencia</strong>, no un conjunto suelto de tareas</p>
-</div>
-<div>
-<h3 id="%F0%9F%9A%A6-inicio-y-fin"><img class="emoji" draggable="false" alt="🚦" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f6a6.svg" data-marp-twemoji=""/> Inicio y fin</h3>
-<p>El proceso tiene <strong>límites</strong> identificables</p>
-</div>
-<div>
-<h3 id="%E2%AC%85%EF%B8%8F%E2%9E%A1%EF%B8%8F-entradas-y-salidas"><img class="emoji" draggable="false" alt="⬅️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/2b05.svg" data-marp-twemoji=""/><img class="emoji" draggable="false" alt="➡️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/27a1.svg" data-marp-twemoji=""/> Entradas y salidas</h3>
-<p>Transforma algo en algo → igual que un <strong>sistema</strong></p>
-</div>
-<div>
-<h3 id="%F0%9F%8E%AF-valor-para-un-cliente"><img class="emoji" draggable="false" alt="🎯" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f3af.svg" data-marp-twemoji=""/> Valor para un cliente</h3>
-<p>Existe para <strong>alguien</strong>, dentro o fuera de la organización</p>
-</div>
-</div>
-</step>
-</steps>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="53" data-marpit-scope-NTMLVxvy="" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="53" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
-<h2 id="ejemplo-proceso-de-atenci%C3%B3n-de-un-pedido">Ejemplo: proceso de atención de un pedido</h2>
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Área</th>
-<th style="text-align:left">1</th>
-<th style="text-align:left">2</th>
-<th style="text-align:left">3</th>
-<th style="text-align:left">4</th>
-<th style="text-align:left">5</th>
-<th style="text-align:left">6</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><strong>Ventas</strong></td>
-<td style="text-align:left">Recibir pedido</td>
-<td style="text-align:left">Iniciar trámite</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Contabilidad</strong></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left">Verificar crédito</td>
-<td style="text-align:left"></td>
-<td style="text-align:left">Facturar pedido</td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Manufactura</strong></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-<td style="text-align:left">Producir pedido</td>
-<td style="text-align:left"></td>
-<td style="text-align:left">Enviar pedido</td>
-</tr>
-</tbody>
-</table>
-<div class="grid">
-<div>
-<h3 id="%F0%9F%94%80-el-proceso-cruza-las-%C3%A1reas"><img class="emoji" draggable="false" alt="🔀" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f500.svg" data-marp-twemoji=""/> El proceso <strong>cruza</strong> las áreas</h3>
-<p>Ninguna unidad lo controla de principio a fin</p>
-</div>
-<div>
-<h3 id="%E2%9A%A0%EF%B8%8F-ah%C3%AD-est%C3%A1n-los-problemas"><img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/26a0.svg" data-marp-twemoji=""/> Ahí están los problemas</h3>
-<p>Los <strong>retrasos y errores</strong> aparecen en los <strong>traspasos</strong> entre áreas</p>
-</div>
-</div>
-<ul>
-<li><img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f4a1.svg" data-marp-twemoji=""/> Por eso los organigramas no sirven para entender un negocio: hay que mirar los <strong>procesos</strong></li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="54" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="54" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
-<h2 id="ejemplos-de-procesos-de-negocio">Ejemplos de procesos de negocio</h2>
-<div class="grid">
-<div>
-<h3 id="%F0%9F%8E%93-proceso-de-admisi%C3%B3n"><img class="emoji" draggable="false" alt="🎓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f393.svg" data-marp-twemoji=""/> Proceso de admisión</h3>
-</div>
-<div>
-<h3 id="%F0%9F%93%9D-proceso-de-matr%C3%ADcula"><img class="emoji" draggable="false" alt="📝" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f4dd.svg" data-marp-twemoji=""/> Proceso de matrícula</h3>
-</div>
-<div>
-<h3 id="%F0%9F%91%94-proceso-de-contrataci%C3%B3n-de-personal"><img class="emoji" draggable="false" alt="👔" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f454.svg" data-marp-twemoji=""/> Proceso de contratación de personal</h3>
-</div>
-<div>
-<h3 id="%F0%9F%94%A7-solicitar-mantenimiento-de-equipos"><img class="emoji" draggable="false" alt="🔧" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f527.svg" data-marp-twemoji=""/> Solicitar mantenimiento de equipos</h3>
-</div>
-<div>
-<h3 id="%F0%9F%9B%92-vender-un-producto"><img class="emoji" draggable="false" alt="🛒" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f6d2.svg" data-marp-twemoji=""/> Vender un producto</h3>
-</div>
-<div>
-<h3 id="%F0%9F%93%A6-comprar-materia-prima"><img class="emoji" draggable="false" alt="📦" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f4e6.svg" data-marp-twemoji=""/> Comprar materia prima</h3>
-</div>
-<div>
-<h3 id="%F0%9F%8F%A6-otorgar-pr%C3%A9stamo-bancario"><img class="emoji" draggable="false" alt="🏦" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f3e6.svg" data-marp-twemoji=""/> Otorgar préstamo bancario</h3>
-</div>
-</div>
-<ul>
-<li><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/2753.svg" data-marp-twemoji=""/> Fíjate en el patrón de los nombres: <strong>verbo + objeto</strong>. Un proceso <em>hace</em> algo</li>
-<li><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/2753.svg" data-marp-twemoji=""/> ¿Cuál de estos procesos <strong>cruza</strong> más áreas de la organización?</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="55" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="55" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
-<h2 id="clases-de-procesos-de-negocio">Clases de procesos de negocio</h2>
-<div class="grid">
-<div>
-<h3 id="%E2%AD%90-procesos-principales"><img class="emoji" draggable="false" alt="⭐" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/2b50.svg" data-marp-twemoji=""/> Procesos principales</h3>
-<p>Generan <strong>valor directo</strong> para el cliente externo</p>
-<p><em>Ejemplo:</em> vender producto, atender un pedido</p>
-</div>
-<div>
-<h3 id="%F0%9F%9B%A0%EF%B8%8F-procesos-de-soporte"><img class="emoji" draggable="false" alt="🛠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f6e0.svg" data-marp-twemoji=""/> Procesos de soporte</h3>
-<p>Habilitan a los principales; su cliente es <strong>interno</strong></p>
-<p><em>Ejemplo:</em> desarrollo de personal, compras, TI</p>
-</div>
-<div>
-<h3 id="%F0%9F%A7%AD-procesos-de-gesti%C3%B3n"><img class="emoji" draggable="false" alt="🧭" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f9ed.svg" data-marp-twemoji=""/> Procesos de gestión</h3>
-<p><strong>Planifican, controlan y deciden</strong> sobre los demás</p>
-<p><em>Ejemplo:</em> planificación, presupuesto, auditoría</p>
-</div>
-</div>
-<ul>
-<li><img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f4a1.svg" data-marp-twemoji=""/> Para el análisis importa la distinción: los procesos <strong>principales</strong> son los que justifican el sistema, y los de <strong>gestión</strong> los que definen qué reportes hacen falta</li>
-<li><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/2753.svg" data-marp-twemoji=""/> En tu sistema de las actividades anteriores, ¿cuál proceso principal atiende?</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="56" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="56" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
-<h2 id="modelado-del-negocio">Modelado del negocio</h2>
-<ul>
-<li>Es una <strong>técnica</strong> para representar los procesos del negocio</li>
-<li>Permite asegurar que se construirá el sistema <strong>en el contexto de las necesidades de la empresa</strong></li>
-</ul>
-<split-slide style="--left: 50%; --right: 50%;">
-<div>
-<h3 id="el-contexto-est%C3%A1-dado-por">El contexto está dado por</h3>
-<ul>
-<li>El <strong>ambiente</strong> en que el sistema trabajará</li>
-<li>Los <strong>roles y responsabilidades</strong> de los empleados que usarán el sistema</li>
-<li>Las <strong>«cosas»</strong> que son manejadas en el negocio</li>
-</ul>
-</div>
-<div>
-<h3 id="%C2%BFpor-qu%C3%A9-hacerlo-antes-del-sistema">¿Por qué hacerlo antes del sistema?</h3>
-<ul>
-<li>El sistema <strong>no</strong> reemplaza el proceso: lo <strong>soporta</strong></li>
-<li>Si no entiendes el proceso, automatizas el <strong>desorden</strong> existente</li>
-<li>Los actores y entidades del negocio se convierten después en los <strong>actores</strong> y el <strong>modelo de dominio</strong> del sistema</li>
-</ul>
-</div>
-</split-slide>
-<blockquote>
-<p>Un sistema que ignora el proceso de negocio se usa una semana y se abandona</p>
-</blockquote>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="57" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="57" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
-<h2 id="dos-perspectivas-del-modelado-del-negocio">Dos perspectivas del modelado del negocio</h2>
-<div class="grid">
-<div>
-<h3 id="%F0%9F%8C%8D-perspectiva-externa"><img class="emoji" draggable="false" alt="🌍" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f30d.svg" data-marp-twemoji=""/> Perspectiva externa</h3>
-<h3 id="modelo-de-casos-de-uso-del-negocio">Modelo de <strong>casos de uso del negocio</strong></h3>
-<p>Qué hace la empresa <strong>vista desde afuera</strong></p>
-<ul>
-<li><strong>Actores</strong> del negocio</li>
-<li><strong>Casos de uso</strong> del negocio (los procesos)</li>
-<li>Metas del negocio</li>
-</ul>
-<p><em>«¿Qué le ofrece la empresa a su entorno?»</em></p>
-</div>
-<div>
-<h3 id="%F0%9F%8F%A0-perspectiva-interna"><img class="emoji" draggable="false" alt="🏠" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f3e0.svg" data-marp-twemoji=""/> Perspectiva interna</h3>
-<h3 id="modelo-de-an%C3%A1lisis-del-negocio">Modelo de <strong>análisis del negocio</strong></h3>
-<p><strong>Cómo</strong> lo logra por dentro</p>
-<ul>
-<li><strong>Trabajadores</strong> del negocio</li>
-<li><strong>Entidades</strong> del negocio</li>
-<li><strong>Realizaciones</strong> de los casos de uso</li>
-</ul>
-<p><em>«¿Cómo hace la empresa lo que ofrece?»</em></p>
-</div>
-</div>
-<ul>
-<li>Es la misma distinción <strong>caja negra / caja blanca</strong> del diagrama de contexto, aplicada al <strong>negocio</strong> en vez del sistema</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="58" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="58" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
-<h2 id="modelo-de-casos-de-uso-del-negocio-1">Modelo de casos de uso del negocio</h2>
-<ul>
-<li>Es una <strong>representación de la forma en que la empresa interactúa con su entorno</strong></li>
-<li>Provee una <strong>visión general</strong> de lo que la empresa hace: incluye metas, actores y casos de uso de negocio</li>
-</ul>
-<split-slide style="--left: 50%; --right: 50%;">
-<div>
-<h3 id="%F0%9F%A7%91-actor-de-negocio"><img class="emoji" draggable="false" alt="🧑" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f9d1.svg" data-marp-twemoji=""/> Actor de negocio</h3>
-<p>Representa un <strong>rol</strong> que desempeña alguien o algo <strong>en relación</strong> al negocio</p>
-<p>→ Es <strong>externo</strong> al negocio</p>
-<p><em>Ejemplos:</em> Cliente, Proveedor, Banco, Ministerio</p>
-</div>
-<div>
-<h3 id="%F0%9F%A5%9A-caso-de-uso-de-negocio"><img class="emoji" draggable="false" alt="🥚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f95a.svg" data-marp-twemoji=""/> Caso de uso de negocio</h3>
-<p><strong>Acciones o actividades</strong> para producir un resultado</p>
-<p>→ Es un <strong>proceso de negocio</strong></p>
-<p><em>Ejemplos:</em> Registrar pedido, Fabricar producto, Comprar materia prima</p>
-</div>
-</split-slide>
-<ul>
-<li><img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/26a0.svg" data-marp-twemoji=""/> Un empleado <strong>no</strong> es actor de negocio: está <strong>dentro</strong> del negocio → es un <strong>trabajador</strong></li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="59" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="59" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
-<h2 id="modelo-de-casos-de-uso-del-negocio-ejemplo">Modelo de casos de uso del negocio: ejemplo</h2>
-<p><a href="../assets/ads-cun-ejemplo.png"><img src="../assets/ads-cun-ejemplo.png" alt="" style="height:430px;" /></a></p>
-<ul>
-<li><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/2753.svg" data-marp-twemoji=""/> ¿Por qué <em>Facturación</em> aparece <strong>sin conexión</strong> al actor Cliente? ¿Está bien o falta algo?</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="60" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="60" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
-<h2 id="modelo-de-an%C3%A1lisis-del-negocio-1">Modelo de análisis del negocio</h2>
-<ul>
-<li>Describe la <strong>realización</strong> de los casos de uso del negocio, mediante la <strong>interacción</strong> de los trabajadores del negocio (empleados) y las <strong>entidades</strong> (información) del negocio</li>
-<li>Es una <strong>abstracción</strong> de <strong>cómo</strong> los trabajadores hacen las actividades</li>
-</ul>
-<steps>
-<step>
-<h3 id="elementos">Elementos</h3>
-<div class="grid">
-<div>
-<h3 id="%F0%9F%91%B7-trabajador-de-negocio"><img class="emoji" draggable="false" alt="👷" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f477.svg" data-marp-twemoji=""/> Trabajador de negocio</h3>
-<p>Abstracción de una <strong>persona o sistema</strong> que representa un rol <strong>dentro</strong> de la realización de un CUN</p>
-<p><em>Roles internos:</em> Empleado de ventas, Jefe técnico</p>
-</div>
-<div>
-<h3 id="%F0%9F%93%84-entidad-de-negocio"><img class="emoji" draggable="false" alt="📄" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f4c4.svg" data-marp-twemoji=""/> Entidad de negocio</h3>
-<p>Pieza de información <strong>persistente</strong>, manipulada por actores y trabajadores</p>
-<p><em>Ejemplos:</em> Factura, Proforma, Pedido, Catálogo</p>
-</div>
-<div>
-<h3 id="%F0%9F%94%97-realizaci%C3%B3n-de-cun"><img class="emoji" draggable="false" alt="🔗" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f517.svg" data-marp-twemoji=""/> Realización de CUN</h3>
-<p>La representación de <strong>cómo</strong> se va a detallar el caso de uso del negocio</p>
-<p><em>Se documenta con:</em> diagrama de actividades, de secuencia o de colaboración</p>
-</div>
-</div>
-</step>
-<step>
-<h3 id="c%C3%B3mo-se-conectan-con-el-sistema">Cómo se conectan con el sistema</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Elemento del negocio</th>
-<th style="text-align:left">Se convierte en...</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><strong>Actor</strong> de negocio</td>
-<td style="text-align:left">Actor del sistema (si interactúa con él)</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Trabajador</strong> de negocio</td>
-<td style="text-align:left">Actor del sistema · Rol de seguridad</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Entidad</strong> de negocio</td>
-<td style="text-align:left">Clase del <strong>modelo de dominio</strong> · Entidad de datos</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Caso de uso</strong> de negocio</td>
-<td style="text-align:left">Uno o varios <strong>casos de uso del sistema</strong></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f4a1.svg" data-marp-twemoji=""/> Aquí se ve la <strong>trazabilidad</strong>: el modelo de negocio no es un ejercicio decorativo, es la <strong>entrada</strong> del análisis del sistema</li>
-</ul>
-</step>
-</steps>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="61" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="61" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
-<h2 id="realizaci%C3%B3n-con-un-diagrama-de-actividades">Realización con un diagrama de actividades</h2>
-<p><a href="../assets/ads-man-actividades.png"><img src="../assets/ads-man-actividades.png" alt="" style="height:390px;" /></a></p>
-<ul>
-<li>Las <strong>calles</strong> (<em>swimlanes</em>) son los <strong>trabajadores de negocio</strong>; las cajas son las <strong>actividades</strong></li>
-<li>La flecha que cruza de una calle a otra es un <strong>traspaso</strong> → donde vive el riesgo del proceso</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="62" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="62" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
-<h2 id="ejemplo-%C2%ABvende-barato-sa%C2%BB">Ejemplo: «Vende Barato S.A»</h2>
-<steps>
-<step>
-<h3 id="el-enunciado">El enunciado</h3>
-<ul>
-<li>La empresa <strong>«Vende Barato S.A»</strong> se dedica a la <strong>fabricación de productos bajo demanda</strong></li>
-<li>El <strong>gerente general</strong> está interesado en satisfacer de la mejor manera los pedidos de los clientes, estableciéndose el objetivo de <strong>disminuir el tiempo</strong> de todo el proceso de atención del pedido</li>
-<li>Para cumplir el objetivo es necesario: <strong>registrar</strong> el pedido del cliente, <strong>fabricar</strong> el producto pedido, llevar el <strong>control del almacén</strong> de materias primas y, en caso necesario, realizar la <strong>compra de materia prima</strong> a proveedores</li>
-</ul>
-</step>
-<step>
-<h3 id="las-metas-del-gerente-general">Las metas del gerente general</h3>
-<ul>
-<li>Reducir el tiempo de <strong>registro</strong> de un pedido a un <strong>20 %</strong> del tiempo actual</li>
-<li>Reducir la tasa de <strong>errores de fabricación</strong> a <strong>0,5 %</strong> del total</li>
-<li>Mantener el <strong>stock adecuado</strong> de las materias primas</li>
-<li>Reducir el tiempo de <strong>generación de la orden de compra</strong> a proveedores en un <strong>20 %</strong> del actual</li>
-</ul>
-<br />
-<ul>
-<li><img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f4a1.svg" data-marp-twemoji=""/> Fíjate: las metas están <strong>cuantificadas</strong> → son los <em>objetivos de mejora del sistema</em> de la Fase 2</li>
-</ul>
-</step>
-<step>
-<h3 id="identificaci%C3%B3n-de-elementos">Identificación de elementos</h3>
-<split-slide style="--left: 50%; --right: 50%;">
-<div>
-<h3 id="%F0%9F%A7%91-actores"><img class="emoji" draggable="false" alt="🧑" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f9d1.svg" data-marp-twemoji=""/> Actores</h3>
-<ul>
-<li><strong>Cliente</strong></li>
-<li><strong>Proveedor</strong></li>
-</ul>
-<br />
-<blockquote>
-<p>Están <strong>fuera</strong> del negocio</p>
-</blockquote>
-</div>
-<div>
-<h3 id="%F0%9F%A5%9A-casos-de-uso-de-negocio"><img class="emoji" draggable="false" alt="🥚" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f95a.svg" data-marp-twemoji=""/> Casos de uso de negocio</h3>
-<ul>
-<li>Registrar pedido</li>
-<li>Fabricar producto</li>
-<li>Controlar almacén</li>
-<li>Comprar materia prima</li>
-</ul>
-<blockquote>
-<p>Cada uno es un <strong>proceso</strong></p>
-</blockquote>
-</div>
-</split-slide>
-<ul>
-<li><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/2753.svg" data-marp-twemoji=""/> ¿Y el <strong>gerente general</strong>? ¿Es actor o trabajador? → <spoiler>trabajador: está dentro del negocio</spoiler></li>
-</ul>
-</step>
-</steps>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="63" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="63" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
-<h2 id="actividad-4-construye-el-diagrama-de-casos-de-uso-del-negocio">Actividad 4: construye el diagrama de casos de uso del negocio</h2>
-<ul>
-<li>Con los actores y casos de uso de «Vende Barato S.A», dibujen el <strong>diagrama de CUN</strong></li>
-</ul>
-<split-slide style="--left: 50%; --right: 50%;">
-<div>
-<h3 id="pasos-1">Pasos</h3>
-<ol>
-<li>Dibujen el <strong>límite del negocio</strong></li>
-<li>Coloquen los <strong>actores</strong> fuera</li>
-<li>Coloquen los <strong>casos de uso</strong> dentro</li>
-<li>Conecten cada actor con los casos de uso en los que <strong>participa</strong></li>
-</ol>
-</div>
-<div>
-<h3 id="preguntas-de-control-1">Preguntas de control</h3>
-<ul>
-<li>¿Hay casos de uso <strong>sin ningún actor</strong>? ¿Se justifica?</li>
-<li>¿Algún «actor» que pusieron es en realidad un <strong>trabajador</strong>?</li>
-<li>¿Los nombres siguen el patrón <strong>verbo + objeto</strong>?</li>
-<li>¿Cada meta del gerente se puede <strong>rastrear</strong> a un caso de uso?</li>
-</ul>
-</div>
-</split-slide>
-<ul>
-<li><img class="emoji" draggable="false" alt="⏱️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/23f1.svg" data-marp-twemoji=""/> 15 minutos</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="64" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="64" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
-<h2 id="realizaci%C3%B3n-del-cun-%C2%ABregistrar-pedido%C2%BB">Realización del CUN «Registrar pedido»</h2>
-<steps>
-<step>
-<h3 id="la-narrativa-1-de-2">La narrativa (1 de 2)</h3>
-<ol>
-<li>El <strong>cliente</strong> envía una orden de pedido —por teléfono, fax o correo— al <strong>Dpto. de ventas</strong>. El pedido debe incluir la fecha de solicitud, los datos del cliente y los productos solicitados</li>
-<li>Un <strong>empleado del Dpto. de ventas</strong> revisa el pedido, completándolo si es necesario. Comienza su procesamiento enviándolo al <strong>jefe técnico</strong>, encargado de su análisis</li>
-<li>El <strong>jefe técnico</strong> analiza la viabilidad de cada producto del pedido por separado:
-<ul>
-<li>Si el producto está <strong>en el catálogo</strong> → su fabricación es aceptada</li>
-<li>Si no está, es un <strong>producto especial</strong>: el jefe técnico estudia su fabricación y la acepta o la rechaza</li>
-</ul>
-</li>
-</ol>
-</step>
-<step>
-<h3 id="la-narrativa-2-de-2">La narrativa (2 de 2)</h3>
-<ol start="4">
-<li>Una vez estudiado el pedido completo, el <strong>jefe técnico</strong> informa al Dpto. de ventas de la <strong>aceptación o rechazo</strong> de cada producto. Si todos los productos fueron aceptados, se crea una <strong>orden de trabajo</strong> para cada producto, a partir de una <strong>plantilla de fabricación</strong>:
-<ul>
-<li>La <strong>estándar</strong>, si el producto estaba catalogado</li>
-<li>Una <strong>nueva</strong>, diseñada específicamente, si no estaba en el catálogo</li>
-</ul>
-</li>
-<li>Cada orden de trabajo es enviada al <strong>jefe de producción</strong> y queda pendiente de fabricación</li>
-<li>El <strong>empleado del Dpto. de ventas</strong> comunica al cliente el resultado final del análisis de su pedido</li>
-</ol>
-</step>
-<step>
-<h3 id="elementos-identificados">Elementos identificados</h3>
-<split-slide style="--left: 50%; --right: 50%;">
-<div>
-<h3 id="%F0%9F%91%B7-trabajadores-de-negocio"><img class="emoji" draggable="false" alt="👷" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f477.svg" data-marp-twemoji=""/> Trabajadores de negocio</h3>
-<ul>
-<li><strong>Empleado de ventas</strong></li>
-<li><strong>Jefe técnico</strong></li>
-<li><strong>Jefe de producción</strong></li>
-</ul>
-<blockquote>
-<p>Roles <strong>internos</strong> al negocio</p>
-</blockquote>
-</div>
-<div>
-<h3 id="%F0%9F%93%84-entidades-de-negocio"><img class="emoji" draggable="false" alt="📄" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f4c4.svg" data-marp-twemoji=""/> Entidades de negocio</h3>
-<ul>
-<li><strong>Pedido</strong></li>
-<li><strong>Catálogo</strong></li>
-</ul>
-<br />
-<ul>
-<li><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/2753.svg" data-marp-twemoji=""/> ¿Faltan entidades? → <spoiler>Orden de trabajo y Plantilla de fabricación</spoiler></li>
-</ul>
-</div>
-</split-slide>
-<ul>
-<li><img class="emoji" draggable="false" alt="💡" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f4a1.svg" data-marp-twemoji=""/> Método práctico: los <strong>sustantivos persistentes</strong> de la narrativa son candidatos a <strong>entidad</strong>; los <strong>roles que actúan</strong> son candidatos a <strong>trabajador</strong></li>
-</ul>
-</step>
-</steps>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="65" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="65" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
-<h2 id="actividad-5-modela-%C2%ABregistrar-pedido%C2%BB">Actividad 5: modela «Registrar pedido»</h2>
-<div class="grid">
-<div>
-<h3 id="1%EF%B8%8F%E2%83%A3-diagrama-de-actividades"><img class="emoji" draggable="false" alt="1️⃣" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/31-20e3.svg" data-marp-twemoji=""/> Diagrama de actividades</h3>
-<p>Modelen la narrativa de «Registrar pedido» con <strong>una calle por trabajador</strong> de negocio</p>
-<p>Incluyan la <strong>decisión</strong> del jefe técnico: ¿está en el catálogo?</p>
-</div>
-<div>
-<h3 id="2%EF%B8%8F%E2%83%A3-marquen-los-traspasos"><img class="emoji" draggable="false" alt="2️⃣" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/32-20e3.svg" data-marp-twemoji=""/> Marquen los traspasos</h3>
-<p>Señalen cada flecha que <strong>cruza</strong> de una calle a otra</p>
-<p>¿Cuál traspaso creen que causa el <strong>mayor retraso</strong>?</p>
-</div>
-<div>
-<h3 id="3%EF%B8%8F%E2%83%A3-conecten-con-el-sistema"><img class="emoji" draggable="false" alt="3️⃣" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/33-20e3.svg" data-marp-twemoji=""/> Conecten con el sistema</h3>
-<p>¿Qué <strong>entidades</strong> del negocio se vuelven clases del modelo de dominio?</p>
-<p>¿Qué <strong>trabajadores</strong> se vuelven actores del sistema?</p>
-</div>
-</div>
-<ul>
-<li><img class="emoji" draggable="false" alt="⏱️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/23f1.svg" data-marp-twemoji=""/> 25 minutos · Contrasten el resultado con la meta del gerente: <strong>reducir el tiempo de registro a un 20 %</strong></li>
-<li><img class="emoji" draggable="false" alt="❓" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/2753.svg" data-marp-twemoji=""/> ¿El diagrama les muestra <strong>dónde</strong> recortar ese tiempo?</li>
-</ul>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="66" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="66" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
-<h2 id="c%C3%B3mo-se-conecta-todo">Cómo se conecta todo</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Tema</th>
-<th style="text-align:left">Pregunta</th>
-<th style="text-align:left">Artefacto principal</th>
-<th style="text-align:left">Alimenta a...</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><strong>Visión</strong></td>
-<td style="text-align:left">¿Qué problema y para quién?</td>
-<td style="text-align:left">Documento Visión</td>
-<td style="text-align:left">Alcance · Casos de uso</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Modelado de negocio</strong></td>
-<td style="text-align:left">¿En qué contexto vive?</td>
-<td style="text-align:left">Modelos de CUN y de análisis del negocio</td>
-<td style="text-align:left">Actores · Modelo de dominio</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Análisis</strong></td>
-<td style="text-align:left">¿Qué debe hacer y dónde termina?</td>
-<td style="text-align:left"><strong>Diagrama de contexto</strong> · Modelos lógicos</td>
-<td style="text-align:left">Diseño</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Fases del análisis</strong></td>
-<td style="text-align:left">¿En qué orden lo averiguo?</td>
-<td style="text-align:left">Entregable de cada fase</td>
-<td style="text-align:left">La fase siguiente</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Factibilidad</strong></td>
-<td style="text-align:left">¿Conviene y es posible?</td>
-<td style="text-align:left">Reporte de factibilidad</td>
-<td style="text-align:left">Decisión de <strong>seguir o no</strong></td>
-</tr>
-</tbody>
-</table>
-<div class="grid">
-<div>
-<h3 id="%F0%9F%A7%B5-el-hilo-conductor"><img class="emoji" draggable="false" alt="🧵" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/1f9f5.svg" data-marp-twemoji=""/> El hilo conductor</h3>
-<p><strong>Trazabilidad</strong>: cada artefacto se justifica en el anterior</p>
-</div>
-<div>
-<h3 id="%E2%9A%A0%EF%B8%8F-si-se-rompe-el-hilo"><img class="emoji" draggable="false" alt="⚠️" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@17.0.2/assets/svg/26a0.svg" data-marp-twemoji=""/> Si se rompe el hilo</h3>
-<p>Aparecen requerimientos <strong>sin dueño</strong> y decisiones que nadie puede explicar</p>
-</div>
-</div>
-</section>
-</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="67" data-marpit-scope-B8gSlV8c="" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="67" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="67">
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="50" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="50" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51"></section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="51" data-marpit-scope-a3RQTpHo="" data-paginate="true" data-theme="alo" lang="en-US" data-marpit-pagination="51" style="--paginate:true;--theme:alo;" data-marpit-pagination-total="51">
 <h2 id="referencias">Referencias</h2>
 
 <ul>
@@ -2031,5 +1442,555 @@
 <script src="../assets/image-modal.js"></script>
 </section>
 <script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{container;containerSize;containerObserver;svg;svgComputedStyle;svgPreserveAspectRatio="xMinYMid meet";wrapper;wrapperSize;wrapperObserver;constructor(){super();const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()})}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=this.shadowRoot.querySelector(`div[${e}]`)??void 0;const t=this.svg;this.svg=this.wrapper?.querySelector(`svg[${i}]`)??void 0,this.svg!==t&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=this.svg?.querySelector(`span[${n}]`)??void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame(()=>{t.style.display=""}))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){let t=Math.ceil(this.containerSize?.width??0);const e=Math.ceil(this.containerSize?.height??0);void 0!==this.dataset.downscaleOnly&&(t=Math.max(t,this.wrapperSize?.width??0));const i=this.svg?.querySelector(":scope > foreignObject");if(i?.setAttribute("width",`${t}`),i?.setAttribute("height",`${e}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${t} ${e}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=t<=0||e<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const r=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this._shadow()}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_shadow(){if(!this.shadowRoot)try{this.attachShadow({mode:"open"})}catch(t){if(!(t instanceof Error&&"NotSupportedError"===t.name))throw t}return this.shadowRoot}_update(){const t=this._shadow();if(t){const e=i?`<style>:host { ${i} }</style>`:"";let n="<slot></slot>";const{autoScaling:s}=this.dataset;if(void 0!==s){n=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===s?"data-downscale-only":""}>${n}</marp-auto-scaling>`}t.innerHTML=e+n}}};let o;const a=Symbol(),l=()=>o??(o=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is"),o);let c;const d="marpitSVGPolyfill:setZoomFactor,",h=Symbol(),g=Symbol();const p=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[v]:[],i={then:e=>(t?(async()=>{if(void 0===c){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise(t=>{i.addEventListener("load",()=>t())});i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),c=e.getImageData(5,5,1,1).data[3]<128}return c})().then(t=>{null==e||e(t?[v]:[])}):null==e||e([]),i)};return Object.assign(e,i)};let m,u;function v(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[g]||(Object.defineProperty(window,g,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(d)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(u=i)}}catch(t){console.error(t)}}));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),t=>{var e,s,r,o;t.style.transform||(t.style.transform="translateZ(0)");const a=i||u||t.currentScale||1;m!==a&&(m=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(o=null===(r=n.y)||void 0===r?void 0:r.baseVal.value)&&void 0!==o?o:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}}),!1!==n&&Array.from(e.querySelectorAll("iframe"),({contentWindow:t})=>{null==t||t.postMessage(`${d}${n}`,"null"===window.origin?"*":window.origin)})}function w({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[h])return t[h];let e=!0;const i=()=>{e=!1,delete t[h]};Object.defineProperty(t,h,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await p()}finally{s=!0}})();const r=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(r)};return r(),i}(e);return t?(i(),()=>{}):i}m=1,u=void 0;const b=Symbol(),y=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[a];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,o=t[n].proto();l()&&o!==HTMLElement?i||customElements.define(s,r(o,{style:t[n].style}),{extends:n}):(i||customElements.define(s,r(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach(t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)}))}window[a]=!0})(e),e[b])return e[b];const i=w({target:e}),n=()=>{i(),delete e[b]},o=Object.assign(n,{cleanup:n,update:()=>y(e)});return Object.defineProperty(e,b,{configurable:!0,value:o}),o},f=document.currentScript;y(f?f.getRootNode():document)}();
-</script></foreignObject></svg></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@4.2.3/lib/bespoke.js.LICENSE.txt */
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="29" tabindex="0"><p>## Actividad 2: construye un diagrama de contexto
+
+- Retomen el sistema de la Actividad 1 y dibujen su diagrama de contexto
+
+&lt;split-slide style=&quot;--left: 50%; --right: 50%;&quot;&gt;
+&lt;div&gt;
+
+### Pasos
+1. Nombren el **sistema** y dibújenlo como una caja
+2. Listen las **entidades externas**: personas, sistemas, dispositivos
+3. Dibujen y **etiqueten** cada flujo de información
+4. Agreguen una **leyenda** de notación
+&lt;/div&gt;
+&lt;div&gt;
+
+### Preguntas de control
+- ¿Alguna entidad externa es en realidad **parte** del sistema?
+- ¿Hay flujos **sin etiqueta**?
+- ¿Cuántas integraciones implica el diagrama?
+- ¿Qué quedó **fuera** a propósito?
+&lt;/div&gt;
+&lt;/split-slide&gt;
+
+- ⏱️ 15 minutos · Compárenlo con la sentencia del problema: **¿son consistentes?**
+
+---</p></div><div class="bespoke-marp-note" data-index="47" tabindex="0"><p>---
+
+## Actividad 3: evalúa la factibilidad
+
+- Con el sistema de las actividades anteriores, y en **10 minutos** por punto:
+
+&lt;div class=&quot;grid&quot;&gt;
+&lt;div&gt;
+
+### 1️⃣ Tres candidatas
+Definan **construir**, **comprar** y **no hacer nada** para su caso
+&lt;/div&gt;
+&lt;div&gt;
+
+### 2️⃣ Seis factibilidades
+Califiquen cada candidata (*Alta / Media / Baja*) y **justifiquen** en una línea
+&lt;/div&gt;
+&lt;div&gt;
+
+### 3️⃣ Recomendación
+Escojan una y expliquen **por qué**, no solo cuál
+&lt;/div&gt;
+&lt;/div&gt;
+
+- ❓ Preguntas para la discusión:
+  - ¿Cuál factibilidad fue la **más difícil** de estimar? ¿Por qué?
+  - ¿Alguna candidata falló por una razón **no técnica**?
+  - ¿Qué información les **hizo falta** para decidir con confianza?</p></div><div class="bespoke-marp-note" data-index="49" tabindex="0"><p>## ¿Qué es un proceso de negocio?
+
+&lt;steps&gt;
+&lt;step&gt;
+
+&gt; **Davenport**: «un proceso es un orden específico de actividades a través del tiempo y lugar, con un comienzo y fin, *inputs* y *outputs*: una **estructura para la acción**»
+
+&lt;br&gt;
+
+&gt; **Hammer &amp; Champy**: «un proceso de negocio es un conjunto de actividades que toman uno o más tipos de *inputs* y crean un *output* que es el **valor para un cliente**»
+
+&lt;/step&gt;
+&lt;step&gt;
+
+### Lo que ambas definiciones comparten
+
+&lt;div class=&quot;grid&quot;&gt;
+&lt;div&gt;
+
+### 🔄 Actividades ordenadas
+Hay una **secuencia**, no un conjunto suelto de tareas
+&lt;/div&gt;
+&lt;div&gt;
+
+### 🚦 Inicio y fin
+El proceso tiene **límites** identificables
+&lt;/div&gt;
+&lt;div&gt;
+
+### ⬅️➡️ Entradas y salidas
+Transforma algo en algo → igual que un **sistema**
+&lt;/div&gt;
+&lt;div&gt;
+
+### 🎯 Valor para un cliente
+Existe para **alguien**, dentro o fuera de la organización
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/step&gt;
+&lt;/steps&gt;
+
+---
+
+## Ejemplo: proceso de atención de un pedido
+
+&lt;style scoped&gt;
+table { table-layout: fixed; font-size: 0.8rem; }
+th, td { padding: 8px 6px; }
+th:first-child, td:first-child { width: 17%; text-align: left; }
+&lt;/style&gt;
+
+| Área | 1 | 2 | 3 | 4 | 5 | 6 |
+|:--|:--|:--|:--|:--|:--|:--|
+| **Ventas** | Recibir pedido | Iniciar trámite | | | | |
+| **Contabilidad** | | | Verificar crédito | | Facturar pedido | |
+| **Manufactura** | | | | Producir pedido | | Enviar pedido |
+
+&lt;div class=&quot;grid&quot;&gt;
+&lt;div&gt;
+
+### 🔀 El proceso **cruza** las áreas
+Ninguna unidad lo controla de principio a fin
+&lt;/div&gt;
+&lt;div&gt;
+
+### ⚠️ Ahí están los problemas
+Los **retrasos y errores** aparecen en los **traspasos** entre áreas
+&lt;/div&gt;
+&lt;/div&gt;
+
+- 💡 Por eso los organigramas no sirven para entender un negocio: hay que mirar los **procesos**
+
+---
+
+## Ejemplos de procesos de negocio
+
+&lt;div class=&quot;grid&quot;&gt;
+&lt;div&gt;
+
+### 🎓 Proceso de admisión
+&lt;/div&gt;
+&lt;div&gt;
+
+### 📝 Proceso de matrícula
+&lt;/div&gt;
+&lt;div&gt;
+
+### 👔 Proceso de contratación de personal
+&lt;/div&gt;
+&lt;div&gt;
+
+### 🔧 Solicitar mantenimiento de equipos
+&lt;/div&gt;
+&lt;div&gt;
+
+### 🛒 Vender un producto
+&lt;/div&gt;
+&lt;div&gt;
+
+### 📦 Comprar materia prima
+&lt;/div&gt;
+&lt;div&gt;
+
+### 🏦 Otorgar préstamo bancario
+&lt;/div&gt;
+&lt;/div&gt;
+
+- ❓ Fíjate en el patrón de los nombres: **verbo + objeto**. Un proceso *hace* algo
+- ❓ ¿Cuál de estos procesos **cruza** más áreas de la organización?
+
+---
+
+## Clases de procesos de negocio
+
+&lt;div class=&quot;grid&quot;&gt;
+&lt;div&gt;
+
+### ⭐ Procesos principales
+Generan **valor directo** para el cliente externo
+
+*Ejemplo:* vender producto, atender un pedido
+&lt;/div&gt;
+&lt;div&gt;
+
+### 🛠️ Procesos de soporte
+Habilitan a los principales; su cliente es **interno**
+
+*Ejemplo:* desarrollo de personal, compras, TI
+&lt;/div&gt;
+&lt;div&gt;
+
+### 🧭 Procesos de gestión
+**Planifican, controlan y deciden** sobre los demás
+
+*Ejemplo:* planificación, presupuesto, auditoría
+&lt;/div&gt;
+&lt;/div&gt;
+
+- 💡 Para el análisis importa la distinción: los procesos **principales** son los que justifican el sistema, y los de **gestión** los que definen qué reportes hacen falta
+- ❓ En tu sistema de las actividades anteriores, ¿cuál proceso principal atiende?
+
+---
+
+## Modelado del negocio
+
+- Es una **técnica** para representar los procesos del negocio
+- Permite asegurar que se construirá el sistema **en el contexto de las necesidades de la empresa**
+
+&lt;split-slide style=&quot;--left: 50%; --right: 50%;&quot;&gt;
+&lt;div&gt;
+
+### El contexto está dado por
+- El **ambiente** en que el sistema trabajará
+- Los **roles y responsabilidades** de los empleados que usarán el sistema
+- Las **«cosas»** que son manejadas en el negocio
+&lt;/div&gt;
+&lt;div&gt;
+
+### ¿Por qué hacerlo antes del sistema?
+- El sistema **no** reemplaza el proceso: lo **soporta**
+- Si no entiendes el proceso, automatizas el **desorden** existente
+- Los actores y entidades del negocio se convierten después en los **actores** y el **modelo de dominio** del sistema
+&lt;/div&gt;
+&lt;/split-slide&gt;
+
+&gt; Un sistema que ignora el proceso de negocio se usa una semana y se abandona
+
+---
+
+## Dos perspectivas del modelado del negocio
+
+&lt;div class=&quot;grid&quot;&gt;
+&lt;div&gt;
+
+### 🌍 Perspectiva externa
+### Modelo de **casos de uso del negocio**
+
+Qué hace la empresa **vista desde afuera**
+
+- **Actores** del negocio
+- **Casos de uso** del negocio (los procesos)
+- Metas del negocio
+
+*«¿Qué le ofrece la empresa a su entorno?»*
+&lt;/div&gt;
+&lt;div&gt;
+
+### 🏠 Perspectiva interna
+### Modelo de **análisis del negocio**
+
+**Cómo** lo logra por dentro
+
+- **Trabajadores** del negocio
+- **Entidades** del negocio
+- **Realizaciones** de los casos de uso
+
+*«¿Cómo hace la empresa lo que ofrece?»*
+&lt;/div&gt;
+&lt;/div&gt;
+
+- Es la misma distinción **caja negra / caja blanca** del diagrama de contexto, aplicada al **negocio** en vez del sistema
+
+---
+
+## Modelo de casos de uso del negocio
+
+- Es una **representación de la forma en que la empresa interactúa con su entorno**
+- Provee una **visión general** de lo que la empresa hace: incluye metas, actores y casos de uso de negocio
+
+&lt;split-slide style=&quot;--left: 50%; --right: 50%;&quot;&gt;
+&lt;div&gt;
+
+### 🧑 Actor de negocio
+Representa un **rol** que desempeña alguien o algo **en relación** al negocio
+
+→ Es **externo** al negocio
+
+*Ejemplos:* Cliente, Proveedor, Banco, Ministerio
+&lt;/div&gt;
+&lt;div&gt;
+
+### 🥚 Caso de uso de negocio
+**Acciones o actividades** para producir un resultado
+
+→ Es un **proceso de negocio**
+
+*Ejemplos:* Registrar pedido, Fabricar producto, Comprar materia prima
+&lt;/div&gt;
+&lt;/split-slide&gt;
+
+- ⚠️ Un empleado **no** es actor de negocio: está **dentro** del negocio → es un **trabajador**
+
+---
+
+## Modelo de casos de uso del negocio: ejemplo
+
+[![h:430](../assets/ads-cun-ejemplo.png)](../assets/ads-cun-ejemplo.png)
+
+- ❓ ¿Por qué *Facturación* aparece **sin conexión** al actor Cliente? ¿Está bien o falta algo?
+
+---
+
+## Modelo de análisis del negocio
+
+- Describe la **realización** de los casos de uso del negocio, mediante la **interacción** de los trabajadores del negocio (empleados) y las **entidades** (información) del negocio
+- Es una **abstracción** de **cómo** los trabajadores hacen las actividades
+
+&lt;steps&gt;
+&lt;step&gt;
+
+### Elementos
+
+&lt;div class=&quot;grid&quot;&gt;
+&lt;div&gt;
+
+### 👷 Trabajador de negocio
+Abstracción de una **persona o sistema** que representa un rol **dentro** de la realización de un CUN
+
+*Roles internos:* Empleado de ventas, Jefe técnico
+&lt;/div&gt;
+&lt;div&gt;
+
+### 📄 Entidad de negocio
+Pieza de información **persistente**, manipulada por actores y trabajadores
+
+*Ejemplos:* Factura, Proforma, Pedido, Catálogo
+&lt;/div&gt;
+&lt;div&gt;
+
+### 🔗 Realización de CUN
+La representación de **cómo** se va a detallar el caso de uso del negocio
+
+*Se documenta con:* diagrama de actividades, de secuencia o de colaboración
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/step&gt;
+&lt;step&gt;
+
+### Cómo se conectan con el sistema
+
+| Elemento del negocio | Se convierte en... |
+|:--|:--|
+| **Actor** de negocio | Actor del sistema (si interactúa con él) |
+| **Trabajador** de negocio | Actor del sistema · Rol de seguridad |
+| **Entidad** de negocio | Clase del **modelo de dominio** · Entidad de datos |
+| **Caso de uso** de negocio | Uno o varios **casos de uso del sistema** |
+
+- 💡 Aquí se ve la **trazabilidad**: el modelo de negocio no es un ejercicio decorativo, es la **entrada** del análisis del sistema
+
+&lt;/step&gt;
+&lt;/steps&gt;
+
+---
+
+## Realización con un diagrama de actividades
+
+[![h:390](../assets/ads-man-actividades.png)](../assets/ads-man-actividades.png)
+
+- Las **calles** (*swimlanes*) son los **trabajadores de negocio**; las cajas son las **actividades**
+- La flecha que cruza de una calle a otra es un **traspaso** → donde vive el riesgo del proceso
+
+---
+
+## Ejemplo: «Vende Barato S.A»
+
+&lt;steps&gt;
+&lt;step&gt;
+
+### El enunciado
+- La empresa **«Vende Barato S.A»** se dedica a la **fabricación de productos bajo demanda**
+- El **gerente general** está interesado en satisfacer de la mejor manera los pedidos de los clientes, estableciéndose el objetivo de **disminuir el tiempo** de todo el proceso de atención del pedido
+- Para cumplir el objetivo es necesario: **registrar** el pedido del cliente, **fabricar** el producto pedido, llevar el **control del almacén** de materias primas y, en caso necesario, realizar la **compra de materia prima** a proveedores
+
+&lt;/step&gt;
+&lt;step&gt;
+
+### Las metas del gerente general
+- Reducir el tiempo de **registro** de un pedido a un **20 %** del tiempo actual
+- Reducir la tasa de **errores de fabricación** a **0,5 %** del total
+- Mantener el **stock adecuado** de las materias primas
+- Reducir el tiempo de **generación de la orden de compra** a proveedores en un **20 %** del actual
+
+&lt;br&gt;
+
+- 💡 Fíjate: las metas están **cuantificadas** → son los *objetivos de mejora del sistema* de la Fase 2
+
+&lt;/step&gt;
+&lt;step&gt;
+
+### Identificación de elementos
+
+&lt;split-slide style=&quot;--left: 50%; --right: 50%;&quot;&gt;
+&lt;div&gt;
+
+### 🧑 Actores
+- **Cliente**
+- **Proveedor**
+
+&lt;br&gt;
+
+&gt; Están **fuera** del negocio
+&lt;/div&gt;
+&lt;div&gt;
+
+### 🥚 Casos de uso de negocio
+- Registrar pedido
+- Fabricar producto
+- Controlar almacén
+- Comprar materia prima
+
+&gt; Cada uno es un **proceso**
+&lt;/div&gt;
+&lt;/split-slide&gt;
+
+- ❓ ¿Y el **gerente general**? ¿Es actor o trabajador? → &lt;spoiler&gt;trabajador: está dentro del negocio&lt;/spoiler&gt;
+
+&lt;/step&gt;
+&lt;/steps&gt;
+
+---
+
+## Actividad 4: construye el diagrama de casos de uso del negocio
+
+- Con los actores y casos de uso de «Vende Barato S.A», dibujen el **diagrama de CUN**
+
+&lt;split-slide style=&quot;--left: 50%; --right: 50%;&quot;&gt;
+&lt;div&gt;
+
+### Pasos
+1. Dibujen el **límite del negocio**
+2. Coloquen los **actores** fuera
+3. Coloquen los **casos de uso** dentro
+4. Conecten cada actor con los casos de uso en los que **participa**
+&lt;/div&gt;
+&lt;div&gt;
+
+### Preguntas de control
+- ¿Hay casos de uso **sin ningún actor**? ¿Se justifica?
+- ¿Algún «actor» que pusieron es en realidad un **trabajador**?
+- ¿Los nombres siguen el patrón **verbo + objeto**?
+- ¿Cada meta del gerente se puede **rastrear** a un caso de uso?
+&lt;/div&gt;
+&lt;/split-slide&gt;
+
+- ⏱️ 15 minutos
+
+---
+
+## Realización del CUN «Registrar pedido»
+
+&lt;steps&gt;
+&lt;step&gt;
+
+### La narrativa (1 de 2)
+1. El **cliente** envía una orden de pedido —por teléfono, fax o correo— al **Dpto. de ventas**. El pedido debe incluir la fecha de solicitud, los datos del cliente y los productos solicitados
+2. Un **empleado del Dpto. de ventas** revisa el pedido, completándolo si es necesario. Comienza su procesamiento enviándolo al **jefe técnico**, encargado de su análisis
+3. El **jefe técnico** analiza la viabilidad de cada producto del pedido por separado:
+   - Si el producto está **en el catálogo** → su fabricación es aceptada
+   - Si no está, es un **producto especial**: el jefe técnico estudia su fabricación y la acepta o la rechaza
+
+&lt;/step&gt;
+&lt;step&gt;
+
+### La narrativa (2 de 2)
+4. Una vez estudiado el pedido completo, el **jefe técnico** informa al Dpto. de ventas de la **aceptación o rechazo** de cada producto. Si todos los productos fueron aceptados, se crea una **orden de trabajo** para cada producto, a partir de una **plantilla de fabricación**:
+   - La **estándar**, si el producto estaba catalogado
+   - Una **nueva**, diseñada específicamente, si no estaba en el catálogo
+5. Cada orden de trabajo es enviada al **jefe de producción** y queda pendiente de fabricación
+6. El **empleado del Dpto. de ventas** comunica al cliente el resultado final del análisis de su pedido
+
+&lt;/step&gt;
+&lt;step&gt;
+
+### Elementos identificados
+
+&lt;split-slide style=&quot;--left: 50%; --right: 50%;&quot;&gt;
+&lt;div&gt;
+
+### 👷 Trabajadores de negocio
+- **Empleado de ventas**
+- **Jefe técnico**
+- **Jefe de producción**
+
+&gt; Roles **internos** al negocio
+&lt;/div&gt;
+&lt;div&gt;
+
+### 📄 Entidades de negocio
+- **Pedido**
+- **Catálogo**
+
+&lt;br&gt;
+
+- ❓ ¿Faltan entidades? → &lt;spoiler&gt;Orden de trabajo y Plantilla de fabricación&lt;/spoiler&gt;
+&lt;/div&gt;
+&lt;/split-slide&gt;
+
+- 💡 Método práctico: los **sustantivos persistentes** de la narrativa son candidatos a **entidad**; los **roles que actúan** son candidatos a **trabajador**
+
+&lt;/step&gt;
+&lt;/steps&gt;
+
+---
+
+## Actividad 5: modela «Registrar pedido»
+
+&lt;div class=&quot;grid&quot;&gt;
+&lt;div&gt;
+
+### 1️⃣ Diagrama de actividades
+Modelen la narrativa de «Registrar pedido» con **una calle por trabajador** de negocio
+
+Incluyan la **decisión** del jefe técnico: ¿está en el catálogo?
+&lt;/div&gt;
+&lt;div&gt;
+
+### 2️⃣ Marquen los traspasos
+Señalen cada flecha que **cruza** de una calle a otra
+
+¿Cuál traspaso creen que causa el **mayor retraso**?
+&lt;/div&gt;
+&lt;div&gt;
+
+### 3️⃣ Conecten con el sistema
+¿Qué **entidades** del negocio se vuelven clases del modelo de dominio?
+
+¿Qué **trabajadores** se vuelven actores del sistema?
+&lt;/div&gt;
+&lt;/div&gt;
+
+- ⏱️ 25 minutos · Contrasten el resultado con la meta del gerente: **reducir el tiempo de registro a un 20 %**
+- ❓ ¿El diagrama les muestra **dónde** recortar ese tiempo?
+
+---
+
+## Cómo se conecta todo
+
+| Tema | Pregunta | Artefacto principal | Alimenta a... |
+|:--|:--|:--|:--|
+| **Visión** | ¿Qué problema y para quién? | Documento Visión | Alcance · Casos de uso |
+| **Modelado de negocio** | ¿En qué contexto vive? | Modelos de CUN y de análisis del negocio | Actores · Modelo de dominio |
+| **Análisis** | ¿Qué debe hacer y dónde termina? | **Diagrama de contexto** · Modelos lógicos | Diseño |
+| **Fases del análisis** | ¿En qué orden lo averiguo? | Entregable de cada fase | La fase siguiente |
+| **Factibilidad** | ¿Conviene y es posible? | Reporte de factibilidad | Decisión de **seguir o no** |
+
+&lt;div class=&quot;grid&quot;&gt;
+&lt;div&gt;
+
+### 🧵 El hilo conductor
+**Trazabilidad**: cada artefacto se justifica en el anterior
+&lt;/div&gt;
+&lt;div&gt;
+
+### ⚠️ Si se rompe el hilo
+Aparecen requerimientos **sin dueño** y decisiones que nadie puede explicar
+&lt;/div&gt;
+&lt;/div&gt;</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@4.2.3/lib/bespoke.js.LICENSE.txt */
 !function(){"use strict";function e(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var t,n,r=(n||(n=1,t={from:function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),o=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,function(e){return"SCRIPT"!==e.nodeName}),a={},i=function(e,t){return(t=t||{}).index=o.indexOf(e),t.slide=e,t},s=function(e,t){a[e]=(a[e]||[]).filter(function(e){return e!==t})},c=function(e,t){return(a[e]||[]).reduce(function(e,n){return e&&!1!==n(t)},!0)},l=function(e,t){o[e]&&(n&&c("deactivate",i(n,t)),n=o[e],c("activate",i(n,t)))},d=function(e,t){var r=o.indexOf(n)+e;c(e>0?"next":"prev",i(n,t))&&l(r,t)},u={off:s,on:function(e,t){return(a[e]||(a[e]=[])).push(t),s.bind(null,e,t)},fire:c,slide:function(e,t){if(!arguments.length)return o.indexOf(n);c("slide",i(o[e],t))&&l(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:o,destroy:function(e){c("destroy",i(n,e)),a={}}};return(t||[]).forEach(function(e){e(u)}),n||l(0),u}}),t),o=e(r);const a=document.body,i=(...e)=>history.replaceState(...e),s="",c="presenter",l="next",d=["",c,l],u="bespoke-marp-",f=`data-${u}`,m=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const a=e.toString();return`${t}//${n}${r}${a?"?":""}${a}${o}`},g=()=>a.dataset.bespokeView,p=e=>new URLSearchParams(location.search).get(e),v=(e,t={})=>{const n={location,setter:i,...t},r=new URLSearchParams(n.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?r.set(t,n):r.delete(t)}try{n.setter({...window.history.state??{}},"",m(r,n.location))}catch(e){console.error(e)}},h=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch{return!1}})(),y=e=>{try{return localStorage.getItem(e)}catch{return null}},b=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch{return!1}},w=e=>{try{return localStorage.removeItem(e),!0}catch{return!1}},x=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},k=e=>{e.parent.classList.add(`${u}parent`),e.slides.forEach(e=>e.classList.add(`${u}slide`)),e.on("activate",t=>{const n=`${u}active`,r=t.slide,o=r.classList,a=!o.contains(n);if(e.slides.forEach(e=>{e.classList.remove(n),x(e,!0)}),o.add(n),x(r,!1),a){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}})},$=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const a=t<r||t===r&&n<=o;e.setAttribute(`${f}fragment`,(a?"":"in")+"active");const i=`${f}current-fragment`;t===r&&n===o?e.setAttribute(i,"current"):e.removeAttribute(i)})}),e.fragmentIndex=o;const a={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",a)};e.on("next",({fragment:a=!0})=>{if(a){if(r(1))return o(t,n+1),!1;const a=t+1;e.fragments[a]&&o(a,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const a=e.fragments[t+1];a&&o(t+1,a.length-1)}}),e.on("prev",({fragment:a=!0})=>{if(r(-1)&&a)return o(t,n-1),!1;const i=t-1;e.fragments[i]&&o(i,e.fragments[i].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)}),o(0,0)},E=document,L=()=>!(!E.fullscreenEnabled&&!E.webkitFullscreenEnabled),S=()=>!(!E.fullscreenElement&&!E.webkitFullscreenElement),P=e=>{e.fullscreen=()=>{L()&&(async()=>{S()?(E.exitFullscreen||E.webkitExitFullscreen)?.call(E):((e=E.body)=>{(e.requestFullscreen||e.webkitRequestFullscreen)?.call(e)})()})()},document.addEventListener("keydown",t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!L()||(e.fullscreen(),t.preventDefault())})},_=`${u}inactive`,T=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let a;const i=()=>{a&&clearTimeout(a),a=setTimeout(()=>{r.add(_),o()},e),r.contains(_)&&(r.remove(_),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,i);setTimeout(i,0)},I=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],M=e=>{e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(I.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})},O=e=>{window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("marp-auto-scaling, [data-auto-scaling], [data-marp-fitting]");t.setAttribute(`${f}load`,e?"":"hideable")}})},A=({interval:e=250}={})=>t=>{document.addEventListener("keydown",e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()});let n,r,o=0;t.parent.addEventListener("wheel",a=>{let i=!1;const s=(e,t)=>{e&&(i=i||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),e?.parentElement&&s(e.parentElement,t)};if(0!==a.deltaX&&s(a.target,"X"),0!==a.deltaY&&s(a.target,"Y"),i)return;a.preventDefault();const c=Math.sqrt(a.deltaX**2+a.deltaY**2);if(void 0!==a.wheelDelta){if(void 0===a.webkitForce&&Math.abs(a.wheelDelta)<40)return;if(a.deltaMode===a.DOM_DELTA_PIXEL&&c<4)return}else if(a.deltaMode===a.DOM_DELTA_PIXEL&&c<12)return;r&&clearTimeout(r),r=setTimeout(()=>{n=0},e);const l=Date.now()-o<e,d=c<=n;if(n=c,l||d)return;let u;(a.deltaX>0||a.deltaY>0)&&(u="next"),(a.deltaX<0||a.deltaY<0)&&(u="prev"),u&&(t[u](),o=Date.now())})},C=(e=`.${u}osc`)=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${f}osc=${JSON.stringify(e)}]`).forEach(n)};return L()||n("fullscreen",e=>e.style.display="none"),h||n("presenter",e=>{e.disabled=!0,e.title="Presenter view is disabled due to restricted localStorage."}),e=>{t.addEventListener("click",t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?e?.fullscreen():"presenter"===n&&e.openPresenterView()}}),e.parent.appendChild(t),e.on("activate",({index:t})=>{n("page",n=>n.textContent=`Page ${t+1} of ${e.slides.length}`)}),e.on("fragment",({index:t,fragments:r,fragmentIndex:o})=>{n("prev",e=>e.disabled=0===t&&0===o),n("next",n=>n.disabled=t===e.slides.length-1&&o===r.length-1)}),e.on("marp-active",()=>x(t,!1)),e.on("marp-inactive",()=>x(t,!0)),L()&&(e=>{for(const t of["","webkit"])E.addEventListener(t+"fullscreenchange",e)})(()=>n("fullscreen",e=>e.classList.toggle("exit",L()&&S())))}},D=e=>{window.addEventListener("message",t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),a=Number.parseInt(n,10)+1;a>=e.fragments[o].length&&(o+=1,a=0),e.slide(o,{fragment:a})}})};var N,B,q,K,F,j,V,U={exports:{}},X=(N||(N=1,U.exports=(B=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"],q=function(e){return String(e).replace(/[&<>"']/g,function(e){return"&"+K[e]+";"})},K={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},F="dangerouslySetInnerHTML",j={className:"class",htmlFor:"for"},V={},function(e,t){var n=[],r="";t=t||{};for(var o=arguments.length;o-- >2;)n.push(arguments[o]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(var a in t)!1!==t[a]&&null!=t[a]&&a!==F&&(r+=" "+(j[a]?j[a]:q(a))+'="'+q(t[a])+'"');r+=">"}if(-1===B.indexOf(e)){if(t[F])r+=t[F].__html;else for(;n.length;){var i=n.pop();if(i)if(i.pop)for(var s=i.length;s--;)n.push(i[s]);else r+=!0===V[i]?i:q(i)}r+=e?"</"+e+">":""}return V[r]=!0,r})),U.exports),H=e(X);const R=({children:e})=>H(null,null,...e),W=`${u}presenter-`,J={container:`${W}container`,dragbar:`${W}dragbar-container`,next:`${W}next`,nextContainer:`${W}next-container`,noteContainer:`${W}note-container`,noteWrapper:`${W}note-wrapper`,noteButtons:`${W}note-buttons`,infoContainer:`${W}info-container`,infoPage:`${W}info-page`,infoPageText:`${W}info-page-text`,infoPagePrev:`${W}info-page-prev`,infoPageNext:`${W}info-page-next`,noteButtonsBigger:`${W}note-bigger`,noteButtonsSmaller:`${W}note-smaller`,infoTime:`${W}info-time`,infoTimer:`${W}info-timer`},Y=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=J.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",H(R,null,H("div",{class:J.nextContainer},H("iframe",{class:J.next,src:"?view=next"})),H("div",{class:J.dragbar}),H("div",{class:J.noteContainer},H("div",{class:J.noteWrapper}),H("div",{class:J.noteButtons},H("button",{class:J.noteButtonsSmaller,tabindex:"-1",title:"Smaller notes font size"},"Smaller notes font size"),H("button",{class:J.noteButtonsBigger,tabindex:"-1",title:"Bigger notes font size"},"Bigger notes font size"))),H("div",{class:J.infoContainer},H("div",{class:J.infoPage},H("button",{class:J.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),H("span",{class:J.infoPageText}),H("button",{class:J.infoPageNext,tabindex:"-1",title:"Next"},"Next")),H("time",{class:J.infoTime,title:"Current time"}),H("time",{class:J.infoTimer,title:"Timer"})))),t})(e.parent)),(e=>{let t=!1;r(J.dragbar).addEventListener("mousedown",()=>{t=!0,r(J.dragbar).classList.add("active")}),window.addEventListener("mouseup",()=>{t=!1,r(J.dragbar).classList.remove("active")}),window.addEventListener("mousemove",e=>{if(!t)return;const n=e.clientX/document.documentElement.clientWidth*100;r(J.container).style.setProperty("--bespoke-marp-presenter-split-ratio",`${Math.max(0,Math.min(100,n))}%`)}),r(J.nextContainer).addEventListener("click",()=>e.next());const n=r(J.next),o=(a=n,(e,t)=>a.contentWindow?.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin));var a;n.addEventListener("load",()=>{r(J.nextContainer).classList.add("active"),o(e.slide(),e.fragmentIndex),e.on("fragment",({index:e,fragmentIndex:t})=>o(e,t))});const i=document.querySelectorAll(".bespoke-marp-note");i.forEach(e=>{e.addEventListener("keydown",e=>e.stopPropagation()),r(J.noteWrapper).appendChild(e)}),e.on("activate",()=>i.forEach(t=>t.classList.toggle("active",t.dataset.index==e.slide())));let s=0;const c=e=>{s=Math.max(-5,s+e),r(J.noteContainer).style.setProperty("--bespoke-marp-note-font-scale",(1.2**s).toFixed(4))},l=()=>c(1),d=()=>c(-1),u=r(J.noteButtonsBigger),f=r(J.noteButtonsSmaller);u.addEventListener("click",()=>{u.blur(),l()}),f.addEventListener("click",()=>{f.blur(),d()}),document.addEventListener("keydown",e=>{"+"===e.key&&l(),"-"===e.key&&d()},!0),e.on("activate",({index:t})=>{r(J.infoPageText).textContent=`${t+1} / ${e.slides.length}`});const m=r(J.infoPagePrev),g=r(J.infoPageNext);m.addEventListener("click",t=>{m.blur(),e.prev({fragment:!t.shiftKey})}),g.addEventListener("click",t=>{g.blur(),e.next({fragment:!t.shiftKey})}),e.on("fragment",({index:t,fragments:n,fragmentIndex:r})=>{m.disabled=0===t&&0===r,g.disabled=t===e.slides.length-1&&r===n.length-1});let p=new Date;const v=()=>{const e=new Date,t=e=>`${Math.floor(e)}`.padStart(2,"0"),n=e.getTime()-p.getTime(),o=t(n/1e3%60),a=t(n/1e3/60%60),i=t(n/36e5%24);r(J.infoTime).textContent=e.toLocaleTimeString(),r(J.infoTimer).textContent=`${i}:${a}:${o}`};v(),setInterval(v,250),r(J.infoTimer).addEventListener("click",()=>{p=new Date})})(e)},z=e=>{if(!(e=>e.syncKey&&"string"==typeof e.syncKey)(e))throw new Error("The current instance of Bespoke.js is invalid for Marp bespoke presenter plugin.");Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:G},presenterUrl:{enumerable:!0,get:Q}}),h&&document.addEventListener("keydown",t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())})};function G(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,W+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function Q(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),m(e)}const Z=e=>{const t=g();return t===l&&e.appendChild(document.createElement("span")),{[s]:z,[c]:Y,[l]:D}[t]},ee=e=>{e.on("activate",t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach(n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"})})},te=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},ne=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{let n=t.fragment?te(p("f")||""):null;((t,n)=>{const{min:r,max:o}=Math,{fragments:a,slides:i}=e,s=o(0,r(t,i.length-1)),c=o(0,r(n||0,a[s].length-1));s===e.slide()&&c===e.fragmentIndex||e.slide(s,{fragment:c})})((()=>{if(location.hash){const[t]=location.hash.slice(1).split(":~:");if(/^\d+$/.test(t))return(te(t)??1)-1;const r=document.getElementById(t)||document.querySelector(`a[name="${CSS.escape(t)}"]`);if(r){const{length:t}=e.slides;for(let o=0;o<t;o+=1)if(e.slides[o].contains(r)){const t=e.fragments?.[o],a=r.closest("[data-marpit-fragment]");if(t&&a){const e=t.indexOf(a);e>=0&&(n=e)}return o}}}return 0})(),n)};e.on("fragment",({index:e,fragmentIndex:r})=>{n||v({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})}),setTimeout(()=>{o(),window.addEventListener("hashchange",()=>r(()=>{o({fragment:!1}),v({f:void 0})})),window.addEventListener("popstate",()=>{n||r(()=>o())}),n=!1},0)}},re=(e={})=>{const t=e.key||window.history.state?.marpBespokeSyncKey||Math.random().toString(36).slice(2),n=`bespoke-marp-sync-${t}`;var r;r={marpBespokeSyncKey:t},v({},{setter:(e,...t)=>i({...e,...r},...t)});const o=()=>{const e=y(n);return e?JSON.parse(e):Object.create(null)},a=e=>{const t=o(),r={...t,...e(t)};return b(n,JSON.stringify(r)),r},s=()=>{window.removeEventListener("pageshow",s),a(e=>({reference:(e.reference||0)+1}))};return e=>{s(),Object.defineProperty(e,"syncKey",{value:t,enumerable:!0});let r=!0;setTimeout(()=>{e.on("fragment",e=>{r&&a(()=>({index:e.index,fragmentIndex:e.fragmentIndex}))})},0),window.addEventListener("storage",t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),o=JSON.parse(t.newValue);if(n.index!==o.index||n.fragmentIndex!==o.fragmentIndex)try{r=!1,e.slide(o.index,{fragment:o.fragmentIndex,forSync:!0})}finally{r=!0}}});const i=()=>{const{reference:e}=o();void 0===e||e<=1?w(n):a(()=>({reference:e-1}))};window.addEventListener("pagehide",e=>{e.persisted&&window.addEventListener("pageshow",s),i()}),e.on("destroy",i)}},{PI:oe,abs:ae,sqrt:ie,atan2:se}=Math,ce={passive:!0},le=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,a=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",({touches:e})=>{r=1===e.length?a(e[0]):void 0},ce),o.addEventListener("touchmove",e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=a(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=ie(ae(n)**2+ae(o)**2),r.radian=se(n,o)}else r=void 0}),o.addEventListener("touchend",o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+oe)%(2*oe)-oe;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}},ce)},de=new Map;de.clear(),de.set("none",{backward:{both:void 0,incoming:void 0,outgoing:void 0},forward:{both:void 0,incoming:void 0,outgoing:void 0}});const ue={both:"",outgoing:"outgoing-",incoming:"incoming-"},fe={forward:"",backward:"-backward"},me=e=>`--marp-bespoke-transition-animation-${e}`,ge=e=>`--marp-transition-${e}`,pe=me("name"),ve=me("duration"),he=e=>new Promise(t=>{const n={},r=document.createElement("div"),o=e=>{r.remove(),t(e)};r.addEventListener("animationstart",()=>o(n)),Object.assign(r.style,{animationName:e,animationDuration:"1s",animationFillMode:"both",animationPlayState:"paused",position:"absolute",pointerEvents:"none"}),document.body.appendChild(r);const a=getComputedStyle(r).getPropertyValue(ge("duration"));a&&Number.parseFloat(a)>=0&&(n.defaultDuration=a),((e,t)=>{requestAnimationFrame(()=>{e.style.animationPlayState="running",requestAnimationFrame(()=>t(void 0))})})(r,o)}),ye=async e=>de.has(e)?de.get(e):(e=>{const t={},n=[];for(const[r,o]of Object.entries(ue))for(const[a,i]of Object.entries(fe)){const s=`marp-${o}transition${i}-${e}`;n.push(he(s).then(e=>{t[a]=t[a]||{},t[a][r]=e?{...e,name:s}:void 0}))}return Promise.all(n).then(()=>t)})(e).then(t=>(de.set(e,t),t)),be=e=>Object.values(e).flatMap(Object.values).every(e=>!e),we=(e,{type:t,backward:n})=>{const r=e[n?"backward":"forward"],o=(()=>{const e=r[t],n=e=>({[pe]:e.name});if(e)return n(e);if(r.both){const e=n(r.both);return"incoming"===t&&(e[me("direction")]="reverse"),e}})();return!o&&n?we(e,{type:t,backward:!1}):o||{[pe]:"__bespoke_marp_transition_no_animation__"}},xe=e=>{if(e)try{const t=JSON.parse(e);if((e=>{if("object"!=typeof e)return!1;const t=e;return"string"==typeof t.name&&(void 0===t.duration||"string"==typeof t.duration)})(t))return t}catch{}},ke="_tSId",$e="_tA",Ee="bespoke-marp-transition-warming-up",Le=window.matchMedia("(prefers-reduced-motion: reduce)"),Se="__bespoke_marp_transition_reduced_outgoing__",Pe="__bespoke_marp_transition_reduced_incoming__",_e={forward:{both:void 0,incoming:{name:Pe},outgoing:{name:Se}},backward:{both:void 0,incoming:{name:Pe},outgoing:{name:Se}}},Te=e=>{if(!document.startViewTransition)return;const t=t=>(void 0!==t&&(e._tD=t),e._tD);let n;t(!1),((...e)=>{CSS.registerProperty({name:ge("duration"),syntax:"<time>",inherits:!0,initialValue:"-1s"});const t=[...new Set(e).values()];return Promise.all(t.map(e=>ye(e))).then()})(...Array.from(document.querySelectorAll("section[data-transition], section[data-transition-back]")).flatMap(e=>[e.dataset.transition,e.dataset.transitionBack].flatMap(e=>{const t=xe(e);return[t?.name,t?.builtinFallback?`__builtin__${t.name}`:void 0]}).filter(e=>!!e))).then(()=>{document.querySelectorAll("style").forEach(e=>{e.innerHTML=e.innerHTML.replace(/--marp-transition-duration:[^;}]*[;}]/g,e=>e.slice(0,-1)+"!important"+e.slice(-1))})});const r=(n,{back:r,cond:o})=>a=>{const i=t();if(i)return!!a[$e]||!("object"!=typeof i||(i.skipTransition(),!a.forSync));if(!o(a))return!0;const s=e.slides[e.slide()],c=()=>a.back??r,l="data-transition"+(c()?"-back":""),d=s.querySelector(`section[${l}]`);if(!d)return!0;const u=xe(d.getAttribute(l)??void 0);return!u||((async(e,{builtinFallback:t=!0}={})=>{let n=await ye(e);if(be(n)){if(!t)return;return n=await ye(`__builtin__${e}`),be(n)?void 0:n}return n})(u.name,{builtinFallback:u.builtinFallback}).then(e=>{if(!e){t(!0);try{n(a)}finally{t(!1)}return}let r=e;Le.matches&&(console.warn("Use a constant animation to transition because preferring reduced motion by viewer has detected."),r=_e);const o=document.getElementById(ke);o&&o.remove();const i=document.createElement("style");i.id=ke,document.head.appendChild(i),((e,t)=>{const n=[`:root{${ge("direction")}:${t.backward?-1:1};}`,":root:has(.bespoke-marp-inactive){cursor:none;}"],r=t=>{const n=e[t].both?.defaultDuration||e[t].outgoing?.defaultDuration||e[t].incoming?.defaultDuration;return"forward"===t?n:n||r("forward")},o=t.duration||r(t.backward?"backward":"forward");void 0!==o&&n.push(`::view-transition-group(*){${ve}:${o};}`);const a=e=>Object.entries(e).map(([e,t])=>`${e}:${t};`).join("");return n.push(`::view-transition-old(root){${a(we(e,{...t,type:"outgoing"}))}}`,`::view-transition-new(root){${a(we(e,{...t,type:"incoming"}))}}`),n})(r,{backward:c(),duration:u.duration}).forEach(e=>i.sheet?.insertRule(e));const s=document.documentElement.classList;s.add(Ee);let l=!1;const d=()=>{l||(n(a),l=!0,s.remove(Ee))},f=()=>{t(!1),i.remove(),s.remove(Ee)};try{t(!0);const e=document.startViewTransition(d);t(e),e.finished.finally(f)}catch(e){console.error(e),d(),f()}}),!1)};e.on("prev",r(t=>e.prev({...t,[$e]:!0}),{back:!0,cond:e=>e.index>0&&!((e.fragment??1)&&n.fragmentIndex>0)})),e.on("next",r(t=>e.next({...t,[$e]:!0}),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout(()=>{e.on("slide",r(t=>e.slide(t.index,{...t,[$e]:!0}),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))},0),e.on("fragment",e=>{n=e})};let Ie;const Me=()=>(void 0===Ie&&(Ie="wakeLock"in navigator&&navigator.wakeLock),Ie),Oe=async()=>{const e=Me();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},Ae=async()=>{if(!Me())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&Oe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await Oe(),e};((e=document.getElementById(":$p"))=>{(()=>{const e=p("view");a.dataset.bespokeView=e===l||e===c?e:""})();const t=(e=>{const t=p(e);return v({[e]:void 0}),t})("sync")||void 0;o.from(e,((...e)=>{const t=d.findIndex(e=>g()===e);return e.map(([e,n])=>e[t]&&n).filter(e=>e)})([[1,1,0],re({key:t})],[[1,1,1],Z(e)],[[1,1,0],M],[[1,1,1],k],[[1,0,0],T()],[[1,1,1],O],[[1,1,1],ne({history:!1})],[[1,1,0],A()],[[1,1,0],P],[[1,0,0],ee],[[1,1,0],le()],[[1,0,0],C()],[[1,0,0],Te],[[1,1,1],$],[[1,1,0],Ae]))})()}();</script></body></html>
