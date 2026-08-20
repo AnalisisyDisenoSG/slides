@@ -623,7 +623,7 @@ El límite es el del **sistema**, no el de la organización
 </div>
 
 ---
-<!-- 
+
 ## Actividad 2: construye un diagrama de contexto
 
 - Retomen el sistema de la Actividad 1 y dibujen su diagrama de contexto
@@ -649,7 +649,7 @@ El límite es el del **sistema**, no el de la organización
 
 - ⏱️ 15 minutos · Compárenlo con la sentencia del problema: **¿son consistentes?**
 
---- -->
+---
 
 <!-- _class: cover -->
 <style scoped>
@@ -1232,7 +1232,7 @@ El **VAN** es la más defendible; el ***payback*** es la más fácil de explicar
 </div>
 </split-slide>
 
-<!-- ---
+---
 
 ## Actividad 3: evalúa la factibilidad
 
@@ -1259,7 +1259,7 @@ Escojan una y expliquen **por qué**, no solo cuál
 - ❓ Preguntas para la discusión:
   - ¿Cuál factibilidad fue la **más difícil** de estimar? ¿Por qué?
   - ¿Alguna candidata falló por una razón **no técnica**?
-  - ¿Qué información les **hizo falta** para decidir con confianza? -->
+  - ¿Qué información les **hizo falta** para decidir con confianza?
 
 ---
 
@@ -1277,7 +1277,7 @@ section {
 - Análisis del negocio y ejemplos
 
 ---
-<!-- 
+
 ## ¿Qué es un proceso de negocio?
 
 <steps>
@@ -1732,7 +1732,6 @@ La representación de **cómo** se va a detallar el caso de uso del negocio
 ### 1️⃣ Diagrama de actividades
 Modelen la narrativa de «Registrar pedido» con **una calle por trabajador** de negocio
 
-Incluyan la **decisión** del jefe técnico: ¿está en el catálogo?
 </div>
 <div>
 
@@ -1750,8 +1749,8 @@ Señalen cada flecha que **cruza** de una calle a otra
 </div>
 </div>
 
-- ⏱️ 25 minutos · Contrasten el resultado con la meta del gerente: **reducir el tiempo de registro a un 20 %**
-- ❓ ¿El diagrama les muestra **dónde** recortar ese tiempo?
+- ⏱️ 25 minutos
+
 
 ---
 
@@ -1776,7 +1775,7 @@ Señalen cada flecha que **cruza** de una calle a otra
 ### ⚠️ Si se rompe el hilo
 Aparecen requerimientos **sin dueño** y decisiones que nadie puede explicar
 </div>
-</div> -->
+</div>
 
 ---
 
