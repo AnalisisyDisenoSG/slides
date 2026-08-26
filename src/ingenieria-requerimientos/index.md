@@ -1412,26 +1412,9 @@ section {
 </style>
 # Artefactos y prototipos
 ## Contenidos
-- Los artefactos de la ingeniería de requerimientos
 - Plan de administración y peticiones
 - Prototipos como medio de validación
 
----
-
-## Los artefactos de la ingeniería de requerimientos
-
-| Artefacto | Responde | Nivel |
-|:--|:--|:--|
-| **Plan de administración de requerimientos** | ¿**Cómo** vamos a trabajar los requerimientos? | Proceso |
-| **Peticiones de los afectados** | ¿Qué **pidió** cada persona interesada, textualmente? | Crudo |
-| **Visión** | ¿Cuál es el **problema** y qué capacidades hacen falta? | Problema del negocio |
-| **Modelo y especificación de casos de uso** | ¿Qué **hace** el sistema y para quién? | Especificación funcional |
-| **Especificaciones suplementarias** | ¿Bajo qué **atributos y restricciones** lo hace? | Especificación no funcional |
-| **Glosario** | ¿Qué significa cada **término** del dominio? | Transversal |
-| **Atributos de requerimientos** | ¿En qué **estado, prioridad y riesgo** está cada uno? | Administración |
-
-- 🔗 La **Visión** ya la trabajamos a fondo en el mazo de *Métodos de análisis de sistemas*
-- 💡 Juntos, **Casos de uso + Especificaciones suplementarias** forman la especificación completa
 
 ---
 
@@ -1604,33 +1587,6 @@ Una función **completa** de punta a punta → valida la **factibilidad técnica
 
 </step>
 </steps>
-
----
-
-## Actividad 4: diseña un prototipo de validación
-
-- Tomen la característica *«validación de choques de horario en línea»*
-
-<div class="grid">
-<div>
-
-### 1️⃣ ¿Qué pregunta responde?
-Escriban la **pregunta concreta** que el prototipo debe resolver. Una sola
-</div>
-<div>
-
-### 2️⃣ ¿Qué tipo?
-¿Desechable o evolutivo? ¿Horizontal o vertical? **Justifiquen**
-</div>
-<div>
-
-### 3️⃣ ¿Cómo lo presentan?
-¿Pasivo, activo o interactivo? ¿A **quién** se lo muestran y qué les van a **preguntar**?
-</div>
-</div>
-
-- ⏱️ 15 minutos
-- ❓ ¿Qué harían si, al mostrarlo, la contraparte pide **entregarlo tal cual** la próxima semana?
 
 ---
 
@@ -2257,7 +2213,7 @@ Mencionar elementos del **diseño de base de datos o de algoritmos**
 
 ---
 
-## Actividad 5: modela y especifica
+## Actividad 4: modela y especifica
 
 - Sistema de **préstamo de equipo** de laboratorio. En equipos:
 
@@ -2542,7 +2498,7 @@ Se decide en el **plan de administración de requerimientos**: qué se traza con
 
 ---
 
-## Actividad 6: valida y traza
+## Actividad 5: valida y traza
 
 <div class="grid">
 <div>
