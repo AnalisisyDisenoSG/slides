@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 570" width="1020" height="570" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1020" height="570" fill="#ffffff"/>
+
+  <g stroke="#333" stroke-width="1.5" fill="#e6e0f5">
+    <rect x="180" y="120" width="240" height="100"/>
+    <rect x="620" y="70" width="240" height="90"/>
+    <rect x="620" y="230" width="240" height="90"/>
+  </g>
+  <g stroke="#333" stroke-width="1.2" fill="#ffffff">
+    <rect x="386" y="130" width="20" height="15"/><rect x="381" y="132" width="8" height="4"/><rect x="381" y="139" width="8" height="4"/>
+    <rect x="826" y="80" width="20" height="15"/><rect x="821" y="82" width="8" height="4"/><rect x="821" y="89" width="8" height="4"/>
+    <rect x="826" y="240" width="20" height="15"/><rect x="821" y="242" width="8" height="4"/><rect x="821" y="249" width="8" height="4"/>
+  </g>
+  <g font-size="12.5" fill="#555" text-anchor="middle">
+    <text x="290" y="152">&#171;component&#187;</text>
+    <text x="740" y="102">&#171;component&#187;</text>
+    <text x="740" y="262">&#171;component&#187;</text>
+  </g>
+  <g font-size="16.5" fill="#111" text-anchor="middle" font-weight="700">
+    <text x="290" y="176">GestionMatricula</text>
+    <text x="740" y="126">ValidadorRequisitos</text>
+    <text x="740" y="286">RepositorioMatricula</text>
+  </g>
+
+  <g stroke="#333" stroke-width="1.6" fill="none"><path d="M149,170 L180,170"/></g>
+  <circle cx="140" cy="170" r="9" fill="#ffffff" stroke="#333" stroke-width="1.6"/>
+  <text x="140" y="148" font-size="13.5" fill="#c0392b" text-anchor="middle">IMatricula</text>
+
+  <g stroke="#333" stroke-width="1.4" fill="#ffffff">
+    <rect x="414" y="145" width="12" height="12"/>
+    <rect x="414" y="190" width="12" height="12"/>
+  </g>
+
+  <g stroke="#333" stroke-width="1.6" fill="none">
+    <path d="M426,151 L472,151"/>
+    <path d="M490,133 A18,18 0 0 0 490,169"/>
+    <path d="M499,151 L620,115"/>
+    <path d="M426,196 L472,196"/>
+    <path d="M490,178 A18,18 0 0 0 490,214"/>
+    <path d="M499,199 L620,270"/>
+  </g>
+  <circle cx="490" cy="151" r="9" fill="#ffffff" stroke="#333" stroke-width="1.6"/>
+  <circle cx="490" cy="196" r="9" fill="#ffffff" stroke="#333" stroke-width="1.6"/>
+  <g font-size="13.5" fill="#c0392b" text-anchor="middle">
+    <text x="562" y="112">IValidacion</text>
+    <text x="556" y="292">IPersistencia</text>
+  </g>
+
+  <g stroke="#c0392b" stroke-width="1.1" stroke-dasharray="4,3" fill="none">
+    <path d="M472,145 L444,66"/>
+    <path d="M492,142 L546,66"/>
+    <path d="M420,208 L352,300"/>
+  </g>
+  <g font-size="13" fill="#c0392b">
+    <text x="436" y="56" text-anchor="end">zócalo = interfaz requerida</text>
+    <text x="554" y="56">bola = interfaz provista</text>
+    <text x="344" y="316" text-anchor="end">puerto</text>
+  </g>
+
+  <rect x="40" y="400" width="950" height="150" fill="#f7f7f7" stroke="#bbb"/>
+  <g font-size="14.5" fill="#111">
+    <text x="58" y="428" font-weight="700">Cómo se lee</text>
+  </g>
+  <g font-size="13.5" fill="#111">
+    <text x="58" y="456"><tspan font-weight="700">Componente</tspan> — parte reemplazable del sistema con interfaces bien definidas. Se sustituye sin tocar a quien lo usa.</text>
+    <text x="58" y="480"><tspan font-weight="700">Bola (provista)</tspan> — «yo ofrezco este contrato».  <tspan font-weight="700">Zócalo (requerida)</tspan> — «yo necesito este contrato».</text>
+    <text x="58" y="504"><tspan font-weight="700">Puerto</tspan> — punto de interacción con nombre en el borde del componente; agrupa las interfaces de un mismo canal.</text>
+    <text x="58" y="530" fill="#555">Componentes = <tspan font-weight="700">piezas lógicas</tspan> del software y sus contratos. Despliegue = <tspan font-weight="700">dónde se instalan</tspan> esas piezas.</text>
+  </g>
+</svg>
