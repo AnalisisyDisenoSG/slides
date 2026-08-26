@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 560" width="1120" height="560" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1120" height="560" fill="#ffffff"/>
+  <g stroke="#333" stroke-width="1.4" fill="none">
+    <path d="M560 66 L560 84 M190 84 L730 84 M190 84 L190 100 M730 84 L730 100"/>
+    <path d="M190 140 L190 441"/>
+    <path d="M730 140 L730 309"/>
+    <path d="M790 326 L790 489"/>
+    <path d="M190 177 L230 177 M190 221 L230 221 M190 265 L230 265 M190 309 L230 309 M190 353 L230 353 M190 397 L230 397 M190 441 L230 441"/>
+    <path d="M730 177 L770 177 M730 221 L770 221 M730 265 L770 265 M730 309 L770 309"/>
+    <path d="M790 357 L830 357 M790 401 L830 401 M790 445 L830 445 M790 489 L830 489"/>
+  </g>
+  <g stroke="#333" stroke-width="1.6">
+    <rect x="460" y="22" width="200" height="44" rx="6" fill="#e8e8e8"/>
+    <rect x="90" y="100" width="200" height="40" rx="5" fill="#8fc3e8"/>
+    <rect x="620" y="100" width="220" height="40" rx="5" fill="#f0b78e"/>
+  </g>
+  <g font-size="17" text-anchor="middle" fill="#111">
+    <text x="560" y="50" font-weight="600">Diagrama UML</text>
+    <text x="190" y="126" font-weight="600">Estructura (7)</text>
+    <text x="730" y="126" font-weight="600">Comportamiento (7)</text>
+  </g>
+  <g stroke="#333" stroke-width="1.3" fill="#d6eaf8">
+    <rect x="230" y="160" width="240" height="34" rx="4"/>
+    <rect x="230" y="204" width="240" height="34" rx="4"/>
+    <rect x="230" y="248" width="240" height="34" rx="4"/>
+    <rect x="230" y="292" width="240" height="34" rx="4"/>
+    <rect x="230" y="336" width="240" height="34" rx="4"/>
+    <rect x="230" y="380" width="240" height="34" rx="4"/>
+    <rect x="230" y="424" width="240" height="34" rx="4"/>
+  </g>
+  <g font-size="15" fill="#111">
+    <text x="244" y="182">Clases</text>
+    <text x="244" y="226">Objetos</text>
+    <text x="244" y="270">Componentes</text>
+    <text x="244" y="314">Estructura compuesta</text>
+    <text x="244" y="358">Despliegue</text>
+    <text x="244" y="402">Paquetes</text>
+    <text x="244" y="446">Perfiles</text>
+  </g>
+  <g stroke="#333" stroke-width="1.3" fill="#fbe3d2">
+    <rect x="770" y="160" width="250" height="34" rx="4"/>
+    <rect x="770" y="204" width="250" height="34" rx="4"/>
+    <rect x="770" y="248" width="250" height="34" rx="4"/>
+    <rect x="770" y="292" width="250" height="34" rx="4"/>
+  </g>
+  <g font-size="15" fill="#111">
+    <text x="784" y="182">Actividad</text>
+    <text x="784" y="226">Casos de uso</text>
+    <text x="784" y="270">Máquina de estados</text>
+    <text x="784" y="314" font-weight="600">Interacción</text>
+  </g>
+  <g stroke="#333" stroke-width="1.3" fill="#fdf3d0">
+    <rect x="830" y="340" width="230" height="34" rx="4"/>
+    <rect x="830" y="384" width="230" height="34" rx="4"/>
+    <rect x="830" y="428" width="230" height="34" rx="4"/>
+    <rect x="830" y="472" width="230" height="34" rx="4"/>
+  </g>
+  <g font-size="15" fill="#111">
+    <text x="844" y="362">Secuencia</text>
+    <text x="844" y="406">Comunicación</text>
+    <text x="844" y="450">Visión general de interacción</text>
+    <text x="844" y="494">Tiempos</text>
+  </g>
+  <g font-size="13" fill="#555">
+    <text x="90" y="490">UML 2.5.1 (OMG, 2017) — los 14 tipos de diagrama.</text>
+    <text x="90" y="510">Desde UML 2.5 el diagrama de objetos se define como especificaciones de instancia</text>
+    <text x="90" y="528">dentro del diagrama de clases; la mayoría de herramientas lo sigue ofreciendo aparte.</text>
+  </g>
+</svg>

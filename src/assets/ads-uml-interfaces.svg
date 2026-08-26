@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 470" width="1020" height="470" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="hollow" markerWidth="16" markerHeight="16" refX="14" refY="6" orient="auto">
+      <path d="M1,1 L14,6 L1,11 Z" fill="#ffffff" stroke="#333" stroke-width="1.4"/>
+    </marker>
+  </defs>
+  <rect width="1020" height="470" fill="#ffffff"/>
+
+  <text x="40" y="32" font-size="16" font-weight="700" fill="#111">Notación completa: interfaz + realización</text>
+  <g stroke="#333" stroke-width="1.5" fill="#e6e0f5">
+    <rect x="140" y="55" width="270" height="52"/><rect x="140" y="107" width="270" height="66"/>
+  </g>
+  <text x="275" y="76" font-size="14" fill="#555" text-anchor="middle">&#171;interface&#187;</text>
+  <text x="275" y="98" font-size="18" fill="#111" text-anchor="middle" font-weight="700" font-style="italic">MedioDePago</text>
+  <g font-size="14" fill="#111" font-family="Consolas, monospace">
+    <text x="152" y="130">+ autorizar(m : Monto) : Boolean</text>
+    <text x="152" y="154">+ reversar(id : String) : void</text>
+  </g>
+
+  <g stroke="#333" stroke-width="1.5" fill="#d6eaf8">
+    <rect x="40" y="270" width="200" height="30"/><rect x="40" y="300" width="200" height="34"/>
+    <rect x="310" y="270" width="200" height="30"/><rect x="310" y="300" width="200" height="34"/>
+  </g>
+  <g font-size="15" fill="#111" text-anchor="middle" font-weight="600">
+    <text x="140" y="291">TarjetaCredito</text>
+    <text x="410" y="291">TransferenciaSINPE</text>
+  </g>
+  <g stroke="#333" stroke-width="1.5" fill="none" stroke-dasharray="8,5" marker-end="url(#hollow)">
+    <path d="M140,268 L200,178"/>
+    <path d="M410,268 L350,178"/>
+  </g>
+  <text x="275" y="215" font-size="13" fill="#c0392b" text-anchor="middle">realización</text>
+  <text x="275" y="233" font-size="13" fill="#c0392b" text-anchor="middle">(discontinua + triángulo hueco)</text>
+
+  <text x="560" y="32" font-size="16" font-weight="700" fill="#111">Notación abreviada: bola y zócalo</text>
+  <g stroke="#333" stroke-width="1.5" fill="#d6eaf8">
+    <rect x="560" y="110" width="170" height="30"/><rect x="560" y="140" width="170" height="34"/>
+    <rect x="850" y="110" width="170" height="30"/><rect x="850" y="140" width="170" height="34"/>
+  </g>
+  <g font-size="15" fill="#111" text-anchor="middle" font-weight="600">
+    <text x="645" y="131">Checkout</text>
+    <text x="935" y="131">TarjetaCredito</text>
+  </g>
+  <g stroke="#333" stroke-width="1.6" fill="none">
+    <path d="M730,157 L777,157"/>
+    <path d="M850,157 L804,157"/>
+    <path d="M795,139 A18,18 0 0 0 795,175"/>
+  </g>
+  <circle cx="795" cy="157" r="9" fill="#ffffff" stroke="#333" stroke-width="1.6"/>
+  <g font-size="13" fill="#c0392b" text-anchor="middle">
+    <text x="795" y="200">MedioDePago</text>
+    <text x="700" y="222">interfaz requerida</text>
+    <text x="900" y="222">interfaz provista</text>
+  </g>
+  <g font-size="13" fill="#555">
+    <text x="560" y="262">El zócalo (media luna) dice «necesito este contrato».</text>
+    <text x="560" y="282">La bola dice «yo lo cumplo». Encajan = conector de ensamblaje.</text>
+    <text x="560" y="302">Checkout no depende de TarjetaCredito, depende del contrato.</text>
+  </g>
+
+  <rect x="40" y="368" width="960" height="82" fill="#f4f4f4" stroke="#bbb"/>
+  <g font-size="14" fill="#111">
+    <text x="56" y="392" font-weight="700">No confundir</text>
+    <text x="56" y="416">Generalización (herencia): línea <tspan font-weight="700">continua</tspan> + triángulo hueco — «es un tipo de».</text>
+    <text x="56" y="438">Realización (interfaz): línea <tspan font-weight="700">discontinua</tspan> + triángulo hueco — «cumple el contrato de».</text>
+  </g>
+  <g stroke="#333" stroke-width="1.6" fill="none">
+    <path d="M700,410 L790,410" marker-end="url(#hollow)"/>
+    <path d="M700,432 L790,432" stroke-dasharray="8,5" marker-end="url(#hollow)"/>
+  </g>
+</svg>

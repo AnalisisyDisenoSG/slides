@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 560" width="1040" height="560" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1040" height="560" fill="#ffffff"/>
+  <g stroke="#333" stroke-width="1.6" fill="#d6eaf8">
+    <rect x="70" y="60" width="400" height="52"/>
+    <rect x="70" y="112" width="400" height="130"/>
+    <rect x="70" y="242" width="400" height="112"/>
+  </g>
+  <text x="270" y="82" font-size="13" fill="#555" text-anchor="middle">&#171;entity&#187;</text>
+  <text x="270" y="103" font-size="19" fill="#111" text-anchor="middle" font-weight="700">Estudiante</text>
+
+  <g font-size="15" fill="#111" font-family="Consolas, Menlo, monospace">
+    <text x="84" y="135">- carne : String {id}</text>
+    <text x="84" y="159">- nombre : String</text>
+    <text x="84" y="183"># promedio : Double = 0.0</text>
+    <text x="84" y="207">~ telefonos : String [0..*]</text>
+    <text x="84" y="231" text-decoration="underline">+ MAX_CURSOS : Integer = 7</text>
+  </g>
+  <g font-size="15" fill="#111" font-family="Consolas, Menlo, monospace">
+    <text x="84" y="266">+ matricular(c : Curso) : Boolean</text>
+    <text x="84" y="290">+ calcularPromedio() : Double</text>
+    <text x="84" y="314">- validarRequisitos(c : Curso) : Boolean</text>
+    <text x="84" y="338" font-style="italic">+ notificar(m : Mensaje)</text>
+  </g>
+
+  <g stroke="#c0392b" stroke-width="1.2" fill="none" stroke-dasharray="4,3">
+    <path d="M480,86 L560,86"/>
+    <path d="M480,131 L560,131"/>
+    <path d="M480,203 L560,203"/>
+    <path d="M480,227 L560,227"/>
+    <path d="M480,262 L560,262"/>
+    <path d="M480,334 L560,334"/>
+  </g>
+  <g font-size="14" fill="#c0392b">
+    <text x="566" y="91">Nombre (y estereotipo opcional)</text>
+    <text x="566" y="136">Atributos: visibilidad, tipo, propiedades</text>
+    <text x="566" y="208">Multiplicidad del atributo [0..*]</text>
+    <text x="566" y="232">Subrayado = miembro de clase (static)</text>
+    <text x="566" y="267">Operaciones: firma completa</text>
+    <text x="566" y="339">Cursiva = operación abstracta</text>
+  </g>
+
+  <g font-size="14" fill="#111">
+    <text x="70" y="398" font-weight="700">Visibilidad</text>
+    <text x="70" y="422" font-family="Consolas, monospace">+</text><text x="100" y="422">público</text>
+    <text x="200" y="422" font-family="Consolas, monospace">-</text><text x="230" y="422">privado</text>
+    <text x="330" y="422" font-family="Consolas, monospace">#</text><text x="360" y="422">protegido</text>
+    <text x="470" y="422" font-family="Consolas, monospace">~</text><text x="500" y="422">paquete</text>
+  </g>
+
+  <rect x="70" y="446" width="900" height="84" fill="#f4f4f4" stroke="#bbb" stroke-width="1"/>
+  <g font-size="14" fill="#111">
+    <text x="86" y="470" font-weight="700">Sintaxis</text>
+    <text x="86" y="494" font-family="Consolas, monospace">atributo:  visibilidad nombre : tipo [multiplicidad] = valorInicial {propiedades}</text>
+    <text x="86" y="518" font-family="Consolas, monospace">operación: visibilidad nombre(dir par : tipo = valor, ...) : tipoRetorno {propiedades}</text>
+  </g>
+  <text x="640" y="398" font-size="13" fill="#555">Los tres compartimentos son opcionales: en el modelo de dominio</text>
+  <text x="640" y="418" font-size="13" fill="#555">se muestran clase y atributos, casi nunca operaciones.</text>
+</svg>

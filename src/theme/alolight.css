@@ -183,7 +183,7 @@ th, td {
   text-align: center;
 }
 
-a:is([href$=".png"], [href$=".jpg"], [href$=".jpeg"], [href$=".webp"], [href$=".gif"]) {
+a:is([href$=".png"], [href$=".jpg"], [href$=".jpeg"], [href$=".webp"], [href$=".gif"], [href$=".svg"]) {
    &::before {
     content: "";
     display: inline-block;
