@@ -88,17 +88,39 @@ Para las diapositivas de solución de un ejercicio: `<hidden>` desenfoca su cont
 
 `<hidden>` tampoco es una etiqueta de bloque de markdown-it: aplican las mismas **líneas en blanco** que a `<steps>`. El atributo `label` es opcional (por defecto, «Contenido oculto»).
 
-Tres modos, en el orden en que rota `Ctrl+Alt+H` (se recuerda en `localStorage`, clave `ads-slides-hidden-mode`):
+Quién puede ver un bloque se decide en tres niveles, de mayor a menor precedencia:
 
-| modo | efecto |
+**1. El atributo del bloque** — es lo que controlas al republicar:
+
+| atributo | efecto |
 | --- | --- |
-| `locked` (por defecto) | oculto, sin pista de teclado: es lo que ve quien abre el link |
-| `presenter` | oculto, pero `Ctrl+Alt+S` revela la diapositiva actual y `Ctrl+Alt+A` el mazo entero |
-| `open` | mecanismo desactivado, todo visible |
+| *(ninguno)* | oculto; solo lo revela quien haya desbloqueado el mazo |
+| `reveal="always"` | siempre visible |
+| `reveal="key"` | cualquiera lo revela con `Ctrl+Alt+S`; el velo muestra la combinación |
 
-El modo también se fija por URL sin tocar el `localStorage` de quien abre: `?hidden=open`, `?hidden=presenter` (el query va antes del hash: `uml/?hidden=open#57`). Los atajos usan `Ctrl+Alt` para no chocar con las teclas de bespoke.
+**2. El atributo del `<script>`** — deja visible el mazo entero sin tocar cada bloque:
 
-Es ocultamiento visual, no protección: el contenido sigue en el HTML y las imágenes siguen accesibles por su URL en `assets/`.
+```html
+<script src="../assets/hidden.js" data-mode="open"></script>
+```
+
+**3. El desbloqueo del presentador** — se teclea la frase secreta (sin modificadores, en cualquier diapositiva) y queda guardada en el `localStorage` de ese navegador (`ads-slides-presenter`). Se teclea otra vez para volver a bloquear. Con el desbloqueo activo:
+
+- `Ctrl+Alt+S` revela/oculta los `<hidden>` de la diapositiva actual
+- `Ctrl+Alt+A` revela/oculta todos los del mazo
+- un clic sobre el bloque oculto también lo revela
+
+No hay parámetro de URL a propósito: un link es reenviable y reutilizable en otro mazo; el `localStorage` no.
+
+La frase por defecto es `clase`. Para cambiarla:
+
+```bash
+pnpm hidden:secret "tu frase"   # imprime la línea SECRET que se pega en hidden.js
+```
+
+En el código solo queda la longitud y un hash (FNV de dos pasadas, el mismo en `scripts/hidden-secret.mjs` y en `hidden.js`: si tocas uno, toca el otro). Evita en la frase las teclas que usa bespoke —`p` abre la vista de presentador y `f` la pantalla completa—.
+
+Es ocultamiento visual, no protección: el contenido sigue en el HTML publicado y las imágenes siguen accesibles por su URL en `assets/`. Para material que no deba poder verse, no lo publiques.
 
 ### Convención de un mazo
 

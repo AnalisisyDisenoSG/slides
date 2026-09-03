@@ -1,49 +1,64 @@
 (function () {
   /*
-   * <hidden> — contenido oculto (soluciones, respuestas, spoilers de una demo).
+   * <hidden> — contenido oculto (soluciones de un ejercicio, spoilers de una demo).
    *
-   * Tres modos, en el orden en que rota Ctrl+Alt+H:
-   *   locked    (por defecto) → oculto y sin pistas: es lo que ve quien abre el link
-   *   presenter                → oculto, pero revelable con el teclado; muestra la ayuda
-   *   open                     → mecanismo desactivado, todo visible
+   * Qué decide si un bloque se ve, en orden de precedencia:
    *
-   * Atajos (siempre con Ctrl+Alt para no chocar con bespoke ni con el navegador):
-   *   Ctrl+Alt+H  rota el modo y lo recuerda en este navegador (localStorage)
-   *   Ctrl+Alt+S  revela/oculta los <hidden> de la diapositiva actual (modo presenter)
-   *   Ctrl+Alt+A  revela/oculta todos los <hidden> del mazo (modo presenter)
+   *   1. El atributo del bloque, en el Markdown:
+   *        <hidden reveal="always">  siempre visible (lo republicas y ya está)
+   *        <hidden reveal="key">     cualquiera lo revela con Ctrl+Alt+S; el velo lo dice
+   *        <hidden>                  oculto: solo lo revela quien haya desbloqueado
+   *   2. El atributo del <script> del mazo:
+   *        <script src="../assets/hidden.js" data-mode="open"></script>
+   *      deja visible TODO el mazo sin tocar cada bloque.
+   *   3. El desbloqueo del presentador: teclear la frase secreta (ver SECRET) en
+   *      cualquier momento. Queda guardado en el localStorage de ESE navegador, así
+   *      que no viaja en el link ni se puede reenviar. Se teclea otra vez para salir.
    *
-   * También se puede fijar el modo por URL, sin tocar el localStorage de quien abre:
-   *   index.html?hidden=open      → compartir el mazo con las soluciones a la vista
-   *   index.html?hidden=presenter → abrir la copia de clase ya lista para revelar
+   * Con el desbloqueo activo:
+   *   Ctrl+Alt+S   revela/oculta los <hidden> de la diapositiva actual
+   *   Ctrl+Alt+A   revela/oculta todos los del mazo
+   *   clic         sobre un bloque oculto, lo revela
    *
-   * OJO: esto oculta a la vista, no protege. El contenido sigue en el HTML y las
-   * imágenes siguen siendo accesibles por su URL en /assets. Si algo no debe poder
-   * verse, no lo publiques.
+   * La frase secreta no está en claro: SECRET guarda solo su longitud y un hash.
+   * Para cambiarla:  pnpm hidden:secret "tu nueva frase"  y pega la línea que imprime.
+   *
+   * OJO: esto oculta a la vista, no protege. El contenido sigue en el HTML publicado
+   * y las imágenes siguen siendo accesibles por su URL en /assets. Si algo no debe
+   * poder verse, no lo publiques.
    */
 
-  const MODES = ['locked', 'presenter', 'open'];
-  const DEFAULT_MODE = 'locked';
-  const STORE_KEY = 'ads-slides-hidden-mode';
+  // Frase por defecto: "clase". Cámbiala con: pnpm hidden:secret "tu frase"
+  // (evita las teclas que usa bespoke: p abre la vista de presentador, f pantalla completa)
+  const SECRET = { len: 5, hash: '1fec5qh1323dvs' };
+
+  const STORE_KEY = 'ads-slides-presenter';
   const ACCENT = '#fe704d';
 
-  const MODE_LABEL = {
-    locked: '🔒 Oculto (sin revelar)',
-    presenter: '👁️ Modo presentador · Ctrl+Alt+S revela la diapositiva, Ctrl+Alt+A todo',
-    open: '🔓 Todo visible',
+  /* ── Hash (no criptográfico: solo evita que la frase se lea en el código) ── */
+  const hash = (text) => {
+    let a = 0x811c9dc5, b = 0x01000193;
+    for (const ch of text.toLowerCase()) {
+      const c = ch.codePointAt(0);
+      a = Math.imul(a ^ c, 0x01000193) >>> 0;
+      b = Math.imul(b ^ (c + 0x9e3779b9), 0x85ebca6b) >>> 0;
+    }
+    return a.toString(36).padStart(7, '0') + b.toString(36).padStart(7, '0');
   };
 
-  /* ── Estado ──────────────────────────────────────────────────────── */
-  const stored = (() => {
-    try { return localStorage.getItem(STORE_KEY); } catch { return null; }
-  })();
-  const fromUrl = new URLSearchParams(location.search).get('hidden');
+  /* ── Configuración del mazo ──────────────────────────────────────── */
+  const script = document.currentScript;
+  const deckOpen = !!script && script.dataset.mode === 'open';
 
-  let mode = MODES.includes(fromUrl) ? fromUrl
-    : MODES.includes(stored) ? stored
-      : DEFAULT_MODE;
+  let unlocked = (() => {
+    try { return localStorage.getItem(STORE_KEY) === '1'; } catch { return false; }
+  })();
 
   const persist = () => {
-    try { localStorage.setItem(STORE_KEY, mode); } catch { /* modo privado */ }
+    try {
+      if (unlocked) localStorage.setItem(STORE_KEY, '1');
+      else localStorage.removeItem(STORE_KEY);
+    } catch { /* modo privado */ }
   };
 
   /* ── Estilos ─────────────────────────────────────────────────────── */
@@ -81,6 +96,7 @@
       z-index: 10;
     }
     hidden[data-state="hidden"] > .hidden-veil { display: flex; }
+    hidden[data-can-reveal] > .hidden-veil { pointer-events: auto; cursor: pointer; }
     .hidden-veil-icon { font-size: 2.2rem; line-height: 1; }
     .hidden-veil-hint {
       font-size: 0.7rem;
@@ -116,6 +132,7 @@
 
   /* ── Velos ───────────────────────────────────────────────────────── */
   const blocks = [...document.querySelectorAll('hidden')];
+  if (!blocks.length) return;
 
   blocks.forEach(block => {
     const veil = document.createElement('div');
@@ -130,13 +147,17 @@
     block.appendChild(veil);
   });
 
-  /* ── Aplicar modo ────────────────────────────────────────────────── */
+  const alwaysVisible = (b) => deckOpen || b.getAttribute('reveal') === 'always';
+  const canReveal = (b) => !alwaysVisible(b) && (unlocked || b.getAttribute('reveal') === 'key');
+
+  /* ── Aplicar configuración ───────────────────────────────────────── */
   const apply = () => {
-    document.documentElement.dataset.hiddenMode = mode;
     blocks.forEach(block => {
-      block.dataset.state = mode === 'open' ? 'shown' : 'hidden';
+      block.dataset.state = alwaysVisible(block) ? 'shown' : 'hidden';
+      if (canReveal(block)) block.dataset.canReveal = '';
+      else delete block.dataset.canReveal;
       block.querySelector('.hidden-veil-hint').style.display =
-        mode === 'presenter' ? '' : 'none';
+        canReveal(block) ? '' : 'none';
     });
   };
 
@@ -156,39 +177,50 @@
   /* ── Revelar / ocultar ───────────────────────────────────────────── */
   const activeSection = () => {
     const active = document.querySelector('.bespoke-marp-active');
-    if (!active) return document.body;
+    if (!active) return document;
     return active.matches('section') ? active
       : active.querySelector('section') || active.closest('section') || active;
   };
 
   const toggle = (targets) => {
-    if (mode !== 'presenter' || !targets.length) return;
-    const anyHidden = targets.some(b => b.dataset.state === 'hidden');
-    targets.forEach(b => { b.dataset.state = anyHidden ? 'shown' : 'hidden'; });
+    const usable = targets.filter(canReveal);
+    if (!usable.length) return;
+    const anyHidden = usable.some(b => b.dataset.state === 'hidden');
+    usable.forEach(b => { b.dataset.state = anyHidden ? 'shown' : 'hidden'; });
   };
 
-  /* ── Teclado ─────────────────────────────────────────────────────── */
-  document.addEventListener('keydown', (e) => {
-    if (!e.ctrlKey || !e.altKey || e.shiftKey || e.metaKey) return;
+  document.addEventListener('click', (e) => {
+    const veil = e.target.closest('.hidden-veil');
+    if (veil) toggle([veil.parentElement]);
+  });
 
-    if (e.code === 'KeyH') {
-      e.preventDefault();
-      mode = MODES[(MODES.indexOf(mode) + 1) % MODES.length];
-      persist();
-      apply();
-      notify(MODE_LABEL[mode]);
+  /* ── Teclado ─────────────────────────────────────────────────────── */
+  let buffer = '';
+
+  document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.altKey && !e.shiftKey && !e.metaKey) {
+      if (e.code === 'KeyS') {
+        e.preventDefault();
+        toggle([...activeSection().querySelectorAll('hidden')]);
+      } else if (e.code === 'KeyA') {
+        e.preventDefault();
+        toggle(blocks);
+      }
       return;
     }
 
-    if (mode !== 'presenter') return;
+    // Frase secreta: se teclea sin modificadores, en cualquier diapositiva
+    if (e.ctrlKey || e.altKey || e.metaKey || e.key.length !== 1) return;
+    buffer = (buffer + e.key).slice(-SECRET.len);
+    if (buffer.length !== SECRET.len || hash(buffer) !== SECRET.hash) return;
 
-    if (e.code === 'KeyS') {
-      e.preventDefault();
-      toggle([...activeSection().querySelectorAll('hidden')]);
-    } else if (e.code === 'KeyA') {
-      e.preventDefault();
-      toggle(blocks);
-    }
+    buffer = '';
+    unlocked = !unlocked;
+    persist();
+    apply();
+    notify(unlocked
+      ? '🔓 Presentador · Ctrl+Alt+S revela la diapositiva, Ctrl+Alt+A todo'
+      : '🔒 Bloqueado');
   });
 
   apply();
