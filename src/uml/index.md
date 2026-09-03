@@ -226,7 +226,7 @@ Un diagrama sin decisión detrás es decoración. Si no responde una pregunta, n
 
 ## Actividad 1: del enunciado a los conceptos
 
-> «El sistema debe permitir que un **estudiante** se matricule en los **cursos** que oferta la Escuela cada **semestre**. Cada curso tiene un **profesor** asignado y un **cupo máximo**. Al matricularse se genera una **matrícula** con la fecha y el estado. Si el curso está lleno, el estudiante entra en una **lista de espera**.»
+> «El sistema debe permitir que un estudiante se matricule en los cursos que oferta la Escuela cada semestre. Cada curso tiene un profesor asignado y un cupo máximo. Al matricularse se genera una matrícula con la fecha y el estado. Si el curso está lleno, el estudiante entra en una lista de espera.»
 
 <split-slide style="--left: 50%; --right: 50%;">
 <div>
@@ -1481,10 +1481,10 @@ La última frase **no se dibuja**: es una restricción `{...}` o una nota
 - ⏱️ 25 minutos · en grupos
 
 ---
-
+<!-- 
 ## Caso de fabricación: una solución posible
 
-[![h:450](../assets/ads-uml-caso-fabricacion.png)](../assets/ads-uml-caso-fabricacion.png)
+[![h:450](../assets/ads-uml-caso-fabricacion.png)](../assets/ads-uml-caso-fabricacion.png) -->
 
 ---
 
@@ -1589,31 +1589,6 @@ section {
 
 - 🔑 **Son semánticamente equivalentes**: una herramienta puede convertir uno en otro sin perder información
 - 💡 Elige por la pregunta: *¿en qué orden pasa?* → secuencia · *¿quién habla con quién?* → comunicación
-
----
-
-## Actividad 5: modela un escenario
-
-> **Retirar dinero en un cajero automático.** El cliente inserta la tarjeta y digita el PIN. El cajero valida el PIN contra el banco; si es incorrecto, permite hasta tres intentos y luego retiene la tarjeta. Con el PIN válido, el cliente elige «retiro» e indica el monto. El cajero consulta el saldo; si hay fondos, entrega el efectivo, imprime el comprobante y registra la transacción. Si no hay fondos, muestra el error y vuelve al menú.
-
-<split-slide style="--left: 50%; --right: 50%;">
-<div>
-
-### Qué hacer
-1. Identifiquen los **participantes** (mínimo: cliente, cajero, banco, cuenta)
-2. Dibujen el **diagrama de secuencia** del escenario completo
-3. Usen `loop` para los tres intentos y `alt` para el caso sin fondos
-</div>
-<div>
-
-### Preguntas de control
-- ¿Qué mensajes son **síncronos** y cuáles podrían ser asíncronos?
-- ¿Dónde va la **guarda** del fragmento `alt`?
-- Miren cada mensaje recibido: ¿aparece como **operación** en la clase del receptor?
-</div>
-</split-slide>
-
-- ⏱️ 25 minutos
 
 ---
 
@@ -1871,7 +1846,7 @@ Es el **último eslabón** del flujo de transiciones. Puede haber **varios** en 
 
 ---
 
-## Actividad 6: construye el diagrama de cuenta corriente
+## Actividad 5: construye el diagrama de cuenta corriente
 
 <split-slide style="--left: 50%; --right: 50%;">
 <div>
@@ -1895,9 +1870,9 @@ Es el **último eslabón** del flujo de transiciones. Puede haber **varios** en 
 
 ---
 
-## Cuenta corriente: una solución posible
+<!-- ## Cuenta corriente: una solución posible
 
-[![h:450](../assets/ads-uml-act-cuenta-corriente.jpg)](../assets/ads-uml-act-cuenta-corriente.jpg)
+[![h:450](../assets/ads-uml-act-cuenta-corriente.jpg)](../assets/ads-uml-act-cuenta-corriente.jpg) -->
 
 ---
 
@@ -2038,31 +2013,6 @@ Sale y vuelve al mismo estado: **sí** ejecuta `exit` y `entry` otra vez
 
 - ❓ *«Modelar cómo se procesa una devolución, con el almacén y contabilidad»* → <spoiler>actividad</spoiler>
 - ❓ *«Modelar en qué situaciones puede estar una reserva de hotel»* → <spoiler>máquina de estados</spoiler>
-
----
-
-## Actividad 7: el ciclo de vida de un préstamo
-
-> Un **ejemplar** de la biblioteca puede estar **disponible**, **prestado**, **reservado**, **en reparación** o **dado de baja**. Un socio lo presta por 14 días; si lo devuelve tarde se genera una multa y el ejemplar vuelve a estar disponible. Un socio puede reservar un ejemplar prestado; al devolverse, queda reservado 48 horas para quien reservó. Desde disponible o en reparación se puede dar de baja.
-
-<split-slide style="--left: 50%; --right: 50%;">
-<div>
-
-### Qué hacer
-1. Dibujen la **máquina de estados** del `Ejemplar`
-2. Etiqueten cada transición con `evento [guarda] / acción`
-3. Marquen el estado **inicial** y el **final**
-</div>
-<div>
-
-### Preguntas de control
-- ¿«Vencido» es un **estado** o una **guarda** sobre la fecha?
-- ¿Qué pasa con la reserva si nadie la retira en 48 horas? ¿Falta una transición?
-- ¿Hay algún estado del que **no se pueda salir** y que no sea final?
-</div>
-</split-slide>
-
-- ⏱️ 20 minutos
 
 ---
 
