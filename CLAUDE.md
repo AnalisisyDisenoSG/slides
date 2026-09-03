@@ -34,6 +34,7 @@ El tema estiliza etiquetas HTML inventadas (no son Web Components reales, solo C
 - `<steps>` / `<step>` — revelado progresivo. `src/assets/steps.js` recorre los `<steps>`, añade `data-marpit-fragment` a cada `<step>` salvo el primero (para que bespoke los trate como fragmentos) y pinta un indicador `n / total` en la esquina. El CSS de `alo.css` es el que realmente muestra/oculta según `data-bespoke-marp-fragment`. Los dos lados —CSS y JS— tienen que cambiar juntos.
 - `<split-slide>` — grid de dos columnas, ajustable con las variables inline `--left`, `--right`, `--font-size`.
 - `<spoiler>` — texto oculto hasta el hover.
+- `<hidden>` — bloque oculto (soluciones de un ejercicio). Lo maneja `src/assets/hidden.js`, que se estiliza a sí mismo: el tema no interviene. Ver «Contenido oculto» más abajo.
 - `.grid` — grid auto-fit de tarjetas.
 
 #### Líneas en blanco alrededor de las etiquetas inventadas
@@ -69,7 +70,35 @@ Se incluyen **al final** del `index.md` que los necesita, con rutas relativas:
 <script src="../assets/image-modal.js"></script>
 ```
 
-`image-modal.js` convierte los enlaces a imágenes (`.png`, `.jpg`, `.svg`, …) en un lightbox; `alo.css` les añade además un icono con `::before`. Si un mazo usa `<steps>` o enlaces a imágenes y no se ven bien, lo primero a revisar es si falta el `<script>` correspondiente.
+`hidden.js` implementa `<hidden>` (ver «Contenido oculto»). `image-modal.js` convierte los enlaces a imágenes (`.png`, `.jpg`, `.svg`, …) en un lightbox; `alo.css` les añade además un icono con `::before`. Si un mazo usa `<steps>` o enlaces a imágenes y no se ven bien, lo primero a revisar es si falta el `<script>` correspondiente.
+
+### Contenido oculto (`<hidden>`)
+
+Para las diapositivas de solución de un ejercicio: `<hidden>` desenfoca su contenido y lo tapa con un velo. Requiere `<script src="../assets/hidden.js"></script>` en el mazo.
+
+```markdown
+## Caso de fabricación: una solución posible
+
+<hidden label="Solución">
+
+[![h:450](../assets/ads-uml-caso-fabricacion.png)](../assets/ads-uml-caso-fabricacion.png)
+
+</hidden>
+```
+
+`<hidden>` tampoco es una etiqueta de bloque de markdown-it: aplican las mismas **líneas en blanco** que a `<steps>`. El atributo `label` es opcional (por defecto, «Contenido oculto»).
+
+Tres modos, en el orden en que rota `Ctrl+Alt+H` (se recuerda en `localStorage`, clave `ads-slides-hidden-mode`):
+
+| modo | efecto |
+| --- | --- |
+| `locked` (por defecto) | oculto, sin pista de teclado: es lo que ve quien abre el link |
+| `presenter` | oculto, pero `Ctrl+Alt+S` revela la diapositiva actual y `Ctrl+Alt+A` el mazo entero |
+| `open` | mecanismo desactivado, todo visible |
+
+El modo también se fija por URL sin tocar el `localStorage` de quien abre: `?hidden=open`, `?hidden=presenter` (el query va antes del hash: `uml/?hidden=open#57`). Los atajos usan `Ctrl+Alt` para no chocar con las teclas de bespoke.
+
+Es ocultamiento visual, no protección: el contenido sigue en el HTML y las imágenes siguen accesibles por su URL en `assets/`.
 
 ### Convención de un mazo
 

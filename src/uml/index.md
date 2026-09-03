@@ -1481,10 +1481,14 @@ La última frase **no se dibuja**: es una restricción `{...}` o una nota
 - ⏱️ 25 minutos · en grupos
 
 ---
-<!-- 
+
 ## Caso de fabricación: una solución posible
 
-[![h:450](../assets/ads-uml-caso-fabricacion.png)](../assets/ads-uml-caso-fabricacion.png) -->
+<hidden label="Solución">
+
+[![h:450](../assets/ads-uml-caso-fabricacion.png)](../assets/ads-uml-caso-fabricacion.png)
+
+</hidden>
 
 ---
 
@@ -1870,9 +1874,13 @@ Es el **último eslabón** del flujo de transiciones. Puede haber **varios** en 
 
 ---
 
-<!-- ## Cuenta corriente: una solución posible
+## Cuenta corriente: una solución posible
 
-[![h:450](../assets/ads-uml-act-cuenta-corriente.jpg)](../assets/ads-uml-act-cuenta-corriente.jpg) -->
+<hidden label="Solución">
+
+[![h:450](../assets/ads-uml-act-cuenta-corriente.jpg)](../assets/ads-uml-act-cuenta-corriente.jpg)
+
+</hidden>
 
 ---
 
@@ -2064,3 +2072,4 @@ ul li { margin-block: 0.2em; }
 
 <script src="../assets/steps.js"></script>
 <script src="../assets/image-modal.js"></script>
+<script src="../assets/hidden.js"></script>
