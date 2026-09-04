@@ -804,6 +804,57 @@ Cualquier herramienta lo reporta. En Java: *jdeps*; en .NET: *NDepend*; en JS: *
 
 ---
 
+## Posible Solución
+
+<hidden label="Solución">
+
+
+
+<split-slide style="--left: 50%; --right: 50%;">
+<div>
+
+## ui
+
+- PantallaPrestamo
+- ControladorWeb
+</div>
+<div>
+
+## aplicacion
+
+- GestorPrestamos
+  
+</div>
+</split-slide>
+
+
+<split-slide style="--left: 50%; --right: 50%;">
+<div>
+
+## dominio
+
+- Libro
+- Ejemplar
+- Socio
+- Prestamo
+- Multa
+- PoliticaDeMulta
+- RepositorioLibros (la interfaz, no la implementación)
+</div>
+<div>
+
+## infraestructura
+
+- ConexionBD
+- ServicioCorreo
+- RepositorioLibrosJPA / RepositorioLibrosSQL (la implementación concreta de la interfaz del dominio)
+</div>
+</split-slide>
+
+</hidden>
+
+---
+
 <!-- _class: cover -->
 <style scoped>
 section {
