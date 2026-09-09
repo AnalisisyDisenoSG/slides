@@ -1929,7 +1929,7 @@ Es el **último eslabón** del flujo de transiciones. Puede haber **varios** en 
 
 <hidden label="Solución">
 
-[![h:450](../assets/ads-uml-act-cuenta-corriente.jpg)](../assets/ads-uml-act-cuenta-corriente.jpg)
+[![h:450](../assets/da-cuenta-corriente-cajero.png)](../assets/da-cuenta-corriente-cajero.png)
 
 </hidden>
 
