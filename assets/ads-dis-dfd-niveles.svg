@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 620" width="1020" height="620" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="n-ar" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="1020" height="620" fill="#ffffff"/>
+
+  <text x="240" y="32" font-size="17" fill="#111" text-anchor="middle" font-weight="600">Nivel 0 &#8212; diagrama de contexto</text>
+  <text x="740" y="32" font-size="17" fill="#111" text-anchor="middle" font-weight="600">Nivel 1 &#8212; explosi&#243;n del proceso 0</text>
+  <path d="M470,50 L470,596" stroke="#ddd" stroke-width="1.4"/>
+
+  <!-- ================= NIVEL 0 ================= -->
+  <circle cx="240" cy="230" r="66" fill="#d6eaf8" stroke="#333" stroke-width="1.8"/>
+  <text x="240" y="222" font-size="14" fill="#111" text-anchor="middle" font-weight="600">0</text>
+  <text x="240" y="244" font-size="13" fill="#111" text-anchor="middle">Sistema de</text>
+  <text x="240" y="262" font-size="13" fill="#111" text-anchor="middle">matr&#237;cula</text>
+
+  <g fill="#e8f6ec" stroke="#333" stroke-width="1.6">
+    <rect x="52" y="94" width="124" height="44"/>
+    <rect x="304" y="94" width="124" height="44"/>
+    <rect x="52" y="330" width="124" height="44"/>
+    <rect x="304" y="330" width="124" height="44"/>
+  </g>
+  <g font-size="12.5" fill="#111" text-anchor="middle">
+    <text x="114" y="121">Estudiante</text>
+    <text x="366" y="121">Registro</text>
+    <text x="114" y="357">Docente</text>
+    <text x="366" y="357">Caja</text>
+  </g>
+
+  <g stroke="#333" stroke-width="1.6" fill="none">
+    <path d="M142,140 L196,186" marker-end="url(#n-ar)"/>
+    <path d="M286,184 L334,140" marker-end="url(#n-ar)"/>
+    <path d="M194,276 L144,326" marker-end="url(#n-ar)"/>
+    <path d="M332,326 L288,280" marker-end="url(#n-ar)"/>
+  </g>
+  <g font-size="11.5" fill="#444">
+    <text x="102" y="176">solicitud</text>
+    <text x="322" y="174">expediente</text>
+    <text x="64" y="300">lista de grupo</text>
+    <text x="330" y="314">recibo</text>
+  </g>
+
+  <rect x="52" y="416" width="376" height="150" fill="#f7f7f7" stroke="#bbb"/>
+  <text x="70" y="442" font-size="13.5" fill="#111" font-weight="600">Reglas del nivel 0</text>
+  <g font-size="12.5" fill="#333">
+    <text x="70" y="466">&#183; Un solo proceso, numerado 0.</text>
+    <text x="70" y="488">&#183; Todas las entidades externas, ninguna interna.</text>
+    <text x="70" y="510">&#183; Sin almacenes de datos: est&#225;n dentro del sistema.</text>
+    <text x="70" y="532">&#183; Equivale al diagrama de contexto del sistema.</text>
+    <text x="70" y="554">&#183; Los flujos que entran y salen son el contrato.</text>
+  </g>
+
+  <!-- ================= NIVEL 1 ================= -->
+  <g fill="#e8f6ec" stroke="#333" stroke-width="1.6">
+    <rect x="512" y="92" width="112" height="42"/>
+    <rect x="878" y="92" width="112" height="42"/>
+    <rect x="512" y="478" width="112" height="42"/>
+  </g>
+  <g font-size="12" fill="#111" text-anchor="middle">
+    <text x="568" y="118">Estudiante</text>
+    <text x="934" y="118">Registro</text>
+    <text x="568" y="504">Caja</text>
+  </g>
+
+  <g fill="#d6eaf8" stroke="#333" stroke-width="1.6">
+    <circle cx="600" cy="205" r="42"/>
+    <circle cx="880" cy="205" r="42"/>
+    <circle cx="600" cy="410" r="42"/>
+  </g>
+  <g font-size="11.5" fill="#111" text-anchor="middle">
+    <text x="600" y="196">1.0</text>
+    <text x="600" y="212">Verificar</text>
+    <text x="600" y="228">requisitos</text>
+    <text x="880" y="196">2.0</text>
+    <text x="880" y="212">Asignar</text>
+    <text x="880" y="228">cupo</text>
+    <text x="600" y="401">3.0</text>
+    <text x="600" y="417">Generar</text>
+    <text x="600" y="433">cobro</text>
+  </g>
+
+  <g stroke="#333" stroke-width="1.6">
+    <path d="M508,296 L720,296"/>
+    <path d="M508,326 L720,326"/>
+    <path d="M790,296 L1002,296"/>
+    <path d="M790,326 L1002,326"/>
+  </g>
+  <g font-size="11.5" fill="#111" text-anchor="middle">
+    <text x="614" y="317">D1  Estudiantes</text>
+    <text x="896" y="317">D2  Matr&#237;culas</text>
+  </g>
+
+  <g stroke="#333" stroke-width="1.5" fill="none">
+    <path d="M580,138 L592,159" marker-end="url(#n-ar)"/>
+    <path d="M642,205 L834,205" marker-end="url(#n-ar)"/>
+    <path d="M600,249 L600,290" marker-end="url(#n-ar)"/>
+    <path d="M898,163 L898,138" marker-end="url(#n-ar)"/>
+    <path d="M888,249 L892,290" marker-end="url(#n-ar)"/>
+    <path d="M848,238 L638,378" marker-end="url(#n-ar)"/>
+    <path d="M584,452 L572,474" marker-end="url(#n-ar)"/>
+  </g>
+  <g font-size="11" fill="#444">
+    <text x="530" y="156">solicitud</text>
+    <text x="738" y="196" text-anchor="middle">estudiante v&#225;lido</text>
+    <text x="612" y="276">datos</text>
+    <text x="910" y="156">confirmaci&#243;n</text>
+    <text x="902" y="276">matr&#237;cula</text>
+    <text x="768" y="352" text-anchor="middle">cupo asignado</text>
+    <text x="524" y="466">recibo</text>
+  </g>
+
+  <rect x="512" y="540" width="478" height="56" fill="#fdf3d0" stroke="#bbb"/>
+  <text x="530" y="562" font-size="12.5" fill="#333"><tspan font-weight="600">Balanceo:</tspan> los flujos que entran y salen del nivel 1 tienen que ser</text>
+  <text x="530" y="582" font-size="12.5" fill="#333">exactamente los mismos del proceso 0. Si aparece uno nuevo, hay un error.</text>
+</svg>
