@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 560" width="1020" height="560" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1020" height="560" fill="#ffffff"/>
+  <text x="510" y="34" font-size="19" fill="#111" text-anchor="middle" font-weight="600">Del modelo de clases al modelo l&#243;gico de datos</text>
+
+  <g stroke="#333" stroke-width="1.5">
+    <rect x="60" y="80" width="230" height="200" fill="#ffffff"/>
+    <rect x="60" y="80" width="230" height="34" fill="#d6eaf8"/>
+  </g>
+  <text x="175" y="104" font-size="15" fill="#111" text-anchor="middle" font-weight="600">DOCENTE</text>
+  <g font-size="13" fill="#111">
+    <text x="76" y="138">PK  cedula</text>
+    <text x="76" y="164">     nombre</text>
+    <text x="76" y="190">     correo</text>
+    <text x="76" y="216">     telefono</text>
+    <text x="76" y="242">     fecha_ingreso</text>
+    <text x="76" y="268">     activo</text>
+  </g>
+
+  <g stroke="#333" stroke-width="1.5">
+    <rect x="396" y="80" width="240" height="200" fill="#ffffff"/>
+    <rect x="396" y="80" width="240" height="34" fill="#fdf3d0"/>
+  </g>
+  <text x="516" y="104" font-size="15" fill="#111" text-anchor="middle" font-weight="600">ASIGNACION</text>
+  <g font-size="13" fill="#111">
+    <text x="412" y="138">PK  id_asignacion</text>
+    <text x="412" y="164">FK  cedula</text>
+    <text x="412" y="190">FK  cod_carrera</text>
+    <text x="412" y="216">     fecha_inicio</text>
+    <text x="412" y="242">     jornada</text>
+  </g>
+  <text x="412" y="268" font-size="12" fill="#c0392b">UQ (cedula, cod_carrera)</text>
+
+  <g stroke="#333" stroke-width="1.5">
+    <rect x="742" y="80" width="220" height="200" fill="#ffffff"/>
+    <rect x="742" y="80" width="220" height="34" fill="#e8f6ec"/>
+  </g>
+  <text x="852" y="104" font-size="15" fill="#111" text-anchor="middle" font-weight="600">CARRERA</text>
+  <g font-size="13" fill="#111">
+    <text x="758" y="138">PK  cod_carrera</text>
+    <text x="758" y="164">     nombre</text>
+    <text x="758" y="190">     sede</text>
+    <text x="758" y="216">     grado</text>
+  </g>
+
+  <g stroke="#333" stroke-width="1.6" fill="none">
+    <path d="M290,176 L392,176"/>
+    <path d="M636,176 L738,176"/>
+    <path d="M304,166 L304,186"/>
+    <path d="M392,176 L376,164 M392,176 L376,188 M376,166 L376,186"/>
+    <path d="M724,166 L724,186"/>
+    <path d="M636,176 L652,164 M636,176 L652,188 M652,166 L652,186"/>
+  </g>
+  <g font-size="12" fill="#444" text-anchor="middle">
+    <text x="326" y="164">1</text>
+    <text x="366" y="164">N</text>
+    <text x="664" y="164">N</text>
+    <text x="706" y="164">1</text>
+    <text x="341" y="206">tiene</text>
+    <text x="686" y="206">pertenece a</text>
+  </g>
+
+  <rect x="60" y="316" width="430" height="212" fill="#f7f7f7" stroke="#bbb"/>
+  <text x="78" y="344" font-size="14.5" fill="#111" font-weight="600">Lo que cambi&#243; al bajar de clases a tablas</text>
+  <g font-size="13" fill="#333">
+    <text x="78" y="372">&#183; La asociaci&#243;n muchos-a-muchos se volvi&#243; una tabla.</text>
+    <text x="78" y="394">&#183; La clase asociaci&#243;n aport&#243; sus atributos propios.</text>
+    <text x="78" y="416">&#183; Aparecieron tipos, longitudes y nulabilidad.</text>
+    <text x="78" y="438">&#183; Aparecieron claves primarias artificiales.</text>
+    <text x="78" y="460">&#183; Aparecieron restricciones: UNIQUE, CHECK, FK.</text>
+    <text x="78" y="482">&#183; Los m&#233;todos <tspan font-style="italic">no</tspan> viajan: el comportamiento se queda</text>
+    <text x="90" y="502">  en el dominio, no en la base de datos.</text>
+  </g>
+
+  <rect x="530" y="316" width="432" height="212" fill="#fdf3d0" stroke="#bbb"/>
+  <text x="548" y="344" font-size="14.5" fill="#111" font-weight="600">Los tres modelos de datos</text>
+  <g font-size="13" fill="#333">
+    <text x="548" y="374"><tspan font-weight="600">Conceptual</tspan> &#8212; entidades y relaciones del negocio.</text>
+    <text x="548" y="394">Sin llaves, sin tipos. Se discute con el usuario.</text>
+    <text x="548" y="424"><tspan font-weight="600">L&#243;gico</tspan> &#8212; tablas, columnas, PK/FK, normalizaci&#243;n.</text>
+    <text x="548" y="444">Independiente del motor. Es el de este diagrama.</text>
+    <text x="548" y="474"><tspan font-weight="600">F&#237;sico</tspan> &#8212; tipos del motor, &#237;ndices, particiones,</text>
+    <text x="548" y="494">tablespaces. Aqu&#237; s&#237; importa si es PostgreSQL u Oracle.</text>
+  </g>
+</svg>

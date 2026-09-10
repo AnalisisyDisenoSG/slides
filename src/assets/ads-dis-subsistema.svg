@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 560" width="1020" height="560" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="sub-ar" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="1020" height="560" fill="#ffffff"/>
+  <text x="510" y="36" font-size="19" fill="#111" text-anchor="middle" font-weight="600">Un subsistema se ofrece por sus interfaces, no por sus clases</text>
+
+  <!-- subsistema -->
+  <rect x="196" y="84" width="392" height="330" fill="#f7fbff" stroke="#333" stroke-width="1.8"/>
+  <rect x="196" y="84" width="164" height="32" fill="#e5eef8" stroke="#333" stroke-width="1.8"/>
+  <text x="212" y="106" font-size="13" fill="#111">&#171;subsystem&#187;</text>
+  <text x="392" y="146" font-size="17" fill="#111" text-anchor="middle" font-weight="600">GestionAcademica</text>
+
+  <g stroke="#333" stroke-width="1.5" fill="#fdf3d0">
+    <rect x="228" y="182" width="144" height="50"/>
+    <rect x="410" y="182" width="144" height="50"/>
+    <rect x="228" y="282" width="144" height="50"/>
+    <rect x="410" y="282" width="144" height="50"/>
+  </g>
+  <g font-size="12.5" fill="#111" text-anchor="middle">
+    <text x="300" y="212">ServicioMatricula</text>
+    <text x="482" y="212">ServicioDocente</text>
+    <text x="300" y="312">Docente</text>
+    <text x="482" y="312">Curso</text>
+  </g>
+  <text x="392" y="376" font-size="12.5" fill="#666" text-anchor="middle">contenido interno: invisible desde afuera</text>
+
+  <!-- interfaz provista (lollipop) -->
+  <g stroke="#333" stroke-width="1.8" fill="none">
+    <path d="M588,188 L668,188"/>
+    <circle cx="680" cy="188" r="12" fill="#fff"/>
+  </g>
+  <text x="706" y="176" font-size="14" fill="#111" font-weight="600">IGestionDocente</text>
+  <text x="706" y="196" font-size="12.5" fill="#555">interfaz <tspan font-weight="600">provista</tspan></text>
+  <text x="706" y="214" font-size="12.5" fill="#555">lo que el subsistema promete</text>
+
+  <!-- interfaz requerida (socket) -->
+  <g stroke="#333" stroke-width="1.8" fill="none">
+    <path d="M588,308 L668,308"/>
+    <path d="M668,288 A22,22 0 0 0 668,328"/>
+  </g>
+  <text x="706" y="296" font-size="14" fill="#111" font-weight="600">IAutenticacion</text>
+  <text x="706" y="316" font-size="12.5" fill="#555">interfaz <tspan font-weight="600">requerida</tspan></text>
+  <text x="706" y="334" font-size="12.5" fill="#555">lo que necesita de otros</text>
+
+  <!-- cliente -->
+  <rect x="40" y="162" width="132" height="50" fill="#d6eaf8" stroke="#333" stroke-width="1.5"/>
+  <text x="106" y="192" font-size="12.5" fill="#111" text-anchor="middle">PortalWeb</text>
+  <path d="M172,188 L192,188" stroke="#333" stroke-width="1.6" marker-end="url(#sub-ar)" fill="none"/>
+  <text x="106" y="234" font-size="12" fill="#555" text-anchor="middle">solo conoce la interfaz</text>
+
+  <rect x="60" y="446" width="900" height="88" fill="#f7f7f7" stroke="#bbb"/>
+  <text x="78" y="474" font-size="14.5" fill="#111" font-weight="600">Por qu&#233; importa</text>
+  <g font-size="13.5" fill="#333">
+    <text x="78" y="498">&#183; La interfaz es el <tspan font-weight="600">contrato</tspan>: mientras no cambie, el interior se puede reescribir entero.</text>
+    <text x="78" y="520">&#183; Dos equipos pueden trabajar en paralelo apenas acuerdan la interfaz, antes de que exista una l&#237;nea de c&#243;digo.</text>
+  </g>
+</svg>

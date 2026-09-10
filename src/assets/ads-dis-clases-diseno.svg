@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 620" width="1020" height="620" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="cd-ar" markerWidth="14" markerHeight="14" refX="12" refY="5" orient="auto">
+      <path d="M1,1 L11,5 L1,9" fill="none" stroke="#333" stroke-width="1.4"/>
+    </marker>
+    <marker id="cd-tri" markerWidth="16" markerHeight="16" refX="14" refY="7" orient="auto">
+      <path d="M0,0 L14,7 L0,14 Z" fill="#fff" stroke="#333" stroke-width="1.3"/>
+    </marker>
+  </defs>
+  <rect width="1020" height="620" fill="#ffffff"/>
+  <text x="510" y="30" font-size="18" fill="#111" text-anchor="middle" font-weight="600">Clases de dise&#241;o del CU &#171;Registrar docente&#187;, repartidas por capa</text>
+
+  <g stroke="#ccc" stroke-width="1.2" stroke-dasharray="6,5" fill="none">
+    <path d="M30,168 L1000,168"/>
+    <path d="M30,306 L1000,306"/>
+    <path d="M30,472 L1000,472"/>
+  </g>
+  <g font-size="12.5" fill="#999">
+    <text x="34" y="62">presentaci&#243;n</text>
+    <text x="34" y="192">aplicaci&#243;n</text>
+    <text x="34" y="330">dominio</text>
+    <text x="34" y="496">infraestructura</text>
+  </g>
+
+  <!-- boundary -->
+  <g stroke="#333" stroke-width="1.5">
+    <rect x="180" y="52" width="240" height="98" fill="#d6eaf8"/>
+    <path d="M180,104 L420,104"/>
+  </g>
+  <text x="300" y="72" font-size="11.5" fill="#444" text-anchor="middle">&#171;boundary&#187;</text>
+  <text x="300" y="93" font-size="13.5" fill="#111" text-anchor="middle" font-weight="600">FormularioDocente</text>
+  <g font-size="12" fill="#111">
+    <text x="192" y="124">+ mostrar()</text>
+    <text x="192" y="142">+ mostrarResultado(r)</text>
+  </g>
+
+  <!-- control -->
+  <g stroke="#333" stroke-width="1.5">
+    <rect x="180" y="196" width="272" height="98" fill="#fdf3d0"/>
+    <path d="M180,248 L452,248"/>
+  </g>
+  <text x="316" y="216" font-size="11.5" fill="#444" text-anchor="middle">&#171;control&#187;</text>
+  <text x="316" y="237" font-size="13.5" fill="#111" text-anchor="middle" font-weight="600">GestorRegistroDocente</text>
+  <g font-size="12" fill="#111">
+    <text x="192" y="268">+ registrar(datos, cod) : Resultado</text>
+    <text x="192" y="286">- validarFormato(datos) : boolean</text>
+  </g>
+
+  <!-- interface -->
+  <g stroke="#333" stroke-width="1.5">
+    <rect x="758" y="196" width="242" height="98" fill="#ffffff"/>
+    <path d="M758,248 L1000,248"/>
+  </g>
+  <text x="879" y="216" font-size="11.5" fill="#444" text-anchor="middle">&#171;interface&#187;</text>
+  <text x="879" y="237" font-size="13.5" fill="#111" text-anchor="middle" font-weight="600">RepositorioDocente</text>
+  <g font-size="12" fill="#111">
+    <text x="770" y="268">+ existe(cedula) : boolean</text>
+    <text x="770" y="286">+ guardar(d : Docente)</text>
+  </g>
+
+  <!-- entidades -->
+  <g stroke="#333" stroke-width="1.5">
+    <rect x="70" y="340" width="210" height="114" fill="#e8f6ec"/>
+    <path d="M70,392 L280,392"/>
+    <rect x="330" y="340" width="196" height="114" fill="#e8f6ec"/>
+    <path d="M330,392 L526,392"/>
+    <rect x="576" y="340" width="208" height="114" fill="#e8f6ec"/>
+    <path d="M576,392 L784,392"/>
+  </g>
+  <text x="175" y="360" font-size="11.5" fill="#444" text-anchor="middle">&#171;entity&#187;</text>
+  <text x="175" y="381" font-size="13.5" fill="#111" text-anchor="middle" font-weight="600">Docente</text>
+  <g font-size="12" fill="#111">
+    <text x="82" y="412">- cedula : String</text>
+    <text x="82" y="430">- nombre : String</text>
+    <text x="82" y="448">+ asignarA(c : Carrera)</text>
+  </g>
+  <text x="428" y="360" font-size="11.5" fill="#444" text-anchor="middle">&#171;entity&#187;</text>
+  <text x="428" y="381" font-size="13.5" fill="#111" text-anchor="middle" font-weight="600">Asignacion</text>
+  <g font-size="12" fill="#111">
+    <text x="342" y="412">- fechaInicio : Date</text>
+    <text x="342" y="430">- jornada : Jornada</text>
+    <text x="342" y="448">+ estaVigente() : boolean</text>
+  </g>
+  <text x="680" y="360" font-size="11.5" fill="#444" text-anchor="middle">&#171;entity&#187;</text>
+  <text x="680" y="381" font-size="13.5" fill="#111" text-anchor="middle" font-weight="600">Carrera</text>
+  <g font-size="12" fill="#111">
+    <text x="588" y="412">- codigo : String</text>
+    <text x="588" y="430">- nombre : String</text>
+    <text x="588" y="448">+ admiteDocente() : boolean</text>
+  </g>
+
+  <!-- infraestructura -->
+  <g stroke="#333" stroke-width="1.5">
+    <rect x="758" y="508" width="242" height="80" fill="#f2e6f7"/>
+    <path d="M758,560 L1000,560"/>
+  </g>
+  <text x="879" y="528" font-size="11.5" fill="#444" text-anchor="middle">&#171;adapter&#187;</text>
+  <text x="879" y="549" font-size="13.5" fill="#111" text-anchor="middle" font-weight="600">RepositorioDocenteSQL</text>
+  <text x="770" y="578" font-size="12" fill="#111">+ guardar(d : Docente)</text>
+
+  <!-- relaciones -->
+  <g stroke="#333" stroke-width="1.5" fill="none">
+    <path d="M300,150 L300,192" marker-end="url(#cd-ar)" stroke-dasharray="7,5"/>
+    <path d="M260,294 L200,336" marker-end="url(#cd-ar)" stroke-dasharray="7,5"/>
+    <path d="M452,240 L754,240" marker-end="url(#cd-ar)" stroke-dasharray="7,5"/>
+    <path d="M879,504 L879,300" marker-end="url(#cd-tri)" stroke-dasharray="9,6"/>
+    <path d="M280,404 L328,404"/>
+    <path d="M526,404 L574,404"/>
+  </g>
+  <g font-size="11.5" fill="#555">
+    <text x="310" y="176">usa</text>
+    <text x="196" y="318">usa</text>
+    <text x="600" y="232" text-anchor="middle">depende de la interfaz</text>
+    <text x="892" y="404">implementa</text>
+    <text x="288" y="396">1</text>
+    <text x="316" y="396">*</text>
+    <text x="534" y="396">*</text>
+    <text x="562" y="396">1</text>
+  </g>
+
+  <text x="510" y="608" font-size="12.5" fill="#555" text-anchor="middle">La flecha de la infraestructura sube: la clase concreta depende de la interfaz que declar&#243; el dominio, nunca al rev&#233;s.</text>
+</svg>

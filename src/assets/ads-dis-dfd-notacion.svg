@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 560" width="1020" height="560" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="d-ar" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="1020" height="560" fill="#ffffff"/>
+  <text x="510" y="36" font-size="19" fill="#111" text-anchor="middle" font-weight="600">Las dos notaciones de DFD que va a encontrar</text>
+
+  <g stroke="#ccc" stroke-width="1">
+    <path d="M60,60 L960,60"/>
+    <path d="M60,104 L960,104"/>
+    <path d="M60,206 L960,206"/>
+    <path d="M60,308 L960,308"/>
+    <path d="M60,410 L960,410"/>
+    <path d="M60,512 L960,512"/>
+    <path d="M300,60 L300,512"/>
+    <path d="M632,60 L632,512"/>
+  </g>
+
+  <g font-size="15" fill="#111" font-weight="600" text-anchor="middle">
+    <text x="180" y="88">Elemento</text>
+    <text x="466" y="88">Yourdon / DeMarco</text>
+    <text x="796" y="88">Gane &#38; Sarson</text>
+  </g>
+
+  <!-- entidad externa -->
+  <text x="180" y="150" font-size="14.5" fill="#111" text-anchor="middle" font-weight="600">Entidad externa</text>
+  <text x="180" y="172" font-size="12" fill="#555" text-anchor="middle">origen o destino, fuera del sistema</text>
+  <rect x="401" y="132" width="130" height="46" fill="#e8f6ec" stroke="#333" stroke-width="1.6"/>
+  <text x="466" y="160" font-size="12.5" fill="#111" text-anchor="middle">Estudiante</text>
+  <rect x="731" y="132" width="130" height="46" fill="#e8f6ec" stroke="#333" stroke-width="1.6"/>
+  <path d="M737,138 L867,138 M867,138 L867,184" stroke="#333" stroke-width="1.6" fill="none" opacity="0.5"/>
+  <text x="796" y="160" font-size="12.5" fill="#111" text-anchor="middle">Estudiante</text>
+
+  <!-- proceso -->
+  <text x="180" y="252" font-size="14.5" fill="#111" text-anchor="middle" font-weight="600">Proceso</text>
+  <text x="180" y="274" font-size="12" fill="#555" text-anchor="middle">transforma datos</text>
+  <circle cx="466" cy="257" r="36" fill="#d6eaf8" stroke="#333" stroke-width="1.6"/>
+  <text x="466" y="253" font-size="12.5" fill="#111" text-anchor="middle">1.0</text>
+  <text x="466" y="271" font-size="11.5" fill="#111" text-anchor="middle">Matricular</text>
+  <rect x="721" y="229" width="150" height="56" rx="14" fill="#d6eaf8" stroke="#333" stroke-width="1.6"/>
+  <path d="M721,249 L871,249" stroke="#333" stroke-width="1.2"/>
+  <text x="735" y="244" font-size="12" fill="#111">1.0</text>
+  <text x="796" y="272" font-size="12.5" fill="#111" text-anchor="middle">Matricular</text>
+
+  <!-- flujo -->
+  <text x="180" y="354" font-size="14.5" fill="#111" text-anchor="middle" font-weight="600">Flujo de datos</text>
+  <text x="180" y="376" font-size="12" fill="#555" text-anchor="middle">datos en movimiento</text>
+  <path d="M391,362 L541,362" stroke="#333" stroke-width="1.8" fill="none" marker-end="url(#d-ar)"/>
+  <text x="466" y="350" font-size="12.5" fill="#111" text-anchor="middle">solicitud de matr&#237;cula</text>
+  <path d="M721,362 L871,362" stroke="#333" stroke-width="1.8" fill="none" marker-end="url(#d-ar)"/>
+  <text x="796" y="350" font-size="12.5" fill="#111" text-anchor="middle">igual en ambas</text>
+
+  <!-- almacen -->
+  <text x="180" y="456" font-size="14.5" fill="#111" text-anchor="middle" font-weight="600">Almac&#233;n de datos</text>
+  <text x="180" y="478" font-size="12" fill="#555" text-anchor="middle">datos en reposo</text>
+  <g stroke="#333" stroke-width="1.6">
+    <path d="M392,443 L540,443"/>
+    <path d="M392,479 L540,479"/>
+  </g>
+  <text x="466" y="467" font-size="12.5" fill="#111" text-anchor="middle">D1  Estudiantes</text>
+  <g stroke="#333" stroke-width="1.6" fill="#fdf3d0">
+    <path d="M722,443 L870,443 L870,479 L722,479 Z"/>
+    <path d="M756,443 L756,479"/>
+  </g>
+  <text x="739" y="467" font-size="12" fill="#111" text-anchor="middle">D1</text>
+  <text x="815" y="467" font-size="12.5" fill="#111" text-anchor="middle">Estudiantes</text>
+
+  <text x="510" y="540" font-size="13.5" fill="#333" text-anchor="middle">Escoja una y ap&#233;guese a ella en todo el proyecto. Mezclar notaciones en un mismo juego de diagramas es el error m&#225;s com&#250;n.</text>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 560" width="1020" height="560" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a-ar" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="1020" height="560" fill="#ffffff"/>
+  <text x="510" y="34" font-size="19" fill="#111" text-anchor="middle" font-weight="600">Artefactos de la disciplina de dise&#241;o: qu&#233; entra y qu&#233; sale</text>
+
+  <!-- entradas -->
+  <rect x="40" y="80" width="200" height="400" fill="#f7f7f7" stroke="#bbb"/>
+  <text x="140" y="108" font-size="14.5" fill="#111" text-anchor="middle" font-weight="600">Entra</text>
+  <g stroke="#333" stroke-width="1.4" fill="#d6eaf8">
+    <rect x="64" y="128" width="152" height="52"/>
+    <rect x="64" y="196" width="152" height="52"/>
+    <rect x="64" y="264" width="152" height="52"/>
+    <rect x="64" y="332" width="152" height="52"/>
+  </g>
+  <g font-size="12.5" fill="#111" text-anchor="middle">
+    <text x="140" y="150">Modelo de</text>
+    <text x="140" y="168">casos de uso</text>
+    <text x="140" y="218">Especificaciones</text>
+    <text x="140" y="236">suplementarias</text>
+    <text x="140" y="286">Modelo de</text>
+    <text x="140" y="304">dominio</text>
+    <text x="140" y="354">Glosario y reglas</text>
+    <text x="140" y="372">de negocio</text>
+  </g>
+  <text x="140" y="418" font-size="12" fill="#666" text-anchor="middle">de requerimientos</text>
+  <text x="140" y="438" font-size="12" fill="#666" text-anchor="middle">y an&#225;lisis</text>
+
+  <!-- disciplina -->
+  <rect x="300" y="150" width="200" height="260" rx="10" fill="#fdf3d0" stroke="#333" stroke-width="1.8"/>
+  <text x="400" y="252" font-size="18" fill="#111" text-anchor="middle" font-weight="600">Dise&#241;o del</text>
+  <text x="400" y="278" font-size="18" fill="#111" text-anchor="middle" font-weight="600">sistema</text>
+  <text x="400" y="312" font-size="12.5" fill="#555" text-anchor="middle">decidir <tspan font-style="italic">c&#243;mo</tspan></text>
+  <text x="400" y="332" font-size="12.5" fill="#555" text-anchor="middle">se construye</text>
+
+  <!-- salidas -->
+  <rect x="560" y="60" width="420" height="440" fill="#f7fbff" stroke="#bbb"/>
+  <text x="770" y="88" font-size="14.5" fill="#111" text-anchor="middle" font-weight="600">Sale</text>
+  <g stroke="#333" stroke-width="1.4" fill="#e8f6ec">
+    <rect x="584" y="104" width="372" height="62"/>
+    <rect x="584" y="182" width="372" height="62"/>
+    <rect x="584" y="260" width="372" height="62"/>
+    <rect x="584" y="338" width="372" height="62"/>
+    <rect x="584" y="416" width="372" height="62"/>
+  </g>
+  <g font-size="13.5" fill="#111" font-weight="600">
+    <text x="600" y="128">Modelo de An&#225;lisis</text>
+    <text x="600" y="206">Documento de Arquitectura de Software (SAD)</text>
+    <text x="600" y="284">Modelo de Dise&#241;o</text>
+    <text x="600" y="362">Modelo de Datos</text>
+    <text x="600" y="440">Prototipo de interfaz gr&#225;fica</text>
+  </g>
+  <g font-size="12" fill="#555">
+    <text x="600" y="150">clases l&#237;mite, control y entidad + realizaciones de CU</text>
+    <text x="600" y="228">decisiones, estilo, vistas 4+1, atributos de calidad</text>
+    <text x="600" y="306">clases de dise&#241;o, subsistemas, interfaces, componentes</text>
+    <text x="600" y="384">modelo conceptual, l&#243;gico y f&#237;sico de la base de datos</text>
+    <text x="600" y="462">pantallas navegables, sin l&#243;gica detr&#225;s</text>
+  </g>
+
+  <g stroke="#555" stroke-width="2" fill="none">
+    <path d="M244,280 L294,280" marker-end="url(#a-ar)"/>
+    <path d="M504,280 L554,280" marker-end="url(#a-ar)"/>
+  </g>
+
+  <text x="510" y="536" font-size="13" fill="#555" text-anchor="middle">Ninguno de los cinco es opcional por decreto: se produce el que alguien va a usar. Un artefacto que nadie lee es desperdicio.</text>
+</svg>
