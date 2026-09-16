@@ -903,9 +903,8 @@ Datos incorrectos de los objetos que participan en el caso de uso
 
 ### Qué entregar
 1. La lista de **sustantivos** con el filtro aplicado (candidata · atributos · ¿es clase?)
-2. El **diagrama de robustez** con las tres clases de análisis
-3. El **diagrama de secuencia** del flujo básico, con un fragmento `alt` para el flujo alterno
-4. Una frase que justifique **por qué** el cálculo de la fecha de devolución quedó donde lo pusieron
+2. El **diagrama de secuencia** del flujo básico, con un fragmento `alt` para el flujo alterno
+3. Una frase que justifique **por qué** el cálculo de la fecha de devolución quedó donde lo pusieron
 
 ### Preguntas de control
 - ¿Cuántas clases límite hay? ¿Por qué?
