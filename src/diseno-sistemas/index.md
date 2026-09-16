@@ -940,9 +940,9 @@ Datos incorrectos de los objetos que participan en el caso de uso
 </div>
 <div>
 
-### Robustez
+### Clases de análisis
 
-- **Límite**: `PantallaPrestamo` (una sola: un actor, un caso de uso) y `ImpresoraComprobante`
+- **Límite**: `PantallaPrestamo` (una sola: un actor, un caso de uso)
 - **Control**: `GestorPrestamo` — decide el orden: primero valida usuario, luego ejemplar, luego registra
 - **Entidad**: `Usuario`, `Ejemplar`, `Prestamo`, `Multa`, `TipoUsuario`
 
