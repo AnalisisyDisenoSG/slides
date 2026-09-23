@@ -1482,8 +1482,8 @@ section {
 </style>
 # Diseño de la base de datos
 ## Contenidos
-- Los tres modelos de datos
-- Del modelo de dominio a las tablas
+- El modelo entidad-relación y su cardinalidad
+- Del modelo de clases al E-R y a las tablas
 - Herencia, normalización y claves
 - Índices, transacciones y concurrencia
 - El desfase objeto-relacional
@@ -1519,7 +1519,236 @@ La diferencia entre 40 ms y 40 s casi siempre está en un índice o en una consu
 
 ---
 
-## Del modelo de clases al modelo de datos
+## El modelo entidad-relación
+
+<split-slide style="--left: 50%; --right: 50%;">
+<div>
+
+### 📐 Diagrama de clases
+- Muestra atributos, **operaciones** (métodos) y las relaciones entre clases, incluida la herencia
+- Describe el **software**: qué objetos existen y qué saben hacer
+- Pertenece al modelo de diseño
+</div>
+<div>
+
+### 🗄️ Modelo entidad-relación (E-R)
+- Muestra la **estructura de la base de datos**: entidades, atributos, relaciones y sus cardinalidades
+- Describe **los datos**: qué se guarda y cómo se conecta
+- Es el **modelo conceptual** de datos: todavía no hay tablas ni tipos del motor
+</div>
+</split-slide>
+
+> El modelo E-R es una **técnica de análisis** basada en identificar las **entidades** y las **relaciones** que se dan entre ellas en la parte de la realidad que se pretende modelar — *Peter Chen, 1976*
+
+- 🔑 Es el paso intermedio: **clases → E-R conceptual → modelo lógico (tablas) → modelo físico**
+
+---
+
+## Los tres elementos del modelo E-R
+
+<steps>
+<step>
+
+<div class="grid">
+<div>
+
+### 🟦 Entidades
+**Conceptos de interés**: objetos reales o abstractos, distinguibles de los demás. Al grupo de entidades con cualidades similares se le llama **tipo** o **conjunto de entidades**
+
+*Ej.: un libro concreto, un escritor*
+</div>
+<div>
+
+### 🟢 Atributos
+**Características** de las entidades: las propiedades que interesa almacenar
+
+*Del libro: título, ISBN, edición, páginas · Del escritor: nombre, apellidos, fecha de nacimiento*
+</div>
+<div>
+
+### 🔶 Relaciones
+**Conexiones semánticas** entre conjuntos de entidades
+
+*Ej.: la relación entre los escritores y los libros que han escrito*
+</div>
+</div>
+
+</step>
+<step>
+
+### Entidades fuertes y débiles
+
+| Tipo | Qué es | Ejemplo en una biblioteca |
+|:--|:--|:--|
+| **Fuerte** | Sus ejemplares **existen por sí mismos**; tienen identificador propio | `LIBRO`, `SOCIO`, `AUTOR` |
+| **Débil** | Su existencia **depende de otra** entidad; se identifica con ayuda de ella | `EJEMPLAR` (la copia 3 **del libro** X), `LINEA` de una factura |
+
+- ⚠️ Prueba rápida: si al borrar la entidad fuerte la otra **pierde el sentido**, es débil. Una línea de factura sin factura no significa nada
+
+</step>
+</steps>
+
+---
+
+## Notación del diagrama E-R
+
+[![h:450](../assets/ads-dis-er-notacion.svg)](../assets/ads-dis-er-notacion.svg)
+
+---
+
+## Cardinalidad de relaciones y de entidades
+
+[![h:450](../assets/ads-dis-er-cardinalidad.svg)](../assets/ads-dis-er-cardinalidad.svg)
+
+---
+
+## Cómo se escribe la cardinalidad
+
+<split-slide style="--left: 50%; --right: 50%;">
+<div>
+
+### Cardinalidad de la **relación**
+- Indica el número de ocurrencias de una entidad que se relacionan con **cada** ocurrencia de la otra, y viceversa
+- Se escribe como **tipo**: `1:1`, `1:N` o `N:M`
+- Se obtiene de los **máximos** de las dos entidades
+</div>
+<div>
+
+### Cardinalidad de la **entidad**
+- Número **mínimo y máximo** de correspondencias en las que participa cada ejemplar
+- Se escribe entre paréntesis: `(0,1)`, `(1,1)`, `(0,N)`, `(1,N)`
+- Se lee **(cardinalidad mínima, cardinalidad máxima)**
+- Se coloca **junto a la entidad de llegada** de la lectura
+</div>
+</split-slide>
+
+| El mínimo | Significa | Pregunta que lo decide |
+|:--|:--|:--|
+| **0** | Participación **opcional** | ¿Puede existir un jugador sin equipo? Sí → 0 |
+| **1** | Participación **obligatoria** | ¿Puede existir un equipo sin jugadores? No → 1 |
+
+- 💡 El **mínimo** termina siendo `NULL` / `NOT NULL` en la clave foránea; el **máximo** decide **dónde** va la clave foránea
+
+---
+
+## Del modelo de clases al modelo E-R
+
+| En el diagrama de clases | En el modelo E-R |
+|:--|:--|
+| **Clase** | Entidad |
+| **Atributo** de la clase | Atributo de la entidad |
+| — | Un **atributo identificador** nuevo para cada entidad |
+| **Operación** | **No existe**: en el modelo de datos no hay operaciones |
+| **Asociación** | Interrelación, con **la misma multiplicidad** (`1..*` → `(1,n)`) |
+| **Composición** | El **todo** → entidad fuerte · la **parte** → entidad débil |
+| **Clase asociación** | Interrelación **N:M**; sus atributos pasan a ser atributos de la relación |
+| **Generalización** | 1) relación superclase-subclases · 2) bajar los atributos a las subclases · 3) subir los atributos a la superclase |
+
+- 🔗 La opción de generalización que se escoja aquí determina la estrategia de tablas de unas láminas más adelante
+
+---
+
+## Los tres casos especiales
+
+[![h:450](../assets/ads-dis-er-desde-clases.svg)](../assets/ads-dis-er-desde-clases.svg)
+
+---
+
+## Ejemplo: facultad, docentes y asignaturas
+
+[![h:440](../assets/ads-dis-er-ejemplo-facultad.png)](../assets/ads-dis-er-ejemplo-facultad.png)
+
+---
+
+## Cómo leer el ejemplo
+
+- ❓ *¿Qué tipo de relación hay entre `FACULTAD` y `DECANO`?* → <spoiler>1:1 — una facultad tiene un decano y un decano dirige una facultad</spoiler>
+- ❓ *¿Y entre `FACULTAD` y `DOCENTE`?* → <spoiler>1:M — una facultad tiene muchos docentes; cada docente pertenece a una</spoiler>
+- ❓ *¿Cuáles relaciones se vuelven una tabla propia al pasar a tablas?* → <spoiler>las N:M: DICTAR e INSCRIBIR</spoiler>
+- ❓ *¿Qué le falta al diagrama para estar completo?* → <spoiler>los atributos identificadores subrayados y las cardinalidades (mín, máx) de cada entidad</spoiler>
+- ❓ *Si quisiéramos guardar la nota de un estudiante en una asignatura, ¿dónde va el atributo `nota`?* → <spoiler>en la relación INSCRIBIR: no es del estudiante ni de la asignatura, es de la combinación</spoiler>
+
+---
+
+## Errores frecuentes en el diagrama E-R
+
+<div class="grid">
+<div>
+
+### 🔁 Relación como entidad
+Dibujar `ESCRIBE` como rectángulo. Los verbos van en rombos
+</div>
+<div>
+
+### 🔑 Sin identificador
+Entidades sin atributo subrayado: no hay forma de distinguir un ejemplar de otro
+</div>
+<div>
+
+### 🧷 Atributo mal ubicado
+`nota` en `ESTUDIANTE` cuando en realidad depende de estudiante **y** curso
+</div>
+<div>
+
+### 🔗 Clave foránea dibujada
+Poner `id_facultad` como atributo de `DOCENTE`. En el modelo conceptual, eso lo expresa **la relación**
+</div>
+<div>
+
+### 🔢 Cardinalidad al revés
+Anotar `(0,1)` junto a la entidad equivocada. Lea la frase completa en voz alta
+</div>
+<div>
+
+### 🧮 Guardar lo derivado
+`edad` o `total` como atributos normales: se calculan, van punteados
+</div>
+</div>
+
+---
+
+## Actividad 3: construye el diagrama E-R
+
+<split-slide style="--left: 52%; --right: 48%;">
+<div>
+
+### El enunciado — clínica veterinaria
+- Un **dueño** tiene cédula, nombre y uno o varios **teléfonos**. Tiene una o varias **mascotas**; cada mascota tiene exactamente un dueño
+- Una **mascota** tiene número de chip, nombre, especie, fecha de nacimiento y **edad**
+- Cada **visita** de una mascota tiene un número (1, 2, 3… **por mascota**), fecha y motivo. Una visita no existe sin su mascota
+- Un **veterinario** (código, nombre, especialidad) atiende cada visita; puede atender muchas
+- En una visita se aplican varios **medicamentos** (código, nombre) y un medicamento se aplica en muchas visitas. De cada aplicación interesa la **dosis**
+</div>
+<div>
+
+### Qué entregar
+1. El diagrama E-R en **notación de Chen**
+2. Los **identificadores** subrayados
+3. La **cardinalidad** `(mín, máx)` de cada entidad y el **tipo** de cada relación
+4. Los atributos multivaluados y derivados con su símbolo
+
+### Preguntas de control
+- ¿Cuál entidad es **débil**? ¿Cuál es su relación identificadora?
+- ¿Dónde va `dosis`?
+- ¿`edad` se guarda?
+</div>
+</split-slide>
+
+- ⏱️ 25 minutos · en grupos
+
+---
+
+## Actividad 3: una solución posible
+
+<hidden label="Solución">
+
+[![h:450](../assets/ads-dis-er-veterinaria.svg)](../assets/ads-dis-er-veterinaria.svg)
+
+</hidden>
+
+---
+
+## Del modelo E-R a las tablas
 
 [![h:450](../assets/ads-dis-er.svg)](../assets/ads-dis-er.svg)
 
@@ -1786,7 +2015,7 @@ Se sobrescribe el dato y se pierde el pasado que la auditoría iba a pedir
 
 ---
 
-## Actividad 3: diseña el modelo de datos
+## Actividad 4: pasa a tablas
 
 <split-slide style="--left: 50%; --right: 50%;">
 <div>
@@ -1803,7 +2032,7 @@ Retome la **biblioteca** de la Actividad 1 y agregue:
 <div>
 
 ### Qué entregar
-1. El **modelo lógico**: tablas, columnas, PK y FK
+1. El **diagrama E-R** y, a partir de él, el **modelo lógico**: tablas, columnas, PK y FK
 2. La estrategia escogida para la **herencia** usuario / estudiante / docente, con su justificación
 3. Verificación de **3FN** en cada tabla
 4. Dos **índices** propuestos, con la consulta que cada uno acelera
@@ -1820,7 +2049,7 @@ Retome la **biblioteca** de la Actividad 1 y agregue:
 
 ---
 
-## Actividad 3: una solución posible
+## Actividad 4: una solución posible
 
 <hidden label="Solución">
 
@@ -2167,7 +2396,7 @@ Código muerto que nadie borra «por si acaso» y que todos rodean con cuidado
 
 ---
 
-## Actividad 4: aplica patrones
+## Actividad 5: aplica patrones
 
 <split-slide style="--left: 50%; --right: 50%;">
 <div>
@@ -2199,7 +2428,7 @@ Para **cada** situación:
 
 ---
 
-## Actividad 4: una solución posible
+## Actividad 5: una solución posible
 
 <hidden label="Solución">
 
@@ -2376,6 +2605,7 @@ ul li { margin-block: 0.15em; }
 - Satzinger, J., Jackson, R., Burd, S. (2016). *Systems Analysis and Design in a Changing World*. Cengage. {Diseño de sistemas, arquitectura de aplicaciones}
 - Evans, G. (2004). *[Getting from use cases to code, Part 1: Use-Case Analysis](https://www.ibm.com/developerworks/rational/library/5383.html)*. IBM Rational.
 - Kruchten, P. (1995). *[Architectural Blueprints — The «4+1» View Model](https://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf)*. IEEE Software, 12(6).
+- Chen, P. (1976). *[The Entity-Relationship Model — Toward a Unified View of Data](https://dl.acm.org/doi/10.1145/320434.320440)*. ACM TODS, 1(1). {Notación E-R}
 - Parnas, D. L. (1972). *[On the Criteria To Be Used in Decomposing Systems into Modules](https://dl.acm.org/doi/10.1145/361598.361623)*. CACM, 15(12).
 - [Refactoring Guru — Patrones de diseño](https://refactoring.guru/es/design-patterns) · [Microservices.io — Patrones](https://microservices.io/patterns/) · [arc42 — plantilla de documentación de arquitectura](https://arc42.org/)
 
