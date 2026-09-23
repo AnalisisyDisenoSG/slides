@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 560" width="1020" height="560" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ci-ar" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#333"/>
+    </marker>
+    <marker id="ci-ar-r" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#c0392b"/>
+    </marker>
+  </defs>
+  <rect width="1020" height="560" fill="#ffffff"/>
+  <text x="510" y="36" font-size="19" fill="#111" text-anchor="middle" font-weight="600">Integración continua: cada cambio se integra y se verifica en minutos</text>
+
+  <!-- etapas -->
+  <g stroke="#333" stroke-width="1.5">
+    <rect x="30" y="120" width="140" height="80" fill="#e8daef"/>
+    <rect x="220" y="120" width="140" height="80" fill="#d6eaf8"/>
+    <rect x="410" y="120" width="140" height="80" fill="#d6eaf8"/>
+    <rect x="600" y="120" width="140" height="80" fill="#d6eaf8"/>
+    <rect x="790" y="120" width="190" height="80" fill="#d5f5e3"/>
+  </g>
+  <g font-size="15" fill="#111" text-anchor="middle" font-weight="600">
+    <text x="100" y="152">Commit</text>
+    <text x="290" y="152">Build</text>
+    <text x="480" y="152">Pruebas</text>
+    <text x="670" y="152">Análisis</text>
+    <text x="885" y="152">Versión candidata</text>
+  </g>
+  <g font-size="12" fill="#555" text-anchor="middle">
+    <text x="100" y="174">a la rama principal</text>
+    <text x="100" y="190">al menos una vez al día</text>
+    <text x="290" y="174">composer install</text>
+    <text x="290" y="190">compilar / empaquetar</text>
+    <text x="480" y="174">unitarias</text>
+    <text x="480" y="190">de integración</text>
+    <text x="670" y="174">estilo (PSR-12)</text>
+    <text x="670" y="190">estático, cobertura</text>
+    <text x="885" y="174">artefacto etiquetado</text>
+    <text x="885" y="190">listo para staging</text>
+  </g>
+  <g stroke="#333" stroke-width="1.8" fill="none" marker-end="url(#ci-ar)">
+    <path d="M170,160 L214,160"/>
+    <path d="M360,160 L404,160"/>
+    <path d="M550,160 L594,160"/>
+    <path d="M740,160 L784,160"/>
+  </g>
+
+  <!-- bucle de fallo -->
+  <path d="M480,200 C480,290 100,290 100,206" stroke="#c0392b" stroke-width="1.8" fill="none" stroke-dasharray="7 5" marker-end="url(#ci-ar-r)"/>
+  <text x="290" y="296" font-size="13.5" fill="#c0392b" text-anchor="middle" font-weight="600">❌ algo falló → el build está roto → arreglarlo es la prioridad del equipo</text>
+
+  <!-- tiempos -->
+  <path d="M220,86 L740,86" stroke="#888" stroke-width="1.2"/>
+  <path d="M220,80 L220,92 M740,80 L740,92" stroke="#888" stroke-width="1.2"/>
+  <text x="480" y="76" font-size="13" fill="#555" text-anchor="middle">automático · objetivo: menos de 10 minutos</text>
+
+  <!-- prácticas -->
+  <rect x="60" y="340" width="900" height="190" fill="#f7f7f7" stroke="#bbb"/>
+  <text x="80" y="370" font-size="15" fill="#111" font-weight="600">Las prácticas que la hacen funcionar</text>
+  <g font-size="13.5" fill="#111">
+    <text x="80" y="400">• Un solo repositorio con todo lo necesario para construir</text>
+    <text x="80" y="426">• Build automatizado: un comando, sin pasos manuales</text>
+    <text x="80" y="452">• Build que se prueba a sí mismo</text>
+    <text x="80" y="478">• Todos integran en la rama principal a diario</text>
+    <text x="80" y="504">• Build rápido</text>
+    <text x="530" y="400">• Arreglar un build roto de inmediato</text>
+    <text x="530" y="426">• Probar en un clon del entorno de producción</text>
+    <text x="530" y="452">• Todos ven el estado del último build</text>
+    <text x="530" y="478">• Despliegue automatizado</text>
+    <text x="530" y="504" fill="#555">— Fowler, «Continuous Integration»</text>
+  </g>
+</svg>
