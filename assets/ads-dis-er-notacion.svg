@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 600" width="1020" height="600" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1020" height="600" fill="#ffffff"/>
+  <text x="510" y="36" font-size="19" fill="#111" text-anchor="middle" font-weight="600">Notaci&#243;n de Chen para el diagrama entidad-relaci&#243;n</text>
+
+  <!-- fila 1 -->
+  <rect x="90" y="98" width="120" height="44" fill="#d6eaf8" stroke="#333" stroke-width="1.6"/>
+  <text x="150" y="125" font-size="13" fill="#111" text-anchor="middle" font-weight="600">LIBRO</text>
+  <text x="150" y="172" font-size="14" fill="#111" text-anchor="middle" font-weight="600">Entidad fuerte</text>
+  <text x="150" y="190" font-size="12" fill="#555" text-anchor="middle">existe por s&#237; misma</text>
+
+  <rect x="330" y="96" width="120" height="48" fill="#d6eaf8" stroke="#333" stroke-width="1.6"/>
+  <rect x="335" y="101" width="110" height="38" fill="none" stroke="#333" stroke-width="1.4"/>
+  <text x="390" y="125" font-size="13" fill="#111" text-anchor="middle" font-weight="600">EJEMPLAR</text>
+  <text x="390" y="172" font-size="14" fill="#111" text-anchor="middle" font-weight="600">Entidad d&#233;bil</text>
+  <text x="390" y="190" font-size="12" fill="#555" text-anchor="middle">depende de otra para existir</text>
+
+  <polygon points="630,90 690,120 630,150 570,120" fill="#fdf3d0" stroke="#333" stroke-width="1.6"/>
+  <text x="630" y="124" font-size="12.5" fill="#111" text-anchor="middle">escribe</text>
+  <text x="630" y="172" font-size="14" fill="#111" text-anchor="middle" font-weight="600">Relaci&#243;n</text>
+  <text x="630" y="190" font-size="12" fill="#555" text-anchor="middle">asociaci&#243;n entre entidades</text>
+
+  <polygon points="870,86 936,120 870,154 804,120" fill="#fdf3d0" stroke="#333" stroke-width="1.6"/>
+  <polygon points="870,95 922,120 870,145 818,120" fill="none" stroke="#333" stroke-width="1.3"/>
+  <text x="870" y="124" font-size="12.5" fill="#111" text-anchor="middle">tiene</text>
+  <text x="870" y="172" font-size="14" fill="#111" text-anchor="middle" font-weight="600">Relaci&#243;n identificadora</text>
+  <text x="870" y="190" font-size="12" fill="#555" text-anchor="middle">la que sostiene a una d&#233;bil</text>
+
+  <!-- fila 2 -->
+  <ellipse cx="150" cy="260" rx="60" ry="24" fill="#e8f6ec" stroke="#333" stroke-width="1.6"/>
+  <text x="150" y="265" font-size="13" fill="#111" text-anchor="middle">titulo</text>
+  <text x="150" y="312" font-size="14" fill="#111" text-anchor="middle" font-weight="600">Atributo</text>
+  <text x="150" y="330" font-size="12" fill="#555" text-anchor="middle">una propiedad</text>
+
+  <ellipse cx="390" cy="260" rx="60" ry="24" fill="#e8f6ec" stroke="#333" stroke-width="1.6"/>
+  <text x="390" y="265" font-size="13" fill="#111" text-anchor="middle" text-decoration="underline">isbn</text>
+  <text x="390" y="312" font-size="14" fill="#111" text-anchor="middle" font-weight="600">Atributo identificador</text>
+  <text x="390" y="330" font-size="12" fill="#555" text-anchor="middle">subrayado: distingue a cada ejemplar</text>
+
+  <ellipse cx="630" cy="260" rx="62" ry="26" fill="#e8f6ec" stroke="#333" stroke-width="1.6"/>
+  <ellipse cx="630" cy="260" rx="54" ry="19" fill="none" stroke="#333" stroke-width="1.3"/>
+  <text x="630" y="265" font-size="13" fill="#111" text-anchor="middle">tel&#233;fonos</text>
+  <text x="630" y="312" font-size="14" fill="#111" text-anchor="middle" font-weight="600">Atributo multivaluado</text>
+  <text x="630" y="330" font-size="12" fill="#555" text-anchor="middle">puede tener varios valores</text>
+
+  <ellipse cx="870" cy="260" rx="60" ry="24" fill="#ffffff" stroke="#333" stroke-width="1.6" stroke-dasharray="6,4"/>
+  <text x="870" y="265" font-size="13" fill="#111" text-anchor="middle">edad</text>
+  <text x="870" y="312" font-size="14" fill="#111" text-anchor="middle" font-weight="600">Atributo derivado</text>
+  <text x="870" y="330" font-size="12" fill="#555" text-anchor="middle">se calcula a partir de otros</text>
+
+  <!-- ejemplo -->
+  <path d="M40,360 L980,360" stroke="#ddd" stroke-width="1.4"/>
+  <text x="510" y="392" font-size="15" fill="#111" text-anchor="middle" font-weight="600">Ejemplo: escritores y los libros que han escrito</text>
+
+  <g stroke="#333" stroke-width="1.5" fill="none">
+    <path d="M300,463 L440,463"/>
+    <path d="M580,463 L720,463"/>
+    <path d="M150,527 L200,486"/>
+    <path d="M225,527 L225,486"/>
+    <path d="M315,527 L260,486"/>
+    <path d="M700,527 L745,486"/>
+    <path d="M775,527 L785,486"/>
+    <path d="M850,527 L820,486"/>
+    <path d="M930,527 L850,478"/>
+  </g>
+  <rect x="150" y="440" width="150" height="46" fill="#d6eaf8" stroke="#333" stroke-width="1.6"/>
+  <text x="225" y="468" font-size="13.5" fill="#111" text-anchor="middle" font-weight="600">ESCRITOR</text>
+  <polygon points="510,431 580,463 510,495 440,463" fill="#fdf3d0" stroke="#333" stroke-width="1.6"/>
+  <text x="510" y="468" font-size="13" fill="#111" text-anchor="middle">escribe</text>
+  <rect x="720" y="440" width="150" height="46" fill="#d6eaf8" stroke="#333" stroke-width="1.6"/>
+  <text x="795" y="468" font-size="13.5" fill="#111" text-anchor="middle" font-weight="600">LIBRO</text>
+
+  <g fill="#e8f6ec" stroke="#333" stroke-width="1.4">
+    <ellipse cx="130" cy="545" rx="48" ry="18"/>
+    <ellipse cx="225" cy="560" rx="42" ry="18"/>
+    <ellipse cx="325" cy="545" rx="46" ry="18"/>
+    <ellipse cx="690" cy="545" rx="34" ry="18"/>
+    <ellipse cx="775" cy="562" rx="38" ry="18"/>
+    <ellipse cx="860" cy="545" rx="40" ry="18"/>
+    <ellipse cx="950" cy="562" rx="46" ry="18"/>
+  </g>
+  <g font-size="12" fill="#111" text-anchor="middle">
+    <text x="130" y="549" text-decoration="underline">id_escritor</text>
+    <text x="225" y="564">nombre</text>
+    <text x="325" y="549">fechaNac</text>
+    <text x="690" y="549" text-decoration="underline">isbn</text>
+    <text x="775" y="566">titulo</text>
+    <text x="860" y="549">edicion</text>
+    <text x="950" y="566">num_paginas</text>
+  </g>
+
+  <g font-size="12.5" fill="#1f5fa8" font-weight="600">
+    <text x="308" y="454">(1,n)</text>
+    <text x="712" y="454" text-anchor="end">(1,n)</text>
+    <text x="510" y="422" text-anchor="middle">N:M</text>
+  </g>
+</svg>

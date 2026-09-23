@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 600" width="1020" height="600" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1020" height="600" fill="#ffffff"/>
+  <text x="510" y="34" font-size="19" fill="#111" text-anchor="middle" font-weight="600">Cardinalidad: cu&#225;ntos de un lado se relacionan con cada uno del otro</text>
+
+  <!-- ejemplo principal -->
+  <g stroke="#333" stroke-width="1.6" fill="none">
+    <path d="M310,115 L430,115"/>
+    <path d="M590,115 L710,115"/>
+  </g>
+  <rect x="150" y="90" width="160" height="50" fill="#d6eaf8" stroke="#333" stroke-width="1.8"/>
+  <text x="230" y="120" font-size="15" fill="#111" text-anchor="middle" font-weight="600">JUGADOR</text>
+  <polygon points="510,77 590,115 510,153 430,115" fill="#fdf3d0" stroke="#333" stroke-width="1.8"/>
+  <text x="510" y="120" font-size="13.5" fill="#111" text-anchor="middle">pertenece</text>
+  <rect x="710" y="90" width="160" height="50" fill="#d6eaf8" stroke="#333" stroke-width="1.8"/>
+  <text x="790" y="120" font-size="15" fill="#111" text-anchor="middle" font-weight="600">EQUIPO</text>
+  <g font-size="14" fill="#1f5fa8" font-weight="600">
+    <text x="318" y="106">(1,n)</text>
+    <text x="702" y="106" text-anchor="end">(0,1)</text>
+    <text x="510" y="66" text-anchor="middle">1:N</text>
+  </g>
+
+  <rect x="80" y="178" width="420" height="96" fill="#f7fbff" stroke="#bbb"/>
+  <text x="98" y="204" font-size="13.5" fill="#111" font-weight="600">Se lee de izquierda a derecha &#8594;</text>
+  <text x="98" y="228" font-size="13" fill="#333">Un JUGADOR pertenece a m&#237;nimo 0 y m&#225;ximo 1 EQUIPO.</text>
+  <text x="98" y="252" font-size="13" fill="#333">Se anota <tspan fill="#1f5fa8" font-weight="600">(0,1)</tspan> junto a EQUIPO, el lado de llegada.</text>
+
+  <rect x="520" y="178" width="420" height="96" fill="#f7fbff" stroke="#bbb"/>
+  <text x="538" y="204" font-size="13.5" fill="#111" font-weight="600">&#8592; Se lee de derecha a izquierda</text>
+  <text x="538" y="228" font-size="13" fill="#333">A un EQUIPO pertenecen m&#237;nimo 1 y m&#225;ximo n JUGADORES.</text>
+  <text x="538" y="252" font-size="13" fill="#333">Se anota <tspan fill="#1f5fa8" font-weight="600">(1,n)</tspan> junto a JUGADOR.</text>
+
+  <text x="510" y="300" font-size="13" fill="#555" text-anchor="middle">(m&#237;nimo, m&#225;ximo) es la cardinalidad de la entidad. El tipo de la relaci&#243;n (1:1, 1:N, N:M) sale de comparar los dos m&#225;ximos.</text>
+
+  <path d="M40,320 L980,320" stroke="#ddd" stroke-width="1.4"/>
+  <text x="510" y="348" font-size="15" fill="#111" text-anchor="middle" font-weight="600">Los tres tipos de relaci&#243;n</text>
+
+  <!-- filas -->
+  <g font-size="20" fill="#1f5fa8" font-weight="700" text-anchor="middle">
+    <text x="70" y="398">1:1</text>
+    <text x="70" y="478">1:N</text>
+    <text x="70" y="558">N:M</text>
+  </g>
+  <g stroke="#333" stroke-width="1.5" fill="none">
+    <path d="M260,391 L330,391 M450,391 L520,391"/>
+    <path d="M260,471 L330,471 M450,471 L520,471"/>
+    <path d="M260,551 L330,551 M450,551 L520,551"/>
+  </g>
+  <g fill="#d6eaf8" stroke="#333" stroke-width="1.5">
+    <rect x="130" y="371" width="130" height="40"/>
+    <rect x="520" y="371" width="130" height="40"/>
+    <rect x="130" y="451" width="130" height="40"/>
+    <rect x="520" y="451" width="130" height="40"/>
+    <rect x="130" y="531" width="130" height="40"/>
+    <rect x="520" y="531" width="130" height="40"/>
+  </g>
+  <g fill="#fdf3d0" stroke="#333" stroke-width="1.5">
+    <polygon points="390,365 450,391 390,417 330,391"/>
+    <polygon points="390,445 450,471 390,497 330,471"/>
+    <polygon points="390,525 450,551 390,577 330,551"/>
+  </g>
+  <g font-size="12.5" fill="#111" text-anchor="middle">
+    <text x="195" y="396" font-weight="600">DECANO</text>
+    <text x="390" y="395">dirige</text>
+    <text x="585" y="396" font-weight="600">FACULTAD</text>
+    <text x="195" y="476" font-weight="600">FACULTAD</text>
+    <text x="390" y="475">pertenece</text>
+    <text x="585" y="476" font-weight="600">DOCENTE</text>
+    <text x="195" y="556" font-weight="600">DOCENTE</text>
+    <text x="390" y="555">dicta</text>
+    <text x="585" y="556" font-weight="600">ASIGNATURA</text>
+  </g>
+  <g font-size="12" fill="#1f5fa8" font-weight="600">
+    <text x="266" y="384">(1,1)</text>
+    <text x="514" y="384" text-anchor="end">(1,1)</text>
+    <text x="266" y="464">(1,1)</text>
+    <text x="514" y="464" text-anchor="end">(1,n)</text>
+    <text x="266" y="544">(1,n)</text>
+    <text x="514" y="544" text-anchor="end">(0,n)</text>
+  </g>
+  <g font-size="13" fill="#333">
+    <text x="680" y="388">Cada facultad tiene un decano y cada</text>
+    <text x="680" y="406">decano dirige una sola facultad</text>
+    <text x="680" y="468">Una facultad tiene muchos docentes;</text>
+    <text x="680" y="486">un docente pertenece a una facultad</text>
+    <text x="680" y="548">Un docente dicta varias asignaturas y</text>
+    <text x="680" y="566">una asignatura la dictan varios docentes</text>
+  </g>
+</svg>
