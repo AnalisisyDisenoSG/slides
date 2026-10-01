@@ -2066,6 +2066,7 @@ Retome la **biblioteca** de la Actividad 1 y agregue:
 - `DOCENTE` (**id_usuario**, codigo, unidad)
 - `PRESTAMO` (**id_prestamo**, *num_inventario*, *id_usuario*, fecha_salida, fecha_pactada, fecha_real)
 - `MULTA` (**id_multa**, *id_prestamo*, monto, pagada)
+- 🔗 **Cardinalidades**: autor–libro **N:M** · libro–ejemplar **1:N** · ejemplar–préstamo **1:N** · usuario–préstamo **1:N** · préstamo–multa **1:N** · usuario–estudiante/docente **1:1**
 </div>
 <div>
 
@@ -2078,6 +2079,8 @@ Retome la **biblioteca** de la Actividad 1 y agregue:
 - **Borrado**: `RESTRICT`. Un libro con historial **no se borra**: se marca inactivo
 </div>
 </split-slide>
+
+
 
 </hidden>
 
