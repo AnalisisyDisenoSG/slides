@@ -862,7 +862,7 @@ class ServicioCitas               // «control»
 
 ```text
 app/
-├── Http/Controllers/     ← «boundary»
+├── Http/Controllers/     ← «boundary» (lado HTTP)
 │   └── CitaController.php
 ├── Services/             ← «control»
 │   └── ServicioCitas.php
@@ -872,6 +872,7 @@ app/
 │   └── Dueno.php
 └── Contracts/            ← interfaces
     └── RepositorioCitas.php
+resources/views/          ← «boundary» (pantallas)
 database/migrations/      ← modelo de datos
 tests/
 ├── Unit/                 ← pruebas por clase
@@ -882,6 +883,7 @@ tests/
 <div>
 
 ### Reglas que conviene respetar
+- La frontera son **dos piezas**: la vista y el controlador, que es **delgado** y delega en el servicio
 - **Un archivo por clase**, con el mismo nombre (PSR-4)
 - El **espacio de nombres** refleja la carpeta: `App\Services\ServicioCitas`
 - Las dependencias entre carpetas siguen la **dirección de las capas** del diseño: un modelo nunca usa un controlador
