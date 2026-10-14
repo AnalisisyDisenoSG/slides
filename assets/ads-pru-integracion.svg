@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 560" width="1020" height="560" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs><marker id="i-ar" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#555"/></marker></defs>
+  <rect width="1020" height="560" fill="#ffffff"/>
+  <text x="510" y="36" font-size="19" fill="#111" text-anchor="middle" font-weight="600">Integración incremental: dos órdenes para el mismo árbol de módulos</text>
+  <line x1="510" y1="60" x2="510" y2="485" stroke="#ccc" stroke-width="1.5" stroke-dasharray="5 5"/>
+<text x="260" y="80" font-size="18" fill="#111" text-anchor="middle" font-weight="600">Ascendente (bottom-up)</text>
+<text x="260" y="100" font-size="13" fill="#666" text-anchor="middle">se empieza por las hojas</text>
+<path d="M260,172 L120,241" stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#i-ar)"/>
+<path d="M260,172 L260,241" stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#i-ar)"/>
+<path d="M260,172 L400,241" stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#i-ar)"/>
+<path d="M120,287 L120,356" stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#i-ar)"/>
+<path d="M260,287 L215,356" stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#i-ar)"/>
+<path d="M260,287 L315,356" stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#i-ar)"/>
+<rect x="224" y="128" width="72" height="44" rx="4" fill="#fcf3cf" stroke="#333" stroke-width="1.6"/>
+<text x="260" y="157" font-size="19" fill="#111" text-anchor="middle" font-weight="600">A</text>
+<circle cx="296" cy="128" r="12" fill="#1e8449"/><text x="296" y="133" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">3</text>
+<rect x="84" y="243" width="72" height="44" rx="4" fill="#fdebd0" stroke="#333" stroke-width="1.6"/>
+<text x="120" y="272" font-size="19" fill="#111" text-anchor="middle" font-weight="600">B</text>
+<circle cx="156" cy="243" r="12" fill="#1e8449"/><text x="156" y="248" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">2</text>
+<rect x="224" y="243" width="72" height="44" rx="4" fill="#fdebd0" stroke="#333" stroke-width="1.6"/>
+<text x="260" y="272" font-size="19" fill="#111" text-anchor="middle" font-weight="600">C</text>
+<circle cx="296" cy="243" r="12" fill="#1e8449"/><text x="296" y="248" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">2</text>
+<rect x="364" y="243" width="72" height="44" rx="4" fill="#e8f6ec" stroke="#333" stroke-width="1.6"/>
+<text x="400" y="272" font-size="19" fill="#111" text-anchor="middle" font-weight="600">D</text>
+<circle cx="436" cy="243" r="12" fill="#1e8449"/><text x="436" y="248" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">1</text>
+<rect x="84" y="358" width="72" height="44" rx="4" fill="#e8f6ec" stroke="#333" stroke-width="1.6"/>
+<text x="120" y="387" font-size="19" fill="#111" text-anchor="middle" font-weight="600">E</text>
+<circle cx="156" cy="358" r="12" fill="#1e8449"/><text x="156" y="363" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">1</text>
+<rect x="179" y="358" width="72" height="44" rx="4" fill="#e8f6ec" stroke="#333" stroke-width="1.6"/>
+<text x="215" y="387" font-size="19" fill="#111" text-anchor="middle" font-weight="600">F</text>
+<circle cx="251" cy="358" r="12" fill="#1e8449"/><text x="251" y="363" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">1</text>
+<rect x="279" y="358" width="72" height="44" rx="4" fill="#e8f6ec" stroke="#333" stroke-width="1.6"/>
+<text x="315" y="387" font-size="19" fill="#111" text-anchor="middle" font-weight="600">G</text>
+<circle cx="351" cy="358" r="12" fill="#1e8449"/><text x="351" y="363" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">1</text>
+<text x="260" y="450" font-size="14" fill="#111" text-anchor="middle">1: E F G D · 2: B+E, C+F, C+G · 3: A+B, A+C, A+D</text>
+<text x="260" y="472" font-size="14" fill="#1e8449" text-anchor="middle" font-weight="600">requiere DRIVERS: simulan a quien llama</text>
+<text x="760" y="80" font-size="18" fill="#111" text-anchor="middle" font-weight="600">Descendente (top-down)</text>
+<text x="760" y="100" font-size="13" fill="#666" text-anchor="middle">se empieza por la raíz</text>
+<path d="M760,172 L620,241" stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#i-ar)"/>
+<path d="M760,172 L760,241" stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#i-ar)"/>
+<path d="M760,172 L900,241" stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#i-ar)"/>
+<path d="M620,287 L620,356" stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#i-ar)"/>
+<path d="M760,287 L715,356" stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#i-ar)"/>
+<path d="M760,287 L815,356" stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#i-ar)"/>
+<rect x="724" y="128" width="72" height="44" rx="4" fill="#d6eaf8" stroke="#333" stroke-width="1.6"/>
+<text x="760" y="157" font-size="19" fill="#111" text-anchor="middle" font-weight="600">A</text>
+<circle cx="796" cy="128" r="12" fill="#2471a3"/><text x="796" y="133" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">1</text>
+<rect x="584" y="243" width="72" height="44" rx="4" fill="#d6eaf8" stroke="#333" stroke-width="1.6"/>
+<text x="620" y="272" font-size="19" fill="#111" text-anchor="middle" font-weight="600">B</text>
+<circle cx="656" cy="243" r="12" fill="#2471a3"/><text x="656" y="248" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">2</text>
+<rect x="724" y="243" width="72" height="44" rx="4" fill="#d6eaf8" stroke="#333" stroke-width="1.6"/>
+<text x="760" y="272" font-size="19" fill="#111" text-anchor="middle" font-weight="600">C</text>
+<circle cx="796" cy="243" r="12" fill="#2471a3"/><text x="796" y="248" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">4</text>
+<rect x="864" y="243" width="72" height="44" rx="4" fill="#d6eaf8" stroke="#333" stroke-width="1.6"/>
+<text x="900" y="272" font-size="19" fill="#111" text-anchor="middle" font-weight="600">D</text>
+<circle cx="936" cy="243" r="12" fill="#2471a3"/><text x="936" y="248" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">7</text>
+<rect x="584" y="358" width="72" height="44" rx="4" fill="#d6eaf8" stroke="#333" stroke-width="1.6"/>
+<text x="620" y="387" font-size="19" fill="#111" text-anchor="middle" font-weight="600">E</text>
+<circle cx="656" cy="358" r="12" fill="#2471a3"/><text x="656" y="363" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">3</text>
+<rect x="679" y="358" width="72" height="44" rx="4" fill="#d6eaf8" stroke="#333" stroke-width="1.6"/>
+<text x="715" y="387" font-size="19" fill="#111" text-anchor="middle" font-weight="600">F</text>
+<circle cx="751" cy="358" r="12" fill="#2471a3"/><text x="751" y="363" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">5</text>
+<rect x="779" y="358" width="72" height="44" rx="4" fill="#d6eaf8" stroke="#333" stroke-width="1.6"/>
+<text x="815" y="387" font-size="19" fill="#111" text-anchor="middle" font-weight="600">G</text>
+<circle cx="851" cy="358" r="12" fill="#2471a3"/><text x="851" y="363" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">6</text>
+<text x="760" y="450" font-size="14" fill="#111" text-anchor="middle">profundidad: A B E C F G D · anchura: A B C D E F G</text>
+<text x="760" y="472" font-size="14" fill="#2471a3" text-anchor="middle" font-weight="600">requiere STUBS: simulan a quien es llamado</text>
+  <rect x="140" y="500" width="740" height="44" fill="#f7f7f7" stroke="#bbb"/>
+  <text x="510" y="528" font-size="14" fill="#444" text-anchor="middle">Los números indican el orden en que cada módulo entra a la integración</text>
+</svg>
